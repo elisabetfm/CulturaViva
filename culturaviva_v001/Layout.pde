@@ -6,12 +6,12 @@ float margenH = 20,
       margenV = 20;
 
 //Dimensiones banner
-float bannerWidth = 1760,
-      bannerHeight = 300;
+float bannerWidth = 1300,
+      bannerHeight = 150;
       
 //Dimensiones logo
-float logoWidth = 300,
-      logoHeight = 300;
+float logoWidth = 150,
+      logoHeight = 150;
       
 //Dimensiones idioma
 float idiomaWidth = 100,
@@ -26,13 +26,13 @@ float filtrosWidth = 200,
       filtrosHeight = 50;
       
 //Dimensiones acontecimientos recientes1
-float acontecimientos1Width = 1460,
-      acontecimientos1Height = 300;
+float acontecimientos1Width = 500,
+      acontecimientos1Height = 800;
       
 //Dimensiones acontecimientos recientes2
 float acontecimientos2Width = 500,
-     acontecimientos2Height = 1000;
+     acontecimientos2Height = 800;
       
 //Dimensions indicador cantidad de páginas
-float indicadorWidth = 500,
-      indicadorHeight = 1000;
+float indicadorWidth = 50,
+      indicadorHeight = 10;
