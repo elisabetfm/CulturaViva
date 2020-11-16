@@ -2,9 +2,10 @@
 //Establecer las zonas comunes de la pantalla
 
 void setup(){
-  size (1500,700); //dimensión de la pantalla
+  fullScreen(); //dimensión de la pantalla
   noStroke(); // figuras sin bordes
   textAlign(CENTER);textSize(20); //alineación y tamaño del texto
+  print(width+" "+height);
 }
 
 void draw(){
@@ -58,5 +59,6 @@ void draw(){
   rect (margenH, margenV, indicadorWidth, indicadorHeight);
   fill(0);
   text("Indicador de páginas", margenH+indicadorWidth/2,margenV+indicadorHeight/2);
+
 
 }
