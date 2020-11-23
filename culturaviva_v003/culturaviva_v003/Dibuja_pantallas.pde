@@ -44,7 +44,8 @@ void dibujaPantalla05(){
   dibujaIdioma();
   dibujaCuenta();
   dibujaFiltros();
-  dibujaReventa();
+  dibujaReventa1();
+  dibujaReventa2();
   
 }
 

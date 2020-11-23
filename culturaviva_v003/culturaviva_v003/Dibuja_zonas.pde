@@ -65,41 +65,49 @@ void dibujaApertura(){
 
 void dibujaAcontecimientosBuscados(){
   fill(0,0,200);
-  rect (2*margenH, 2*margenV + logoHeight + margenV, buscadosWidth, buscadosHeight);
+  rect (2*margenH, 2*margenV + logoHeight + filtrosHeight + margenV, buscadosWidth, buscadosHeight);
   fill(0);
-  text ("Acontecimientos relacionados con la busca", 2*margenH + buscadosWidth/2, 2*margenV + logoHeight + margenV + buscadosHeight/2,10);
+  text ("Acontecimientos relacionados con la busca", 2*margenH + buscadosWidth/2, 2*margenV + logoHeight + filtrosHeight + margenV + buscadosHeight/2,10);
 }
 
 void dibujaRecomendaciones(){
   fill(0,150,10);
-  rect(2*margenH + buscadosWidth + margenH, 2*margenV + logoHeight + margenV, recomendacionesWidth, recomendacionesHeight);
+  rect(2*margenH + buscadosWidth + margenH, 2*margenV + logoHeight + filtrosHeight + margenV, recomendacionesWidth, recomendacionesHeight);
   fill(0);
-  text ("RECOMENDACIONES", 2*margenH + buscadosWidth + margenH + recomendacionesWidth/2, 2*margenV + logoHeight + margenV + recomendacionesHeight/2, 10);
+  text ("RECOMENDACIONES", 2*margenH + buscadosWidth + margenH + recomendacionesWidth/2, 2*margenV + logoHeight + filtrosHeight + margenV + recomendacionesHeight/2, 10);
 }
 
 void dibujaCompraEntradas(){
   fill(150,10,150);
-  rect(2*margenH + buscadosWidth + margenH, 2*margenV + logoHeight + margenV, compraWidth, compraHeight);
+  rect(2*margenH + buscadosWidth + margenH, 2*margenV + logoHeight + filtrosHeight + margenV, compraWidth, compraHeight);
   fill(0);
-  text ("Compra de entradas", 2*margenH + buscadosWidth + margenH + compraWidth, 2*margenV + logoHeight + margenV + compraHeight, 10);
+  text ("Compra de entradas", 2*margenH + buscadosWidth + margenH + compraWidth/2, 2*margenV + logoHeight +filtrosHeight + margenV + compraHeight/2, 10);
 }
 
-void dibujaReventa(){
+void dibujaReventa1(){
   fill(0,200,50);
-  rect (2*margenH, 2*margenV + logoHeight + margenV, reventaWidth, reventaHeight);
+  rect (2*margenH, 2*margenV + logoHeight + filtrosHeight + margenV, reventa1Width, reventa1Height);
   fill (0);
-  text ("Reventa de entradas", 2*margenH + reventaWidth/2, 2*margenV + logoHeight + margenV + reventaHeight/2, 10);
+  text ("Reventa de entradas", 2*margenH + reventa1Width/2, 2*margenV + logoHeight + filtrosHeight + margenV + reventa1Height/2, 10);
+}
+
+void dibujaReventa2(){
+  fill(0,200,50);
+  rect (2*margenH, 2*margenV + logoHeight + filtrosHeight + reventa1Height + 2*margenV, reventa2Width, reventa2Height);
+  fill (0);
+  text ("Reventa de entradas", 2*margenH + reventa2Width/2, 2*margenV + logoHeight + filtrosHeight +  reventa1Height + 2*margenV + reventa2Height/2, 10);
 }
 
 void dibujaMapaLocalizacion(){
   fill(5,50,50);
-  rect (width/2, height/2, mapaWidth, mapaHeight);
+  rect (2*margenH + logoWidth + margenH, 2*margenV + bannerHeight + filtrosHeight + margenV, mapaWidth, mapaHeight);
   fill (0);
-  text ("mapa de localización", width/2 + mapaWidth, height/2 + mapaHeight, 10);
+  text ("mapa de localización",  2*margenH + logoWidth + margenH + mapaWidth/2, 2*margenV + bannerHeight + filtrosHeight + margenV + mapaHeight/2, 10);
 }
 
 void dibujaAcontecimientoIndividual(){
   fill(15,75,20);
-  rect (2*margenH, 2*margenV + logoHeight + margenV, individualWidth, individualHeight);
-  text ("acontecimiento individual", 2*margenH + individualWidth, 2*margenV + logoHeight + margenV + individualHeight, 10);
+  rect (2*margenH, 2*margenV + logoHeight + filtrosHeight + margenV, individualWidth, individualHeight);
+  fill(0);
+  text ("acontecimiento individual", 2*margenH + individualWidth/2, 2*margenV + logoHeight + filtrosHeight + margenV + individualHeight/2, 10);
 }

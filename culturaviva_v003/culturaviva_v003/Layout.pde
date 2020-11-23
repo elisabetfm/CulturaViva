@@ -38,26 +38,30 @@ float indicadorWidth = 300,
       indicadorHeight = 30;
    
 //Dimensiones acontecimientos buscados (pantalla 3 y 4)
-float buscadosWidth = 700,
+float buscadosWidth = 1100,
       buscadosHeight = 430;
      
 //Dimensiones recomendaciones (pantalla 3)
-float recomendacionesWidth = 70,
-      recomendacionesHeight = 280;
+float recomendacionesWidth = 150,
+      recomendacionesHeight = 360;
       
 //Dimensiones compra entradas
-float compraWidth = 70,
+float compraWidth = 150,
       compraHeight = 430;
       
-//Dimensiones reventa
-float reventaWidth = 1150,
-      reventaHeight = 200;
+//Dimensiones reventa1
+float reventa1Width = 1150,
+      reventa1Height = 200;
+      
+//Dimensiones reventa2
+float reventa2Width = 1150,
+      reventa2Height = 200;
       
 //Dimensiones mapa de localización
-float mapaWidth = 1000,
-      mapaHeight = 860;
+float mapaWidth = 986,
+      mapaHeight = 488;
       
 //Dimensiones acontecimiento individual
-float individualWidth = 1000,
-       individualHeight = 800;
+float individualWidth = 1300,
+       individualHeight = 488;
       
