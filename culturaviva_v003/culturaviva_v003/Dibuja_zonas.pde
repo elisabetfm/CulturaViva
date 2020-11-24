@@ -107,7 +107,7 @@ void dibujaMapaLocalizacion(){
 
 void dibujaAcontecimientoIndividual(){
   fill(15,75,20);
-  rect (2*margenH, 2*margenV + logoHeight + filtrosHeight + margenV, individualWidth, individualHeight);
+  rect (margenH, 2*margenV + logoHeight + filtrosHeight + margenV, individualWidth, individualHeight);
   fill(0);
-  text ("acontecimiento individual", 2*margenH + individualWidth/2, 2*margenV + logoHeight + filtrosHeight + margenV + individualHeight/2, 10);
+  text ("acontecimiento individual", margenH + individualWidth/2, 2*margenV + logoHeight + filtrosHeight + margenV + individualHeight/2, 10);
 }

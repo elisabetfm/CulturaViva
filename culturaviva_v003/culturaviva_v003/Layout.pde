@@ -62,6 +62,6 @@ float mapaWidth = 986,
       mapaHeight = 488;
       
 //Dimensiones acontecimiento individual
-float individualWidth = 1300,
+float individualWidth = 1320,
        individualHeight = 488;
       
