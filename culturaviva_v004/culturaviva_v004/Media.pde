@@ -1,22 +1,19 @@
 // Elementos multimedia de la APP
 // Imágenes, tipografías, sonidos, ...
-
-import processing.sound.*;
-
 // Imatges
 PImage imgLogo, imgFondo, imgBanner;
 // Tipografies
-PFont font1, font2, font3;
+//PFont font1, font2, font3;
 // Audios
-SoundFile audio1, audio2, audio3;
-import processing.sound;
+//SoundFile audio1, audio2, audio3;
+//import processing.sound.*;
 
 
 // Càrrega dels elements multimèdia
 void loadMedia(){
   loadImages();
-  loadFonts();
-  loadSounds();
+  //loadFonts();
+  //loadSounds();
 }
 
 // Càrrega de les Imatges
@@ -31,7 +28,7 @@ void loadFonts(){
   font1 = createFont("../DATA/fonts/Sweet Creamy.ttf", 32);
   font2 = createFont("../DATA/fonts/secrcode.ttf", 32);
   font3 = createFont("../DATA/fonts/Fluo Gums.ttf", 32);
-}
+//}
 
 // Càrrega dels àudios
 void loadSounds(){
