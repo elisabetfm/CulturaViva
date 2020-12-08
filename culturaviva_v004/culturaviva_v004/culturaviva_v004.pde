@@ -9,10 +9,10 @@ PANTALLA pantalla = PANTALLA.BUSQUEDA;
 
 void setup(){
   fullScreen();            // Pantalla completa
-  //size(1920, 1080);      // Pantalla HD
+ // size(1800, 1000);      // Pantalla HD
   
   loadMedia();    // Càrrega dels elements multimèdia
-  //setGUI();      // Estableix els paràmetres de la GUI
+  setGUI();      // Estableix els paràmetres de la GUI
 }
 
 void draw(){
