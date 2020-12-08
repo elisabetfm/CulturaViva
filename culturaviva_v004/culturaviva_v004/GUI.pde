@@ -2,9 +2,9 @@
 // Botones, Desplegables, 
 
 // Botones del Menú Principal
-Button bIdioma, bCuenta, bSecciones, bLugares, bOtros, bReventas, bBuscar, bCalendario, bComprar ;
+Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bCuenta, bSecciones, bLugares, bOtros, bReventas, bBuscar, bCalendario, bComprar;
 // Dimensions dels botons
-int buttonH = 50, buttonW1 = 300, buttonW2 = , buttonW3 = , buttonW4 = , buttonW;
+int buttonH = 50, buttonW1 = 130, buttonW2 = 400, buttonW3 = 50, buttonW4 = 80;
 
 // Creació dels elements de la GUI
 void setGUI(){
@@ -13,22 +13,32 @@ void setGUI(){
 
 // Creació dels botons de la GUI
 void initButtons(){
-  bIdioma     = new Button("Jugar", 2*marginH, 360, buttonW, buttonH);
-  bCuenta     = new Button("Punts", 2*marginH, 360 + buttonH + 2* marginV, buttonW, buttonH);
-  bSecciones = new Button("Preguntes", 2*marginH, 360 + 2*buttonH + 4*marginV, buttonW, buttonH);
-  bLugares    = new Button("Configuració", 2*marginH, 360 + 3*buttonH + 6*marginV, buttonW, buttonH);
-  bOtros      = new Button("Sobre Trivio", 2*marginH, 360 + 4*buttonH + 8*marginV, buttonW, buttonH);
-  bReventas    = new Button("Jugar", 2*marginH, 360, buttonW, buttonH);
-  bBuscar      = new Button("Jugar", 2*marginH, 360, buttonW, buttonH);
-  bCalendario     = new Button("Jugar", 2*marginH, 360, buttonW, buttonH);
-  bComprar     = new Button("Jugar", 2*marginH, 360, buttonW, buttonH);
+  bIdioma1     = new Button("Català", 2*margenH + logoWidth + bannerWidth - (4*buttonW1), 2*margenV, buttonW1, buttonH);
+  bIdioma2     = new Button("Castellano", 2*margenH + logoWidth + bannerWidth - (3*buttonW1), 2*margenV, buttonW1, buttonH);
+  bIdioma3     = new Button("English", 2*margenH + logoWidth + bannerWidth - (2*buttonW1), 2*margenV, buttonW1, buttonH);
+  bIdioma4     = new Button("Deutsch", 2*margenH + logoWidth + bannerWidth - buttonW1, 2*margenV, buttonW1, buttonH);
+  bCuenta     = new Button( 2*margenH + logoWidth + bannerWidth - buttonW4, 2*margenV + logoHeight - buttonW4, buttonW4, buttonH);
+  bSecciones  = new Button("Secciones", 2*margenH + logoWidth + margenH, 2*margenV + bannerHeight + margenV, buttonW1, buttonH);
+  bLugares    = new Button("Lugares", 2*margenH + logoWidth + buttonW1 + margenH, 2*margenV + bannerHeight + margenV, buttonW1, buttonH);
+  bOtros      = new Button("Otros", 2*margenH + logoWidth + 2*buttonW1 + margenH, 2*margenV + bannerHeight + margenV, buttonW1, buttonH);
+  bReventas   = new Button("Reventas", 2*margenH + logoWidth + 3*buttonW1 + margenH, 2*margenV + bannerHeight + margenV, buttonW1, buttonH);
+  bBuscar     = new Button("Acontecimientos, compañías, grupos, otros.", 2*margenH + logoWidth + 4*buttonW1 + margenH, 2*margenV + bannerHeight + margenV, buttonW2, buttonH);
+  bCalendario = new Button(2*margenH + logoWidth + 4*buttonW1 + buttonW2 + margenH,  2*margenV + bannerHeight + margenV, buttonW1, buttonH);
+  bComprar    = new Button(2*margenH + logoWidth + 5*buttonW1 + buttonW2 + margenH, 2*margenV + bannerHeight + margenV, buttonW3, buttonH);
 }
 
 // Activar els botons del menú
 void enableButtons(){
-  bJugar.setEnabled(true);
-  bPunts.setEnabled(true);
-  bPreguntes.setEnabled(true);
-  bConfig.setEnabled(true);
-  bSobre.setEnabled(true);
+  bIdioma1.setEnabled(true);
+  bIdioma2.setEnabled(true);
+  bIdioma3.setEnabled(true);
+  bIdioma4.setEnabled(true);
+  bCuenta.setEnabled(true);
+  bSecciones.setEnabled(true);
+  bLugares.setEnabled(true);
+  bOtros.setEnabled(true);
+  bReventas.setEnabled(true);
+  bBuscar.setEnabled(true);
+  bCalendario.setEnabled(true);
+  bComprar.setEnabled(true);
 }
