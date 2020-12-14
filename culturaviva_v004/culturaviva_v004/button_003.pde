@@ -27,7 +27,8 @@ void setup(){
   PImage[] buttonImages = {img1, img2};
   
   // Creació dels botons
-  ib = new ImageButton( 2*margenH + (bannerWidth - buttonW01), 2*margenV + (bannerHeight-buttonH01), buttonW01, buttonH01);
+  ib1 = new img1 (2*margenH + logoWidth + bannerWidth - buttonW4, 2*margenV + logoHeight - buttonW4, buttonW4, buttonH);
+  ib2 = new img2 (2*margenH + logoWidth + 5*buttonW1 + buttonW2 + margenH, 2*margenV + bannerHeight + margenV, buttonW3, buttonH);
   
 }
 

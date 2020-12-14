@@ -49,6 +49,16 @@ void mousePressed(){
   
   if(bIdioma1.mouseOverButton() && bIdioma1.enabled){
     
+  }else if (bIdioma2.mouseOverButton() && bIdioma2.enabled){
+    
+  }else if (bIdioma3.mouseOverButton() && bIdioma3.enabled){
+    
+  }else if (bIdioma4.mouseOverButton() && bIdioma4.enabled){
+    
+  }else if (bCuenta.mouseOverButton() && bCuenta.enabled){
+    
+  }else if (bSecciones.mouseOverButton() && bSecciones.enabled){
+    
   }
   
 }

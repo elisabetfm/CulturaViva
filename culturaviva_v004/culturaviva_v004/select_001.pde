@@ -2,7 +2,7 @@
 // Select Desplegable
 
 // Selects de la GUI
-Select s1, s2;
+Select s1, s2, s3, s4;
 
 // Valors dels Selects
 String[] selectValues1 = {"obras de teatro", "exposiciones de arte", "festivales", "conciertos", "ferias", "clubs de lectura"};
@@ -54,7 +54,6 @@ void mousePressed(){
   if(s1.mouseOverSelect() && s1.enabled){
     if(!s1.collapsed){
       s1.update();      // Actualitzar valor
-      updateColor();    // Fer acció amb valor
     }
     s1.toggle();        // Plegar o desplegar
   }
@@ -63,29 +62,11 @@ void mousePressed(){
   if(s2.mouseOverSelect() && s2.enabled){
     if(!s2.collapsed){
       s2.update();      // Actualitzar valor
-      updateNumber();   // Fer acció amb valor
     }
     s2.toggle();        // Plegar o desplegar
   }
 }
 
-// Modifica el color segons Select 1
-void updateColor(){
-  if(s1.selectedValue=="RED"){
-    bgColor = color(255, 0, 0);
-  }
-  else if(s1.selectedValue=="GREEN"){
-    bgColor = color(0, 255, 0);
-  }
-  else if(s1.selectedValue=="BLUE"){
-    bgColor = color(0, 0, 255);
-  }
-}
-
-// Modificar el número segons Select 2
-void updateNumber(){
-  n = Integer.parseInt(s2.selectedValue);
-}
 
  // Modifica el cursor
 void updateCursor(){
