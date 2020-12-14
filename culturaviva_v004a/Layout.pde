@@ -65,3 +65,10 @@ float mapaWidth = 986,
 float individualWidth = 1320,
        individualHeight = 488;
       
+// Dimensions dels botons
+float buttonH1 = 50,
+      buttonH2 = 30,
+      buttonW1 = 130, 
+      buttonW2 = 400, 
+      buttonW3 = 50, 
+      buttonW4 = 80;
