@@ -68,6 +68,7 @@ float individualWidth = 1320,
 // Dimensions dels botons
 float buttonH1 = 50,
       buttonH2 = 30,
+      buttonH3 = 80,
       buttonW1 = 130, 
       buttonW2 = 400, 
       buttonW3 = 50, 

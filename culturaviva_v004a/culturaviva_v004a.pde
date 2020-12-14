@@ -32,6 +32,7 @@ void draw(){
   else if (numPantalla==7){
     dibujaPantalla07();
   }
+
 }
 
 //Cambio de pantalla con las tecla UP y DOWN
@@ -57,7 +58,19 @@ void mousePressed(){
     
   }else if (bCuenta.mouseOverButton() && bCuenta.enabled){
     
-  }else if (bSecciones.mouseOverButton() && bSecciones.enabled){
+  //}else if (bSecciones.mouseOverButton() && bSecciones.enabled){
+    
+  //}else if (bLugares.mouseOverButton() && bLugares.enabled){
+    
+  //}else if (bOtros.mouseOverButton() && bOtros.enabled){
+    
+  //}else if (bReventas.mouseOverButton() && bReventas.enabled){
+    
+  }else if (bBuscar.mouseOverButton() && bBuscar.enabled){
+    
+  }else if (bCalendario.mouseOverButton() && bCalendario.enabled){
+    
+  }else if (bComprar.mouseOverButton() && bComprar.enabled){
     
   }
   

@@ -14,12 +14,12 @@ void dibujaLogo(){
   text("LOGO", margenH+logoWidth/2,margenV+logoHeight/2 + 10); 
 }
 
-void dibujaIdioma(){
-  fill(50,100,50);
-  rect (2*margenH + logoWidth + (bannerWidth-logoWidth*2), 2*margenV, idiomaWidth, idiomaHeight);
-  fill(0);
-  text("IDIOMA", 2*margenH+ logoWidth + (bannerWidth-logoWidth*2) + idiomaWidth/2, 2*margenV+ idiomaHeight/2 + 10);
-}
+//void dibujaIdioma(){
+ // fill(50,100,50);
+ // rect (2*margenH + logoWidth + (bannerWidth-logoWidth*2), 2*margenV, idiomaWidth, idiomaHeight);
+ // fill(0);
+ // text("IDIOMA", 2*margenH+ logoWidth + (bannerWidth-logoWidth*2) + idiomaWidth/2, 2*margenV+ idiomaHeight/2 + 10);
+//}
 
 void dibujaCuenta(){
   fill(200,10,150);
@@ -28,12 +28,12 @@ void dibujaCuenta(){
   text("CUENTA", 2*margenH+logoWidth + (bannerWidth - margenH - cuentaWidth) + cuentaWidth/2, 2*margenV + idiomaHeight + cuentaHeight/2 + 10);
 }
 
-void dibujaFiltros(){
-  fill(100,10,200);
-  rect (2*margenH +logoWidth, 2*margenV + bannerHeight, filtrosWidth, filtrosHeight);
-  fill(0);
-  text("FILTROS", 2*margenH + logoWidth + filtrosWidth/2, 2*margenV + bannerHeight + filtrosHeight/2 + 10);
-  }
+//void dibujaFiltros(){
+  //fill(100,10,200);
+  //rect (2*margenH +logoWidth, 2*margenV + bannerHeight, filtrosWidth, filtrosHeight);
+  //fill(0);
+  //text("FILTROS", 2*margenH + logoWidth + filtrosWidth/2, 2*margenV + bannerHeight + filtrosHeight/2 + 10);
+ // }
 
   void dibujaAcontecimientos1(){
   fill(100,50,100);
