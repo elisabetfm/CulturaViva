@@ -14,13 +14,15 @@ void dibujaPantalla02(){
   bIdioma2.display();
   bIdioma3.display();
   bIdioma4.display();
-  bCuenta.display();
+  //bCuenta.display();
   bBuscar.display();
   bCalendario.display();
-  bComprar.display();
+  //bComprar.display();
   s1.display();
   s2.display();
   s3.display();
+  ib1.display();
+  ib2.display();
 }
 
 void dibujaPantalla03(){
@@ -32,13 +34,15 @@ void dibujaPantalla03(){
   bIdioma2.display();
   bIdioma3.display();
   bIdioma4.display();
-  bCuenta.display();
+  //bCuenta.display();
   bBuscar.display();
   bCalendario.display();
-  bComprar.display();
+  //bComprar.display();
   s1.display();
   s2.display();
   s3.display();
+  ib1.display();
+  ib2.display();
 }
 
 void dibujaPantalla04(){
@@ -50,13 +54,15 @@ void dibujaPantalla04(){
   bIdioma2.display();
   bIdioma3.display();
   bIdioma4.display();
-  bCuenta.display();
+  //bCuenta.display();
   bBuscar.display();
   bCalendario.display();
-  bComprar.display();
+  //bComprar.display();
   s1.display();
   s2.display();
   s3.display();
+  ib1.display();
+  ib2.display();
 }
 
 void dibujaPantalla05(){
@@ -68,13 +74,15 @@ void dibujaPantalla05(){
   bIdioma2.display();
   bIdioma3.display();
   bIdioma4.display();
-  bCuenta.display();
+ // bCuenta.display();
   bBuscar.display();
   bCalendario.display();
-  bComprar.display();
+ // bComprar.display();
   s1.display();
   s2.display();
   s3.display();
+  ib1.display();
+  ib2.display();
 }
 
 void dibujaPantalla06(){
@@ -85,13 +93,15 @@ void dibujaPantalla06(){
   bIdioma2.display();
   bIdioma3.display();
   bIdioma4.display();
-  bCuenta.display();
+ // bCuenta.display();
   bBuscar.display();
   bCalendario.display();
-  bComprar.display();
+ // bComprar.display();
   s1.display();
   s2.display();
   s3.display();
+  ib1.display();
+  ib2.display();
 }
 
 void dibujaPantalla07(){
@@ -102,11 +112,13 @@ void dibujaPantalla07(){
   bIdioma2.display();
   bIdioma3.display();
   bIdioma4.display();
-  bCuenta.display();
+ // bCuenta.display();
   bBuscar.display();
   bCalendario.display();
-  bComprar.display();
+  //bComprar.display();
   s1.display();
   s2.display();
   s3.display();
+  ib1.display();
+  ib2.display();
 }

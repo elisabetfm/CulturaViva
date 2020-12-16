@@ -23,7 +23,7 @@ class Select {
   }
   
   void display(){
-    
+    pushStyle();
     stroke(0); strokeWeight(2); fill(255);
     rect(x, y, w, h);
     
@@ -33,7 +33,7 @@ class Select {
     fill(0); stroke(0);
     triangle(x + w - 25, y+5, x + w - 15, y + 25, x + w - 5 , y+5);
     
-    fill(0); textSize(14); 
+    fill(0); textSize(14); textAlign(LEFT);
     text(selectedValue, x + 10, y + 20);
     
     if(!this.collapsed){
@@ -42,11 +42,17 @@ class Select {
       rect(x, y+h, w, (h + lineSpace)*texts.length);
       
       for(int i=0; i<texts.length; i++){
+        
+        if(i== clickedOption()){
+          fill(200); noStroke();
+          rect(x+4, y+4 + h + (h + lineSpace)*i - 2, w -8, h + lineSpace - 8);
+        }
+        
         fill(0);
         text(texts[i], x + 10, y + h + 25 + (h + lineSpace)*i);
       }
     }
-    
+    popStyle();
   }
   
   void setCollapsed(boolean b){

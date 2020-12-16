@@ -1,39 +1,24 @@
 // FUNCIONES DE DIBUJO DE LAS ZONAS
 
 void dibujaBanner(){
-  fill(200,50,100);
-  rect (2*margenH +logoWidth, margenV, bannerWidth, bannerHeight);
-  fill(0);
-  text("BANNER", 2*margenH + logoWidth + bannerWidth/2,margenV+bannerHeight/2 + 10);
+ // fill(200,50,100);
+ // rect (2*margenH +logoWidth, margenV, bannerWidth, bannerHeight);
+ // fill(0);
+ // text("BANNER", 2*margenH + logoWidth + bannerWidth/2,margenV+bannerHeight/2 + 10);
+  image(imgBanner, 2*margenH +logoWidth, margenV, bannerWidth, bannerHeight);
 }
 
 void dibujaLogo(){
-  fill(50,50,50);
-  rect (margenH, margenV, logoWidth, logoHeight);
-  fill(0);
-  text("LOGO", margenH+logoWidth/2,margenV+logoHeight/2 + 10); 
+  image(imgLogo, margenH, margenV, logoWidth, logoHeight);
 }
 
-//void dibujaIdioma(){
- // fill(50,100,50);
- // rect (2*margenH + logoWidth + (bannerWidth-logoWidth*2), 2*margenV, idiomaWidth, idiomaHeight);
- // fill(0);
- // text("IDIOMA", 2*margenH+ logoWidth + (bannerWidth-logoWidth*2) + idiomaWidth/2, 2*margenV+ idiomaHeight/2 + 10);
-//}
-
-void dibujaCuenta(){
-  fill(200,10,150);
-  rect (2*margenH + logoWidth + (bannerWidth- margenH-cuentaWidth), 2*margenV + idiomaHeight, cuentaWidth, cuentaHeight);
-  fill(0);
-  text("CUENTA", 2*margenH+logoWidth + (bannerWidth - margenH - cuentaWidth) + cuentaWidth/2, 2*margenV + idiomaHeight + cuentaHeight/2 + 10);
-}
-
-//void dibujaFiltros(){
-  //fill(100,10,200);
-  //rect (2*margenH +logoWidth, 2*margenV + bannerHeight, filtrosWidth, filtrosHeight);
+//void dibujaCuenta(){
+  //fill(200,10,150);
+  //rect (2*margenH + logoWidth + (bannerWidth- margenH-cuentaWidth), 2*margenV + idiomaHeight, cuentaWidth, cuentaHeight);
   //fill(0);
-  //text("FILTROS", 2*margenH + logoWidth + filtrosWidth/2, 2*margenV + bannerHeight + filtrosHeight/2 + 10);
- // }
+  //text("CUENTA", 2*margenH+logoWidth + (bannerWidth - margenH - cuentaWidth) + cuentaWidth/2, 2*margenV + idiomaHeight + cuentaHeight/2 + 10);
+  //image (imgCuenta, margenH, margenV, logoWidth, logoHeight, 2*margenH + logoWidth + (bannerWidth-margenH-cuentaWidth), 2*margenV + idiomaHeight, cuentaWidth, cuentaHeight);
+//}
 
   void dibujaAcontecimientos1(){
   fill(100,50,100);
@@ -57,8 +42,6 @@ void dibujaIndicador(){
 }
 
 void dibujaApertura(){
-  fill(150,150,150);
-  rect (margenH, margenV, principalWidth, principalHeight);
   fill(0);
   text ("CULTURA VIVA", margenH + principalWidth/2, margenV + principalHeight/2, 10);
 }
@@ -99,10 +82,11 @@ void dibujaReventa2(){
 }
 
 void dibujaMapaLocalizacion(){
-  fill(5,50,50);
-  rect (2*margenH + logoWidth + margenH, 2*margenV + bannerHeight + filtrosHeight + margenV, mapaWidth, mapaHeight);
-  fill (0);
-  text ("mapa de localización",  2*margenH + logoWidth + margenH + mapaWidth/2, 2*margenV + bannerHeight + filtrosHeight + margenV + mapaHeight/2, 10);
+  //fill(5,50,50);
+  //rect (2*margenH + logoWidth + margenH, 2*margenV + bannerHeight + filtrosHeight + margenV, mapaWidth, mapaHeight);
+  //fill (0);
+  //text ("mapa de localización",  2*margenH + logoWidth + margenH + mapaWidth/2, 2*margenV + bannerHeight + filtrosHeight + margenV + mapaHeight/2, 10);
+  image(imgMapa,2*margenH + logoWidth + margenH, 2*margenV + bannerHeight + filtrosHeight + margenV, mapaWidth, mapaHeight);
 }
 
 void dibujaAcontecimientoIndividual(){
