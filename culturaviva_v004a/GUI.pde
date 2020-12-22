@@ -10,10 +10,13 @@ float selectH = 50;
 
 ImageButton ib1, ib2;
 
+TextField userText, passText, buscarText;
+
 void setGUI(){
   setBotons();
   setImageButtons();
   setSelect();
+  setTextButton();
 }
 
 void setBotons(){
@@ -21,10 +24,8 @@ void setBotons(){
   bIdioma2     = new Button("Castellano", 2*margenH + logoWidth + bannerWidth - (3*buttonW1), 2*margenV, buttonW1, buttonH2);
   bIdioma3     = new Button("English", 2*margenH + logoWidth + bannerWidth - (2*buttonW1), 2*margenV, buttonW1, buttonH2);
   bIdioma4     = new Button("Deutsch", 2*margenH + logoWidth + bannerWidth - buttonW1, 2*margenV, buttonW1, buttonH2);
-  //bCuenta     = new Button( "Cuenta", 2*margenH + logoWidth + bannerWidth - buttonW4, 2*margenV + (bannerHeight - buttonW4), buttonW4, buttonH3);
   bBuscar     = new Button("Acontecimientos, compañías, grupos, otros.", 2*margenH + logoWidth + 4*buttonW1, 2*margenV + bannerHeight, buttonW2, buttonH1);
   bCalendario = new Button ("Calendario", 2*margenH + logoWidth + 4*buttonW1 + buttonW2 + margenH,  2*margenV + bannerHeight, buttonW1, buttonH1);
-  //bComprar    = new Button ("Compra", 2*margenH + logoWidth + 5*buttonW1 + buttonW2 + margenH, 2*margenV + bannerHeight, buttonW3, buttonH1);
 }
 
 void setSelect(){
@@ -36,4 +37,10 @@ void setSelect(){
 void setImageButtons(){
   ib1 = new ImageButton (imgCuenta, 2*margenH + logoWidth + (bannerWidth- margenH-cuentaWidth), 2*margenV + idiomaHeight, cuentaWidth, cuentaHeight);
   ib2 = new ImageButton (imgComprar,  2*margenH + logoWidth + 5*buttonW1 + buttonW2 + margenH, 2*margenV + bannerHeight, buttonW3, buttonH1); 
+}
+
+void setTextButton(){
+  userText = new TextField(260, 103, 200, 35);
+   passText = new TextField(260, 153, 200, 35);
+   buscarText = new TextField (2*margenH + logoWidth + 4*buttonW1 + buttonW2 + margenH,  2*margenV + bannerHeight, buttonW1, buttonH1);
 }

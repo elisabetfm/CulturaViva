@@ -81,12 +81,12 @@ void dibujaReventa2(){
   text ("Reventa de entradas", 2*margenH + reventa2Width/2, 2*margenV + logoHeight + filtrosHeight +  reventa1Height + 2*margenV + reventa2Height/2, 10);
 }
 
-void dibujaMapaLocalizacion(){
-  //fill(5,50,50);
-  //rect (2*margenH + logoWidth + margenH, 2*margenV + bannerHeight + filtrosHeight + margenV, mapaWidth, mapaHeight);
-  //fill (0);
-  //text ("mapa de localización",  2*margenH + logoWidth + margenH + mapaWidth/2, 2*margenV + bannerHeight + filtrosHeight + margenV + mapaHeight/2, 10);
-  image(imgMapa,2*margenH + logoWidth + margenH, 2*margenV + bannerHeight + filtrosHeight + margenV, mapaWidth, mapaHeight);
+void dibujaIniciarSesion(){
+  pushStyle();
+  rectMode (CENTER);
+  fill(5,50,50);
+  rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
+  popStyle();
 }
 
 void dibujaAcontecimientoIndividual(){

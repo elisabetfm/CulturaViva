@@ -57,9 +57,9 @@ float reventa1Width = 1150,
 float reventa2Width = 1150,
       reventa2Height = 200;
       
-//Dimensiones mapa de localización
-float mapaWidth = 986,
-      mapaHeight = 488;
+//Dimensiones iniciar sesión
+float SesionWidth = 400,
+      SesionHeight = 400;
       
 //Dimensiones acontecimiento individual
 float individualWidth = 1320,

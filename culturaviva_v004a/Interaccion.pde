@@ -52,6 +52,7 @@ void buttonPressed() {
   }
   //ImageButtons
   else if (ib1.mouseOverButton() && ib1.enabled) {
+    numPantalla = 6;
     
   } 
   else if (ib2.mouseOverButton() && ib2.enabled) {
