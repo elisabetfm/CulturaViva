@@ -31,8 +31,12 @@ void draw() {
       dibujaPantalla06();
     } else if (numPantalla==7) {
       dibujaPantalla07();
+    } else if (numPantalla==8) {
+      dibujaPantalla08();
     }
   }
   
   updateCursor();
+  
+ //println(mouseX+", "+mouseY);
 }

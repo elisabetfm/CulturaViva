@@ -2,7 +2,7 @@ import processing.sound.*;
 // Elementos multimedia de la APP
 // Imágenes, tipografías, sonidos, ...
 // Imatges
-PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgComprar, imgMapa ;
+PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgComprar, imgBuscar, imgTeatro, imgArte, imgFestival, imgConcierto, imgFeria, imgLectura;
 //Tipografies
 PFont fuente1, fuente2, fuente3, fuente4, fuente5, fuente6;
 
@@ -41,10 +41,17 @@ void loadMedia(){
 void loadImages(){
   imgLogo = loadImage("../DATA/imgs/imgLogo.jpg");
   imgFondo = loadImage("../DATA/imgs/imgFondo.jpg");
-  imgBanner = loadImage("../DATA/imgs/imgBanner.jpg");
   imgCuenta = loadImage("../DATA/imgs/buttonCuenta.png");
   imgComprar = loadImage("../DATA/imgs/buttonComprar.png");
-  imgMapa = loadImage("../DATA/imgs/imgMapa.jpg");
+  imgBuscar = loadImage("../DATA/imgs/buttonBuscar.png");
+  imgBanner = loadImage ("../DATA/imgs/Banner4.jpg");
+  imgTeatro = loadImage("../DATA/imgs/Teatro.jpg");
+  imgArte = loadImage("../DATA/imgs/Arte.jpg");
+  imgTeatro = loadImage("../DATA/imgs/Teatro.jpg");
+  imgFestival = loadImage("../DATA/imgs/Festival.jpg");
+  imgConcierto = loadImage("../DATA/imgs/Concierto.jpg");
+  imgFeria = loadImage("../DATA/imgs/Feria.jpg");
+  imgLectura = loadImage("../DATA/imgs/Lectura.jpg");
 }
 
 // Càrrega de les Tipografies

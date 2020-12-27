@@ -14,13 +14,14 @@ void dibujaPantalla02(){
   bIdioma2.display();
   bIdioma3.display();
   bIdioma4.display();
-  buscarText.display();
   bCalendario.display();
   s1.display();
   s2.display();
   s3.display();
-  ib1.display();
-  ib2.display();
+  iComprar.display();
+  iCuenta.display();
+  buscarText.display();
+  iBuscar.display();
 }
 
 void dibujaPantalla03(){
@@ -37,8 +38,9 @@ void dibujaPantalla03(){
   s1.display();
   s2.display();
   s3.display();
-  ib1.display();
-  ib2.display();
+  iCuenta.display();
+  iComprar.display();
+  iBuscar.display();
 }
 
 void dibujaPantalla04(){
@@ -55,8 +57,9 @@ void dibujaPantalla04(){
   s1.display();
   s2.display();
   s3.display();
-  ib1.display();
-  ib2.display();
+  iCuenta.display();
+  iComprar.display();
+  iBuscar.display();
 }
 
 void dibujaPantalla05(){
@@ -73,8 +76,9 @@ void dibujaPantalla05(){
   s1.display();
   s2.display();
   s3.display();
-  ib1.display();
-  ib2.display();
+  iCuenta.display();
+  iComprar.display();
+  iBuscar.display();
 }
 
 void dibujaPantalla06(){
@@ -87,13 +91,15 @@ void dibujaPantalla06(){
   bIdioma4.display();
   buscarText.display();
   bCalendario.display();
-  userText.display();
-  passText.display();
+  usuarioText.display();
+  contrasenaText.display();
+  bEnter.display();
   s1.display();
   s2.display();
   s3.display();
-  ib1.display();
-  ib2.display();
+  iCuenta.display();
+  iComprar.display();
+  iBuscar.display();
 }
 
 void dibujaPantalla07(){
@@ -109,6 +115,26 @@ void dibujaPantalla07(){
   s1.display();
   s2.display();
   s3.display();
-  ib1.display();
-  ib2.display();
+  iComprar.display();
+  iCuenta.display();
+  iBuscar.display();
+}
+
+void dibujaPantalla08(){
+  dibujaBanner();
+  dibujaLogo();
+  bIdioma1.display();
+  bIdioma2.display();
+  bIdioma3.display();
+  bIdioma4.display();
+  buscarText.display();
+  bCalendario.display();
+  s1.display();
+  s2.display();
+  s3.display();
+  iComprar.display();
+  iCuenta.display();
+  iBuscar.display();
+  calendario.display();
+  bIr.display();
 }

@@ -3,7 +3,7 @@
 class TextField {
   
   // Propietats del camp de text
-  int x, y, h, w;
+  float x, y, h, w;
   
   // Colors
   color bgColor = color(140, 140, 140);
@@ -20,13 +20,13 @@ class TextField {
   boolean selected = false;
    
   // Constructor
-  TextField(int x, int y, int w, int h) {
+  TextField(float x, float y, float w, float h) {
       this.x = x; this.y = y; this.w = w; this.h = h;
    }
   
   // Dibuixa el Camp de Text
   void display() {
-
+pushStyle();
       if (selected) {
          fill(selectedColor);
       } else {
@@ -39,7 +39,9 @@ class TextField {
       
       fill(fgColor);
       textSize(textSize);
+      textAlign(LEFT);
       text(text, x + 5, y + textSize);
+      popStyle();
    }
    
    // Afegeix, lleva el text que es tecleja
@@ -97,23 +99,4 @@ class TextField {
          selected = false;
       }
    }
-   
-   fill(0);textSize(30); textAlign(LEFT);
-   text("LOGIN FORM", 100, 60);
-   textSize(24); 
-   text("Username: ", 100, 130);
-   text("Password: ", 100, 180);
-   text ("Acontecimientos, compañías, grupos, otros.", buttonW1, buttonH1);
-   
-   // Dibuixa els camps de text
-   userText.display();
-   passText.display();
-   buscarText.display();
-   
-   // Si el login és correcte
-   if (comprovaLogin()) {
-      fill(250); textAlign(CENTER);
-      text("YOU ARE LOGGED IN!", width/2, 230); 
-   }
 }
-   

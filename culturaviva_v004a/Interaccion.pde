@@ -7,6 +7,21 @@ void keyPressed() {
     numPantalla--;
   }
   numPantalla = constrain(numPantalla, 1, 7);
+  
+  buscarText.keyPressed(key, (int)keyCode);
+  usuarioText.keyPressed(key, (int)keyCode);
+  contrasenaText.keyPressed(key, (int)keyCode);
+
+// Anar un mes enrere
+  if(keyCode==LEFT){
+    calendario.prevMonth();
+    println("PREV MONTH");
+  }
+  // Anar un mes endavant
+  else if(keyCode==RIGHT){
+    calendario.nextMonth();
+    println("PREV MONTH");
+  }
 }
 
 void mousePressed() {
@@ -15,6 +30,9 @@ void mousePressed() {
   
   selectPressed();
 
+  textfieldPressed();
+  
+  calendarioPressed();
   
 }
 
@@ -49,22 +67,40 @@ void buttonPressed() {
   } else if (bIdioma3.mouseOverButton() && bIdioma3.enabled) {
   } else if (bIdioma4.mouseOverButton() && bIdioma4.enabled) {
   } else if (bCalendario.mouseOverButton() && bCalendario.enabled) {
+    numPantalla = 8;
+  } else if (bEnter.mouseOverButton() && bEnter.enabled){
+    numPantalla = 2;
+  } else if (bIr.mouseOverButton() && bIr.enabled){
+    numPantalla = 3;
   }
   //ImageButtons
-  else if (ib1.mouseOverButton() && ib1.enabled) {
+  else if (iCuenta.mouseOverButton() && iCuenta.enabled) {
     numPantalla = 6;
     
   } 
-  else if (ib2.mouseOverButton() && ib2.enabled) {
+  else if (iComprar.mouseOverButton() && iComprar.enabled) {
     numPantalla = 4;
-  }
+  } else if (iBuscar.mouseOverButton() && iBuscar.enabled){
+    numPantalla = 3;
+}
 }
 
+void textfieldPressed(){
+  buscarText.isPressed();
+  usuarioText.isPressed();
+  contrasenaText.isPressed();
+}
+
+void calendarioPressed(){
+  calendario.checkButtons();
+}
 // Modifica el cursor
 void updateCursor() {
 
-  if ((ib1.mouseOverButton() && ib1.enabled ) ||
-    (ib2.mouseOverButton() && ib2.enabled)) {
+  if ((iCuenta.mouseOverButton() && iCuenta.enabled ) ||
+    (iComprar.mouseOverButton() && iComprar.enabled))  
+    //|| (iBuscar.mouseOverButton () && iBuscar.enabled)
+    {
     cursor(HAND);
   } else {
     cursor(ARROW);

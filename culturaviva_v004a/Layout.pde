@@ -70,6 +70,6 @@ float buttonH1 = 50,
       buttonH2 = 30,
       buttonH3 = 80,
       buttonW1 = 130, 
-      buttonW2 = 400, 
+      buttonW2 = 450, 
       buttonW3 = 50, 
       buttonW4 = 80;
