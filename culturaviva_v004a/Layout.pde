@@ -22,8 +22,8 @@ float idiomaWidth = 280,
       idiomaHeight = 30;
       
 //Dimensiones cuenta
-float cuentaWidth = 80,
-      cuentaHeight = 80;
+float cuentaWidth = 40,
+      cuentaHeight = 40;
       
 //Dimensiones barra de filtros
 float filtrosWidth = 1150,
@@ -70,6 +70,10 @@ float buttonH1 = 50,
       buttonH2 = 30,
       buttonH3 = 80,
       buttonW1 = 130, 
-      buttonW2 = 450, 
+      buttonW2 = 420, 
       buttonW3 = 50, 
       buttonW4 = 80;
+
+//Dimensiones de los selects
+float selectW = 130,
+      selectH = 40;

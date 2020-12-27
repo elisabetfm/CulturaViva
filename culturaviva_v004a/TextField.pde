@@ -6,9 +6,9 @@ class TextField {
   float x, y, h, w;
   
   // Colors
-  color bgColor = color(140, 140, 140);
+  color bgColor = color(255, 255, 255);
   color fgColor = color(0, 0, 0);
-  color selectedColor = color(190, 190, 60);
+  color selectedColor = color(#FFF06A);
   color borderColor = color(30, 30, 30);
   int borderWeight = 1;
   

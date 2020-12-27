@@ -1,10 +1,6 @@
 // FUNCIONES DE DIBUJO DE LAS ZONAS
 
 void dibujaBanner(){
- // fill(200,50,100);
- // rect (2*margenH +logoWidth, margenV, bannerWidth, bannerHeight);
- // fill(0);
- // text("BANNER", 2*margenH + logoWidth + bannerWidth/2,margenV+bannerHeight/2 + 10);
   image(imgBanner, 2*margenH +logoWidth, margenV, bannerWidth, bannerHeight);
 }
 
@@ -12,15 +8,7 @@ void dibujaLogo(){
   image(imgLogo, margenH, margenV, logoWidth, logoHeight);
 }
 
-//void dibujaCuenta(){
-  //fill(200,10,150);
-  //rect (2*margenH + logoWidth + (bannerWidth- margenH-cuentaWidth), 2*margenV + idiomaHeight, cuentaWidth, cuentaHeight);
-  //fill(0);
-  //text("CUENTA", 2*margenH+logoWidth + (bannerWidth - margenH - cuentaWidth) + cuentaWidth/2, 2*margenV + idiomaHeight + cuentaHeight/2 + 10);
-  //image (imgCuenta, margenH, margenV, logoWidth, logoHeight, 2*margenH + logoWidth + (bannerWidth-margenH-cuentaWidth), 2*margenV + idiomaHeight, cuentaWidth, cuentaHeight);
-//}
-
-  void dibujaAcontecimientos1(){
+void dibujaAcontecimientos1(){
   fill(100,50,100);
   rect (2*margenH, 2*margenV + bannerHeight + margenH + filtrosHeight, acontecimientosWidth, acontecimientosHeight);
   fill(0);
@@ -33,13 +21,6 @@ void dibujaAcontecimientos2(){
   fill (0);
   text ("Acontecimientos recientes2", 2*margenH + logoWidth + (bannerWidth-acontecimientosWidth) + acontecimientosWidth/2, 2*margenV + bannerHeight + margenH + filtrosHeight + acontecimientosHeight/2 + 10);
   }
-  
-void dibujaIndicador(){
-  fill(200,200,100);
-  rect (2*margenH + acontecimientosWidth, 2*margenV + bannerHeight + filtrosHeight + acontecimientosHeight + margenV, indicadorWidth, indicadorHeight);
-  fill(0);
-  text("Indicador de páginas", 2*margenH + acontecimientosWidth + indicadorWidth/2, 2*margenV + bannerHeight + filtrosHeight + acontecimientosHeight + margenV + indicadorHeight/2 + 10);
-}
 
 void dibujaApertura(){
   fill(0);

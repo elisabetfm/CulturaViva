@@ -9,7 +9,6 @@ void dibujaPantalla02(){
   dibujaLogo();
   dibujaAcontecimientos1();
   dibujaAcontecimientos2();
-  dibujaIndicador();
   bIdioma1.display();
   bIdioma2.display();
   bIdioma3.display();
