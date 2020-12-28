@@ -42,7 +42,19 @@ void selectPressed(){
   if (s1.mouseOverSelect() && s1.enabled) {
     if (!s1.collapsed) {
       s1.update();      // Actualitzar valor
-      numPantalla = 3;
+      if ((mouseX>=190 && mouseX<320) && (mouseY>=230 && mouseY<280)){ //condició per a què es dibuixi un rectangle
+        numPantalla = 9;
+      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=280 && mouseY<340)){ //condició per a què es dibuixi un rectangle
+        numPantalla = 10;
+      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=340 && mouseY<390)){ //condició per a què es dibuixi un rectangle
+        numPantalla = 11;
+      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=390 && mouseY<450)){ //condició per a què es dibuixi un rectangle
+        numPantalla = 12;
+      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=450 && mouseY<505)){ //condició per a què es dibuixi un rectangle
+        numPantalla = 13;
+      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=505 && mouseY<555)){ //condició per a què es dibuixi un rectangle
+        numPantalla = 14;
+      }
     }
     s1.toggle();        // Plegar o desplegar
   } else if (s2.mouseOverSelect() && s2.enabled) {
@@ -93,6 +105,7 @@ void textfieldPressed(){
 
 void calendarioPressed(){
   calendario.checkButtons();
+  
 }
 // Modifica el cursor
 void updateCursor() {

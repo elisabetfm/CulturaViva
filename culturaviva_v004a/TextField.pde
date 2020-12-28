@@ -8,14 +8,14 @@ class TextField {
   // Colors
   color bgColor = color(255, 255, 255);
   color fgColor = color(0, 0, 0);
-  color selectedColor = color(#FFF06A);
+  color selectedColor = color (149, 127, 239);
   color borderColor = color(30, 30, 30);
   int borderWeight = 1;
   
   // Text del camp
   String text = "";
   int textLength = 0;
-  int textSize = 24;
+  int textSize = 20;
 
   boolean selected = false;
    
@@ -36,7 +36,7 @@ pushStyle();
       strokeWeight(borderWeight);
       stroke(borderColor);
       rect(x, y, w, h, 5);
-      
+      textFont(fuente2);
       fill(fgColor);
       textSize(textSize);
       textAlign(LEFT);

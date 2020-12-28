@@ -110,7 +110,6 @@ class Calendari {
     int f = 0, nb = 0;
     
     while(numDia<=numDaysMonth){
-      
       if(firstDay!=1 && f==0){
         int cPrev=0;
         for(int p=firstDay, c=0; p<=numDaysPrevMonth; p++, c++){

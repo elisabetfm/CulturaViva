@@ -4,7 +4,7 @@ import processing.sound.*;
 // Imatges
 PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgComprar, imgBuscar, imgTeatro, imgArte, imgFestival, imgConcierto, imgFeria, imgLectura;
 //Tipografies
-PFont fuente1, fuente2, fuente3, fuente4, fuente5, fuente6;
+PFont fuente1, fuente2, fuente3, fuente4, fuente5, fuente6, fuente7;
 
 //Audios
 SoundFile[] audio;
@@ -39,8 +39,8 @@ void loadMedia(){
 
 // Càrrega de les Imatges
 void loadImages(){
-  imgLogo = loadImage("../DATA/imgs/imgLogo.jpg");
-  imgFondo = loadImage("../DATA/imgs/imgFondo.jpg");
+  imgLogo = loadImage("../DATA/imgs/imgLogo1.jpg");
+  imgFondo = loadImage("../DATA/imgs/imgFondo5.jpg");
   imgCuenta = loadImage("../DATA/imgs/buttonCuenta.png");
   imgComprar = loadImage("../DATA/imgs/buttonComprar.png");
   imgBuscar = loadImage("../DATA/imgs/buttonBuscar.png");
@@ -58,10 +58,11 @@ void loadImages(){
 void loadFonts(){
   fuente1 = createFont("../DATA/fonts/Borgen.ttf", 32);
   fuente2 = createFont("../DATA/fonts/BorgenBold.ttf", 32);
-  fuente3 = createFont("../DATA/fonts/HunDIN1451.ttf", 32);
+  fuente3 = createFont("../DATA/fonts/secrcode.ttf", 32);
   fuente4= createFont("../DATA/fonts/HunDIN1451.ttf", 32);
   fuente5 = createFont("../DATA/fonts/monkey.ttf", 32);
   fuente6 = createFont("../DATA/fonts/saxmono.ttf", 32);
+  fuente7= createFont("../DATA/fonts/Hiddencinema.ttf", 70);
 }
 
 // Càrrega dels àudios

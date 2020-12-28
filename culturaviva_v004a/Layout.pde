@@ -39,7 +39,7 @@ float indicadorWidth = 300,
    
 //Dimensiones acontecimientos buscados (pantalla 3 y 4)
 float buscadosWidth = 1100,
-      buscadosHeight = 430;
+      buscadosHeight = 130;
      
 //Dimensiones recomendaciones (pantalla 3)
 float recomendacionesWidth = 150,
@@ -67,7 +67,7 @@ float individualWidth = 1320,
       
 // Dimensions dels botons
 float buttonH1 = 50,
-      buttonH2 = 30,
+      buttonH2 = 20,
       buttonH3 = 80,
       buttonW1 = 130, 
       buttonW2 = 420, 

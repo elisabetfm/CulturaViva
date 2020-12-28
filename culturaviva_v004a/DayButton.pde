@@ -35,15 +35,15 @@ class DayButton {
       fill(255); 
     }
     else{
-      fill(100); 
+      fill(254, 127, 45); 
     }
     stroke(0); strokeWeight(1);
     rect(x, y, w, h, 5);
     if(selected){
-      fill(200, 100, 100); noStroke();
+      fill(252, 202, 70); noStroke();
       ellipse(x + w/2, y+h/2, 80, 80);
     }
-    fill(0); textSize(24); textAlign(CENTER);
+    fill(0); textFont(fuente2); textSize(24); textAlign(CENTER);
     text(dia, x + w/2, y + h/2 + 10);
     popStyle();
   }

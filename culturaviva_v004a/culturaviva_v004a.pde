@@ -33,10 +33,22 @@ void draw() {
       dibujaPantalla07();
     } else if (numPantalla==8) {
       dibujaPantalla08();
+    } else if (numPantalla==9) {
+      dibujaPantalla09();
+    } else if (numPantalla==10) {
+      dibujaPantalla10();
+    } else if (numPantalla==11) {
+      dibujaPantalla11();
+    } else if (numPantalla==12) {
+      dibujaPantalla12();
+    } else if (numPantalla==13) {
+      dibujaPantalla13();
+    } else if (numPantalla==14) {
+      dibujaPantalla14();
     }
   }
   
   updateCursor();
   
- //println(mouseX+", "+mouseY);
+// println(mouseX+", "+mouseY);
 }

@@ -33,7 +33,7 @@ class Select {
     fill(0); stroke(0);
     triangle(x + w - 25, y+5, x + w - 15, y + 25, x + w - 5 , y+5);
     
-    fill(0); textSize(14); textAlign(LEFT);
+    fill(0); textFont(fuente6); textSize(11); textAlign(LEFT); 
     text(selectedValue, x + 10, y + 20);
     
     if(!this.collapsed){
@@ -44,7 +44,7 @@ class Select {
       for(int i=0; i<texts.length; i++){
         
         if(i== clickedOption()){
-          fill(200); noStroke();
+          fill(149, 127, 239); noStroke();
           rect(x+4, y+4 + h + (h + lineSpace)*i - 2, w -8, h + lineSpace - 8);
         }
         

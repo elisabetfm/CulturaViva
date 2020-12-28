@@ -18,8 +18,8 @@ class Button {
    this.w = w;
    this.h = h;
    this.enabled = true;
-   fillColor = color(155, 55, 155);
-   fillColorOver = color(255, 55, 155);
+   fillColor = color(138, 163, 155);
+   fillColorOver = color(35, 61, 77);
    fillColorDisabled = color(150);
    strokeColor = color(0);
  }
@@ -32,7 +32,6 @@ class Button {
  
  // Dibuixa el botó
  void display(){
-   
    if(!enabled){
      fill(fillColorDisabled);  // Color desabilitat
    }
@@ -46,7 +45,7 @@ class Button {
    rect(this.x, this.y, this.w, this.h, 10);    // Rectangle del botó
    
    // Text (color, alineació i mida)
-   fill(0); textAlign(CENTER); textSize(20);
+   fill(0); textAlign(CENTER); textFont(fuente1); textSize(20);
    text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
  }
  
