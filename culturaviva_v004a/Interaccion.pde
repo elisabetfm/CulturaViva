@@ -1,11 +1,6 @@
 
-//Cambio de pantalla con las tecla UP y DOWN
+//
 void keyPressed() {
-  if (keyCode==UP) {
-    numPantalla++;
-  } else if (keyCode==DOWN) {
-    numPantalla--;
-  }
   numPantalla = constrain(numPantalla, 1, 7);
   
   buscarText.keyPressed(key, (int)keyCode);
@@ -112,7 +107,6 @@ void updateCursor() {
 
   if ((iCuenta.mouseOverButton() && iCuenta.enabled ) ||
     (iComprar.mouseOverButton() && iComprar.enabled))  
-    //|| (iBuscar.mouseOverButton () && iBuscar.enabled)
     {
     cursor(HAND);
   } else {
