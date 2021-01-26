@@ -24,3 +24,27 @@ void conexion(){
     println ("Connection failed");
   }
 }
+
+// Obté el número de files de la taula
+int getNumRowsTaula(String nomTaula){
+  msql.query( "SELECT COUNT(*) AS n FROM %s", nomTaula );
+  msql.next();
+  int numRows = msql.getInt("n");
+  return numRows;
+}
+
+String[][] getInfoTablaLugar(){
+  
+  int numRows = getNumRowsTaula("lugar");
+  
+  String[][] data = new String[numRows][2];
+  
+  int nr=0;
+  msql.query( "SELECT * FROM lugar" );
+  while (msql.next()){
+      data[nr][0] = String.valueOf(msql.getInt("id_lugar"));
+      data[nr][1] = msql.getString("nombre_lugar");
+      nr++;
+  }
+  return data;
+}

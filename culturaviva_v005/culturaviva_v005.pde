@@ -9,8 +9,8 @@ void setup() {
   textAlign(CENTER);
   textSize(20); //alineación y tamaño del texto
   loadMedia();
-  setGUI();
   conexion();
+  setGUI();
 }
 
 void draw() {
