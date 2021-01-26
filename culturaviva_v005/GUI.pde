@@ -13,6 +13,8 @@ TextField usuarioText, contrasenaText, buscarText;
 Calendari calendario;
 
 Card c1, c2, c3;
+PagedCard pc;
+
 String[] info1 = {"Titol Esdeveniment 1", 
                   "Lloc 1", "Data 1", 
                   "Secció 1", 
@@ -52,7 +54,6 @@ void setButtons(){
 void setSelect(){
   s1 = new Select(selectValues1, 2*margenH + logoWidth, 2*margenV + bannerHeight, selectW, selectH);
   String[][] selectLugares = getInfoTablaLugar();
-  printArray(selectLugares[0]);
   s2 = new SelectBD(selectLugares, 2*margenH + logoWidth + buttonW1 + margenH, 2*margenV + bannerHeight, selectW, selectH);
   s3 = new Select(selectValues3, 2*margenH + logoWidth + 2*buttonW1 + 2*margenH, 2*margenV + bannerHeight, selectW, selectH);
 }
@@ -73,11 +74,10 @@ void setCalendario(){
 }
 
 void setCard(){
-  c1 = new Card(info1);
-  c2 = new Card(info2);
-  c3 = new Card (info3);
-  
-  c1.setImage(imgEvento1);
-  c2.setImage(imgEvento2);
-  c3.setImage (imgEvento3);
+  print("abans");
+  String[][] selectEventos = getInfoTablaEventos();
+  printArray(selectEventos[0]);
+  pc = new PagedCard(3);
+  pc.setData(selectEventos);
+ 
 }

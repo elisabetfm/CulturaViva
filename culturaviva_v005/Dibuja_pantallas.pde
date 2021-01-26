@@ -25,9 +25,13 @@ void dibujaPantallaInicio(){
 void dibujaPantallaEventos(){
   dibujaBanner();
   dibujaLogo();
+  print("dfghjk");
+  pc.display(55, 260, cardW, cardH*3);
+  /*
   c1.display(55,260,cardW, cardH, 10);
   c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
   c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
+  */
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -103,9 +107,9 @@ void dibujaPantallaTeatro(){
   image(imgTeatro, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  c1.display(55,260,cardW, cardH, 10);
-  c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
-  c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
+ // c1.display(55,260,cardW, cardH, 10);
+  //c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
+  //c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -124,9 +128,9 @@ void dibujaPantallaArte(){
   image(imgArte, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  c1.display(55,260,cardW, cardH, 10);
-  c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
-  c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
+  //c1.display(55,260,cardW, cardH, 10);
+  //c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
+  //c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -145,9 +149,9 @@ void dibujaPantallaFestival(){
   image(imgFestival, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  c1.display(55,260,cardW, cardH, 10);
-  c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
-  c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
+  //c1.display(55,260,cardW, cardH, 10);
+  //c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
+  //c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -166,9 +170,7 @@ void dibujaPantallaConcierto(){
   image(imgConcierto, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  c1.display(55,260,cardW, cardH, 10);
-  c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
-  c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
+ 
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -187,9 +189,7 @@ void dibujaPantallaFeria(){
   image(imgFeria, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  c1.display(55,260,cardW, cardH, 10);
-  c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
-  c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
+  
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -208,9 +208,6 @@ void dibujaPantallaLectura(){
   image(imgLectura, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  c1.display(55,260,cardW, cardH, 10);
-  c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
-  c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();

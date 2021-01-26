@@ -52,8 +52,10 @@ String[][] getInfoTablaLugar(){
 String[][] getInfoTablaEventos(){
   
   int numRows = getNumRowsTaula("eventos");
+
+  print(numRows);
   
-  String[][] data = new String[numRows][2];
+  String[][] data = new String[numRows][5];
   
   int nr=0;
   msql.query( "SELECT * FROM eventos" );
