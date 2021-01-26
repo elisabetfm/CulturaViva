@@ -48,3 +48,22 @@ String[][] getInfoTablaLugar(){
   }
   return data;
 }
+
+String[][] getInfoTablaEventos(){
+  
+  int numRows = getNumRowsTaula("eventos");
+  
+  String[][] data = new String[numRows][2];
+  
+  int nr=0;
+  msql.query( "SELECT * FROM eventos" );
+  while (msql.next()){
+      data[nr][0] = String.valueOf(msql.getInt("id_Eventos"));
+      data[nr][1] = msql.getString("nombre_evento");
+      data[nr][2] = msql.getString("descripción_evento");
+      data[nr][3] = msql.getString("Sección_id_sección");
+      data[nr][4] = msql.getString("Lugar_id_lugar");
+      nr++;
+  }
+  return data;
+}

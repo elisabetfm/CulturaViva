@@ -30,7 +30,7 @@ class Button {
    this.enabled = b;
  }
  
- // Dibuixa el botó
+ // Dibuixa el boton
  void display(){
    if(!enabled){
      fill(fillColorDisabled);  // Color desabilitat

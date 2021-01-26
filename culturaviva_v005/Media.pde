@@ -2,7 +2,7 @@ import processing.sound.*;
 // Elementos multimedia de la APP
 // Imágenes, tipografías, sonidos, ...
 // Imatges
-PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgComprar, imgBuscar, imgTeatro, imgArte, imgFestival, imgConcierto, imgFeria, imgLectura;
+PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgComprar, imgBuscar, imgTeatro, imgArte, imgFestival, imgConcierto, imgFeria, imgLectura, imgEvento1, imgEvento2, imgEvento3;
 //Tipografies
 PFont fuente1, fuente2, fuente3, fuente4, fuente5, fuente6, fuente7;
 
@@ -29,7 +29,7 @@ String[] songs = {"alegria.mp3",
                   "milky-chance-stolen-dance.mp3",
                   "no-te-veig-maria-hein.mp3",
                   "oques-grasses-fer-te-felic.mp3"};
-
+                  
 // Càrrega dels elements multimèdia
 void loadMedia(){
   loadImages();
@@ -52,6 +52,9 @@ void loadImages(){
   imgConcierto = loadImage("../DATA/imgs/Concierto.jpg");
   imgFeria = loadImage("../DATA/imgs/Feria.jpg");
   imgLectura = loadImage("../DATA/imgs/Lectura.jpg");
+  imgEvento1 = loadImage ("../DATA/imgs/zoo.jpg");
+  imgEvento2 = loadImage ("../DATA/imgs/Galiana.jpeg");
+  imgEvento3 = loadImage ("../DATA/imgs/RafelJoan.jpg");
 }
 
 // Càrrega de les Tipografies

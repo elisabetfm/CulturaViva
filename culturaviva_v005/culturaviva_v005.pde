@@ -21,35 +21,31 @@ void draw() {
   }
   else {
      if (numPantalla==2) {
-      dibujaPantalla02();
+      dibujaPantallaInicio();
     } else if (numPantalla==3) {
-      dibujaPantalla03();
+      dibujaPantallaEventos();
     } else if (numPantalla==4) {
-      dibujaPantalla04();
+      dibujaPantallaSesion();
     } else if (numPantalla==5) {
-      dibujaPantalla05();
+      dibujaPantallaIndividual();
     } else if (numPantalla==6) {
-      dibujaPantalla06();
+      dibujaPantallaCalendario();
     } else if (numPantalla==7) {
-      dibujaPantalla07();
+      dibujaPantallaTeatro();
     } else if (numPantalla==8) {
-      dibujaPantalla08();
+      dibujaPantallaArte();
     } else if (numPantalla==9) {
-      dibujaPantalla09();
+      dibujaPantallaFestival();
     } else if (numPantalla==10) {
-      dibujaPantalla10();
+      dibujaPantallaConcierto();
     } else if (numPantalla==11) {
-      dibujaPantalla11();
+      dibujaPantallaFeria();
     } else if (numPantalla==12) {
-      dibujaPantalla12();
-    } else if (numPantalla==13) {
-      dibujaPantalla13();
-    } else if (numPantalla==14) {
-      dibujaPantalla14();
+      dibujaPantallaLectura();
     }
   }
   
   updateCursor();
   
-// println(mouseX+", "+mouseY);
+   //println(mouseX+", "+mouseY);
 }

@@ -70,8 +70,10 @@ class SelectBD {
   
   void update(){
     int option = clickedOption();
-    selectedIndex = Integer.valueOf(texts[0][option]);
+    println(option);
+    selectedIndex = Integer.valueOf(texts[option][0]);
     selectedValue = texts[option][1];
+    textAlign (CENTER);
   }
   
  // Indica si el cursor està sobre el select
@@ -91,8 +93,7 @@ class SelectBD {
  }
  
  int clickedOption(){
-   int i = (int)map(mouseY, y + h, y + h + (h + lineSpace)*texts.length, 
-                            0, texts.length);
+   int i = (int)map(mouseY, y + h, y + h + (h + lineSpace)*texts.length, 0, texts.length);
    return i;
  }
   

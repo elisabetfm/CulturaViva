@@ -90,5 +90,4 @@ class Select {
                             0, texts.length);
    return i;
  }
-  
 }
