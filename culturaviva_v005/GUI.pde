@@ -91,7 +91,7 @@ void setCard(){
 }
 
 void setCounter(){
-  c = new Counter(bInsert, bReset, width/4, height/4, buttonW1, buttonH3);
+  c = new Counter(imgMas, imgMenos, width/4, height/4, buttonW1, buttonH3);
   c.setValues(0, 100);
   c.setInitialValue(0);
   c.setStepValue(1);

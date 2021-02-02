@@ -219,3 +219,23 @@ void dibujaPantallaLectura(){
   iCuenta.display();
   iBuscar.display();
 }
+
+void dibujaPantallaInsertar(){
+    dibujaBanner();
+    dibujaLogo();
+    n.display();
+    c.display();
+    bInsert.display();
+    bReset.display();
+    bIdioma1.display();
+    bIdioma2.display();
+    bIdioma3.display();
+    bIdioma4.display();
+    buscarText.display();
+    bCalendario.display();
+    s1.display();
+    s2.display();
+    s3.display();
+    iCuenta.display();
+    iBuscar.display();
+}
