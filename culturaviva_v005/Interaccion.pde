@@ -35,34 +35,45 @@ void selectPressed(){
     // Selects
 
   if (s1.mouseOverSelect() && s1.enabled) {
+    /**/
     if (!s1.collapsed) {
       s1.update();      // Actualitzar valor
-      if ((mouseX>=190 && mouseX<320) && (mouseY>=230 && mouseY<280)){ //condició per a què es dibuixi un rectangle
+      println(s1.selectedValue);
+      if (s1.selectedValue=="obras de teatro"){ //condició per a què es dibuixi un rectangle
+        numPantalla = 7;
+        setCard();
+      } else if (s1.selectedValue=="exposiciones de arte"){ //condició per a què es dibuixi un rectangle
+        numPantalla = 8;
+        setCard();
+      } else if (s1.selectedValue=="festivales"){ //condició per a què es dibuixi un rectangle
         numPantalla = 9;
-      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=280 && mouseY<340)){ //condició per a què es dibuixi un rectangle
+        setCard();
+      } else if (s1.selectedValue=="conciertos"){ //condició per a què es dibuixi un rectangle
         numPantalla = 10;
-      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=340 && mouseY<390)){ //condició per a què es dibuixi un rectangle
+        setCard();
+      } else if (s1.selectedValue=="ferias"){ //condició per a què es dibuixi un rectangle
         numPantalla = 11;
-      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=390 && mouseY<450)){ //condició per a què es dibuixi un rectangle
+        setCard();
+      } else if (s1.selectedValue=="clubs de lectura"){ //condició per a què es dibuixi un rectangle
         numPantalla = 12;
-      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=450 && mouseY<505)){ //condició per a què es dibuixi un rectangle
-        numPantalla = 13;
-      } else if ((mouseX>=190 && mouseX<320) && (mouseY>=505 && mouseY<555)){ //condició per a què es dibuixi un rectangle
-        numPantalla = 14;
+        setCard();
       }
-    }
+      println(numPantalla);
+    }/**/
     s1.toggle();        // Plegar o desplegar
   } else if (s2.mouseOverSelect() && s2.enabled) {
+    /*
     if (!s2.collapsed) {
       s2.update();      // Actualitzar valor
       numPantalla = 3;
-    }
+    }*/
     s2.toggle();        // Plegar o desplegar
   } else if (s3.mouseOverSelect() && s3.enabled) {
+    /*
     if (!s3.collapsed) {
       s3.update();      // Actualitzar valor
       numPantalla = 3;
-    }
+    }*/
     s3.toggle();        // Plegar o desplegar
   }
 }
@@ -74,19 +85,23 @@ void buttonPressed() {
   } else if (bIdioma3.mouseOverButton() && bIdioma3.enabled) {
   } else if (bIdioma4.mouseOverButton() && bIdioma4.enabled) {
   } else if (bCalendario.mouseOverButton() && bCalendario.enabled) {
-    numPantalla = 8;
+    numPantalla = 6;
   } else if (bEnter.mouseOverButton() && bEnter.enabled){
-    numPantalla = 2;
+    n.display();
+    c.display();
+    bInsert.display();
+    bReset.display();
+    
   } else if (bIr.mouseOverButton() && bIr.enabled){
-    numPantalla = 3;
+    numPantalla = 6;
   }
   //ImageButtons
   else if (iCuenta.mouseOverButton() && iCuenta.enabled) {
-    numPantalla = 6;
+    numPantalla = 4;
     
   } 
   else if (iBuscar.mouseOverButton() && iBuscar.enabled){
-    numPantalla = 3;
+    numPantalla = 5;
 }
 }
 

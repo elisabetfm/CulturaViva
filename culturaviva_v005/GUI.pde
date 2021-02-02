@@ -1,5 +1,5 @@
 
-Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bBuscar, bCalendario, bEnter, bIr, bPrev, bNext;
+Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bBuscar, bCalendario, bEnter, bIr, bPrev, bNext, bInsert, bReset;
 Select s1, s3;
 SelectBD s2;
 String[] selectValues1 = {"obras de teatro", "exposiciones de arte", "festivales", "conciertos", "ferias", "clubs de lectura"};
@@ -8,12 +8,15 @@ String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "mercados arte
 
 ImageButton iCuenta, iBuscar;
 
-TextField usuarioText, contrasenaText, buscarText;
+TextField usuarioText, contrasenaText, buscarText, n;
 
 Calendari calendario;
 
 Card c1, c2, c3;
+
 PagedCard pc;
+
+Counter c;
 
 String[] info1 = {"Titol Esdeveniment 1", 
                   "Lloc 1", "Data 1", 
@@ -37,6 +40,7 @@ void setGUI(){
   setTextField();
   setCalendario();
   setCard();
+  setCounter();
 }
 
 void setButtons(){
@@ -49,6 +53,8 @@ void setButtons(){
   bIr = new Button ("Ir", 1050, 320, 200, buttonH1 );
   bPrev = new Button ("Previo", 500, 685, buttonW1, buttonH1);
   bNext = new Button ("Siguiente", 650, 685, buttonW1, buttonH1);
+  bInsert = new Button ("Insertar", 650, 685, buttonW1, buttonH1);
+  bReset = new Button ("Reset", 500, 685, buttonW1, buttonH1);
 }
 
 void setSelect(){
@@ -67,6 +73,7 @@ void setTextField(){
    usuarioText = new TextField(550, 400, 350, buttonH1);
    contrasenaText = new TextField (550, 470, 350, buttonH1);
    buscarText = new TextField(2*margenH + 4*buttonW1 + 4*margenH, 2*margenV + bannerHeight, buttonW2, selectH);
+   n = new TextField (width/4, height/2, 3*buttonW1, buttonH3);
 }
 
 void setCalendario(){
@@ -79,5 +86,13 @@ void setCard(){
   printArray(selectEventos[0]);
   pc = new PagedCard(3);
   pc.setData(selectEventos);
+  pc.setCards();
  
+}
+
+void setCounter(){
+  c = new Counter(bInsert, bReset, width/4, height/4, buttonW1, buttonH3);
+  c.setValues(0, 100);
+  c.setInitialValue(0);
+  c.setStepValue(1);
 }

@@ -2,7 +2,7 @@ import processing.sound.*;
 // Elementos multimedia de la APP
 // Imágenes, tipografías, sonidos, ...
 // Imatges
-PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgComprar, imgBuscar, imgTeatro, imgArte, imgFestival, imgConcierto, imgFeria, imgLectura, imgEvento1, imgEvento2, imgEvento3;
+PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgComprar, imgBuscar, imgTeatro, imgArte, imgFestival, imgConcierto, imgFeria, imgLectura, imgEvento1, imgEvento2, imgEvento3, imgMas, imgMenos;
 //Tipografies
 PFont fuente1, fuente2, fuente3, fuente4, fuente5, fuente6, fuente7;
 
@@ -55,6 +55,8 @@ void loadImages(){
   imgEvento1 = loadImage ("../DATA/imgs/zoo.jpg");
   imgEvento2 = loadImage ("../DATA/imgs/Galiana.jpeg");
   imgEvento3 = loadImage ("../DATA/imgs/RafelJoan.jpg");
+  imgMas = loadImage ("../DATA/imgs/mas.png");
+  imgMenos = loadImage ("../DATA/imgs/menos.png");
 }
 
 // Càrrega de les Tipografies

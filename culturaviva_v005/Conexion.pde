@@ -62,10 +62,12 @@ String[][] getInfoTablaEventos(){
   while (msql.next()){
       data[nr][0] = String.valueOf(msql.getInt("id_Eventos"));
       data[nr][1] = msql.getString("nombre_evento");
-      data[nr][2] = msql.getString("descripción_evento");
-      data[nr][3] = msql.getString("Sección_id_sección");
-      data[nr][4] = msql.getString("Lugar_id_lugar");
+      data[nr][2] = msql.getString("descripcion_evento");
+      data[nr][3] = String.valueOf(msql.getInt("Seccion_id_seccion"));
+      data[nr][4] = String.valueOf(msql.getInt("Lugar_id_lugar"));
       nr++;
   }
+  
+  printArray(data);
   return data;
 }

@@ -107,9 +107,7 @@ void dibujaPantallaTeatro(){
   image(imgTeatro, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
- // c1.display(55,260,cardW, cardH, 10);
-  //c2.display(55,20+ margenH + logoHeight + selectH + cardH + margenH*3,cardW,cardH,10);
-  //c3.display(55,20+ margenH + logoHeight + selectH + cardH*2 + margenH*4, cardW, cardH, 10);
+  pc.display(55, 260, cardW, cardH*3);
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -170,7 +168,7 @@ void dibujaPantallaConcierto(){
   image(imgConcierto, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
- 
+  pc.display(55, 260, cardW, cardH*3);
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
