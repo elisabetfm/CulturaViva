@@ -74,3 +74,7 @@ float buttonH1 = 50,
 float selectW = 130,
       selectH = 40;
       
+//Dimensiones de las cards
+float cardW = 750,
+      cardH = 360;
+      

@@ -4,7 +4,7 @@ void dibujaPantalla01(){
   dibujaApertura();
   }
 
-void dibujaPantalla02(){
+void dibujaPantallaInicio(){
   dibujaBanner();
   dibujaLogo();
   dibujaAcontecimientos1();
@@ -17,13 +17,12 @@ void dibujaPantalla02(){
   s1.display();
   s2.display();
   s3.display();
-  iComprar.display();
   iCuenta.display();
   buscarText.display();
   iBuscar.display();
 }
 
-void dibujaPantalla03(){
+void dibujaPantallaEventos(){
   dibujaBanner();
   dibujaLogo();
   dibujaAcontecimientosBuscados();
@@ -38,49 +37,10 @@ void dibujaPantalla03(){
   s2.display();
   s3.display();
   iCuenta.display();
-  iComprar.display();
   iBuscar.display();
 }
 
-void dibujaPantalla04(){
-  dibujaBanner();
-  dibujaLogo();
-  dibujaAcontecimientosBuscados();
-  dibujaCompraEntradas();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
-  buscarText.display();
-  bCalendario.display();
-  s1.display();
-  s2.display();
-  s3.display();
-  iCuenta.display();
-  iComprar.display();
-  iBuscar.display();
-}
-
-void dibujaPantalla05(){
-  dibujaBanner();
-  dibujaLogo();
-  dibujaReventa1();
-  dibujaReventa2();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
-  buscarText.display();
-  bCalendario.display();
-  s1.display();
-  s2.display();
-  s3.display();
-  iCuenta.display();
-  iComprar.display();
-  iBuscar.display();
-}
-
-void dibujaPantalla06(){
+void dibujaPantallaSesion(){
   dibujaBanner();
   dibujaLogo();
   dibujaIniciarSesion();
@@ -97,11 +57,10 @@ void dibujaPantalla06(){
   s2.display();
   s3.display();
   iCuenta.display();
-  iComprar.display();
   iBuscar.display();
 }
 
-void dibujaPantalla07(){
+void dibujaPantallaIndividual(){
   dibujaBanner();
   dibujaLogo();
   dibujaAcontecimientoIndividual();
@@ -114,12 +73,11 @@ void dibujaPantalla07(){
   s1.display();
   s2.display();
   s3.display();
-  iComprar.display();
   iCuenta.display();
   iBuscar.display();
 }
 
-void dibujaPantalla08(){
+void dibujaPantallaCalendario(){
   dibujaBanner();
   dibujaLogo();
   bIdioma1.display();
@@ -131,14 +89,13 @@ void dibujaPantalla08(){
   s1.display();
   s2.display();
   s3.display();
-  iComprar.display();
   iCuenta.display();
   iBuscar.display();
   calendario.display();
   bIr.display();
 }
 
-void dibujaPantalla09(){
+void dibujaPantallaTeatro(){
   image(imgTeatro, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -154,11 +111,12 @@ void dibujaPantalla09(){
   s2.display();
   s3.display();
   iCuenta.display();
-  iComprar.display();
   iBuscar.display();
+  bAnterior.display();
+  bSiguiente.display();
 }
 
-void dibujaPantalla10(){
+void dibujaPantallaArte(){
   image(imgArte, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -174,11 +132,12 @@ void dibujaPantalla10(){
   s2.display();
   s3.display();
   iCuenta.display();
-  iComprar.display();
   iBuscar.display();
+  bAnterior.display();
+  bSiguiente.display();
 }
 
-void dibujaPantalla11(){
+void dibujaPantallaFestival(){
   image(imgFestival, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -194,11 +153,12 @@ void dibujaPantalla11(){
   s2.display();
   s3.display();
   iCuenta.display();
-  iComprar.display();
   iBuscar.display();
+  bAnterior.display();
+  bSiguiente.display();
 }
 
-void dibujaPantalla12(){
+void dibujaPantallaConcierto(){
   image(imgConcierto, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -214,11 +174,12 @@ void dibujaPantalla12(){
   s2.display();
   s3.display();
   iCuenta.display();
-  iComprar.display();
   iBuscar.display();
+  bAnterior.display();
+  bSiguiente.display();
 }
 
-void dibujaPantalla13(){
+void dibujaPantallaFeria(){
   image(imgFeria, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -234,11 +195,12 @@ void dibujaPantalla13(){
   s2.display();
   s3.display();
   iCuenta.display();
-  iComprar.display();
   iBuscar.display();
+  bAnterior.display();
+  bSiguiente.display();
 }
 
-void dibujaPantalla14(){
+void dibujaPantallaLectura(){
   image(imgLectura, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -254,6 +216,7 @@ void dibujaPantalla14(){
   s2.display();
   s3.display();
   iCuenta.display();
-  iComprar.display();
   iBuscar.display();
+  bAnterior.display();
+  bSiguiente.display();
 }

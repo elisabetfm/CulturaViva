@@ -2,7 +2,7 @@ import processing.sound.*;
 // Elementos multimedia de la APP
 // Imágenes, tipografías, sonidos, ...
 // Imatges
-PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgComprar, imgBuscar, imgTeatro, imgArte, imgFestival, imgConcierto, imgFeria, imgLectura;
+PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgBuscar, imgTeatro, imgArte, imgFestival, imgConcierto, imgFeria, imgLectura;
 //Tipografies
 PFont fuente1, fuente2, fuente3, fuente4, fuente5, fuente6, fuente7;
 
@@ -42,7 +42,6 @@ void loadImages(){
   imgLogo = loadImage("../DATA/imgs/imgLogo1.jpg");
   imgFondo = loadImage("../DATA/imgs/imgFondo5.jpg");
   imgCuenta = loadImage("../DATA/imgs/buttonCuenta.png");
-  imgComprar = loadImage("../DATA/imgs/buttonComprar.png");
   imgBuscar = loadImage("../DATA/imgs/buttonBuscar.png");
   imgBanner = loadImage ("../DATA/imgs/Banner4.jpg");
   imgTeatro = loadImage("../DATA/imgs/Teatro.jpg");

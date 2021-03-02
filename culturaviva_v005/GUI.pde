@@ -11,7 +11,7 @@ TextField usuarioText, contrasenaText, buscarText;
 
 Calendari calendario;
 
-PagedTable pagina;
+Card c1, c2, c3;
 
 void setGUI(){
   setButtons();
@@ -19,7 +19,6 @@ void setGUI(){
   setSelect();
   setTextField();
   setCalendario();
-  setTable();
 }
 
 void setButtons(){
@@ -30,6 +29,8 @@ void setButtons(){
   bCalendario = new Button ("Calendario", 2*margenH + logoWidth + 3*selectW + buttonW2 + margenH*4, 2*margenV + bannerHeight, buttonW1, selectH);
   bEnter = new Button ("Aceptar", 550, 600, 350, buttonH1);
   bIr = new Button ("Ir", 1050, 320, 200, buttonH1 );
+  bAnterior = new Button ("Anterior", 1050, 320, 200, buttonH1);
+  bSiguiente = new Button ("Siguiente", 1050, 320, 200, buttonH1);
 }
 
 void setSelect(){
@@ -40,7 +41,6 @@ void setSelect(){
 
 void setImageButtons(){
   iCuenta = new ImageButton (imgCuenta, 2*margenH + logoWidth + 3*selectW + buttonW2 + buttonW1 + buttonW3 + margenH*6, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
-  iComprar = new ImageButton (imgComprar,  2*margenH + logoWidth + 3*selectW + buttonW2 + buttonW1 + margenH*5, 2*margenV + bannerHeight, buttonW3, selectH); 
   iBuscar = new ImageButton (imgBuscar, 2*margenH + logoWidth + 3*selectW + (buttonW2 - buttonW3) + 3*margenH, 2*margenV + bannerHeight, buttonW3, selectH);
 }
 
@@ -51,12 +51,9 @@ void setTextField(){
 }
 
 void setCalendario(){
- 
-calendario = new Calendari (400, 300, 500, 450);
+  calendario = new Calendari (400, 300, 500, 450);
 }
 
-void setTable(){
-  int files=5, columnes= 2;
-  String[] headers = ;
+void setCard(){
   
 }
