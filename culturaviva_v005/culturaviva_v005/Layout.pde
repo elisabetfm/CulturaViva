@@ -32,8 +32,12 @@ float filtrosWidth = 1150,
 //Dimensiones acontecimientos recientes
 float acontecimientosWidth = 500,
       acontecimientosHeight = 430;
+      
+//Dimensiones indicador cantidad de páginas
+float indicadorWidth = 300,
+      indicadorHeight = 30;
    
-//Dimensiones acontecimientos buscados
+//Dimensiones acontecimientos buscados (pantalla 3 y 4)
 float buscadosWidth = 1100,
       buscadosHeight = 130;
      
@@ -73,4 +77,3 @@ float buttonH1 = 50,
 //Dimensiones de los selects
 float selectW = 130,
       selectH = 40;
-      

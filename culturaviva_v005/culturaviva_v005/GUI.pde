@@ -1,5 +1,5 @@
 
-Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente;
+Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bBuscar, bCalendario, bEnter, bIr;
 Select s1, s2, s3;
 String[] selectValues1 = {"obras de teatro", "exposiciones de arte", "festivales", "conciertos", "ferias", "clubs de lectura"};
 String[] selectValues2 = {"Islas: Malloca", "Menorca", "Eivissa", "Formentera", "Espacio: Exterior", "Interior"};
@@ -11,15 +11,12 @@ TextField usuarioText, contrasenaText, buscarText;
 
 Calendari calendario;
 
-PagedTable pagina;
-
 void setGUI(){
   setButtons();
   setImageButtons();
   setSelect();
   setTextField();
   setCalendario();
-  setTable();
 }
 
 void setButtons(){
@@ -53,10 +50,4 @@ void setTextField(){
 void setCalendario(){
  
 calendario = new Calendari (400, 300, 500, 450);
-}
-
-void setTable(){
-  int files=5, columnes= 2;
-  String[] headers = ;
-  
 }
