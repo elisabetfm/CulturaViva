@@ -1,8 +1,9 @@
 
 Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente;
-Select s1, s2, s3;
-String[] selectValues1 = {"obras de teatro", "exposiciones de arte", "festivales", "conciertos", "ferias", "clubs de lectura"};
-String[] selectValues2 = {"Islas: Malloca", "Menorca", "Eivissa", "Formentera", "Espacio: Exterior", "Interior"};
+SelectBD s1, s2;
+Select s3;
+String[][] selectValues1; // = {"obras de teatro", "exposiciones de arte", "festivales", "conciertos", "ferias", "clubs de lectura"};
+String[][] selectValues2;// = {"Islas: Malloca", "Menorca", "Eivissa", "Formentera", "Espacio: Exterior", "Interior"};
 String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "mercados artesanales", "barra", "foodtrucks", "servicio de guardería", "máximo 100 personas", "más de 100 personas", "gratuïto"};
 
 ImageButton iCuenta, iComprar, iBuscar;
@@ -11,7 +12,7 @@ TextField usuarioText, contrasenaText, buscarText;
 
 Calendari calendario;
 
-Card c1, c2, c3;
+PagedCard pc;
 
 void setGUI(){
   setButtons();
@@ -19,6 +20,7 @@ void setGUI(){
   setSelect();
   setTextField();
   setCalendario();
+  setPagedCard();
 }
 
 void setButtons(){
@@ -34,8 +36,10 @@ void setButtons(){
 }
 
 void setSelect(){
-  s1 = new Select(selectValues1, 2*margenH + logoWidth, 2*margenV + bannerHeight, selectW, selectH);
-  s2 = new Select(selectValues2, 2*margenH + logoWidth + buttonW1 + margenH, 2*margenV + bannerHeight, selectW, selectH);
+  selectValues1 = getInfoTablaSeccion();
+  s1 = new SelectBD(selectValues1, 2*margenH + logoWidth, 2*margenV + bannerHeight, selectW, selectH);
+  selectValues2 = getInfoTablaLugar();
+  s2 = new SelectBD (selectValues2, 2*margenH + logoWidth + buttonW1 + margenH, 2*margenV + bannerHeight, selectW, selectH);
   s3 = new Select(selectValues3, 2*margenH + logoWidth + 2*buttonW1 + 2*margenH, 2*margenV + bannerHeight, selectW, selectH);
 }
 
@@ -54,6 +58,16 @@ void setCalendario(){
   calendario = new Calendari (400, 300, 500, 450);
 }
 
-void setCard(){
-  
+void setPagedCard(){
+  pc = new PagedCard(3);
+  String[][] infoCards = getInfoTablaEventos();
+  pc.setData(infoCards);
+  pc.setCards();
+}
+
+void updatePageCard(){
+   pc = new PagedCard(3);
+  String[][] infoCards = getInfoTablaEventos(s1.selectedIndex);
+  pc.setData(infoCards);
+  pc.setCards();
 }

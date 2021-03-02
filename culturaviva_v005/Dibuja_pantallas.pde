@@ -99,7 +99,6 @@ void dibujaPantallaTeatro(){
   image(imgTeatro, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaAcontecimientosBuscados();
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -114,13 +113,16 @@ void dibujaPantallaTeatro(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
+  
+  
+  pc.display(20, 400, 800, 400);
+ 
 }
 
 void dibujaPantallaArte(){
   image(imgArte, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaAcontecimientosBuscados();
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -141,7 +143,6 @@ void dibujaPantallaFestival(){
   image(imgFestival, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaAcontecimientosBuscados();
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -156,13 +157,13 @@ void dibujaPantallaFestival(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
+  pc.display(20, 400, 800, 400);
 }
 
 void dibujaPantallaConcierto(){
   image(imgConcierto, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaAcontecimientosBuscados();
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -177,13 +178,13 @@ void dibujaPantallaConcierto(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
+  pc.display(20, 400, 800, 400);
 }
 
 void dibujaPantallaFeria(){
   image(imgFeria, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaAcontecimientosBuscados();
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();
@@ -204,7 +205,6 @@ void dibujaPantallaLectura(){
   image(imgLectura, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaAcontecimientosBuscados();
   dibujaRecomendaciones();
   bIdioma1.display();
   bIdioma2.display();

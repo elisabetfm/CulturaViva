@@ -8,6 +8,7 @@ void setup() {
   noStroke(); // figuras sin bordes
   textAlign(CENTER);
   textSize(20); //alineación y tamaño del texto
+  conexion();
   loadMedia();
   setGUI();
 }

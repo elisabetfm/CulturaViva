@@ -33,6 +33,13 @@ int getNumRowsTaula(String nomTaula){
   return numRows;
 }
 
+int getNumRowsEventosSeccion(int numSeccion){
+  msql.query( "SELECT COUNT(*) AS n FROM eventos WHERE Seccion_id_seccion='"+ numSeccion+"'" );
+  msql.next();
+  int numRows = msql.getInt("n");
+  return numRows;
+}
+
 String[][] getInfoTablaLugar(){
   
   int numRows = getNumRowsTaula("lugar");
@@ -40,7 +47,7 @@ String[][] getInfoTablaLugar(){
   String[][] data = new String[numRows][2];
   
   int nr=0;
-  msql.query( "SELECT * FROM lugar" );
+  msql.query( "SELECT * FROM lugar ORDER BY nombre_lugar ASC" );
   while (msql.next()){
       data[nr][0] = String.valueOf(msql.getInt("id_lugar"));
       data[nr][1] = msql.getString("nombre_lugar");
@@ -49,25 +56,69 @@ String[][] getInfoTablaLugar(){
   return data;
 }
 
+String[][] getInfoTablaSeccion(){
+  
+  int numRows = getNumRowsTaula("seccion");
+  println("Num seccions: "+numRows);
+  
+  String[][] data = new String[numRows][2];
+  
+  int nr=0;
+  msql.query( "SELECT * FROM seccion ORDER BY nombre_seccion ASC" );
+  while (msql.next()){
+      data[nr][0] = String.valueOf(msql.getInt("id_seccion"));
+      data[nr][1] = msql.getString("nombre_seccion");
+      nr++;
+  }
+  return data;
+}
+
+
 String[][] getInfoTablaEventos(){
   
   int numRows = getNumRowsTaula("eventos");
 
   print(numRows);
   
-  String[][] data = new String[numRows][5];
+  String[][] data = new String[numRows][6];
   
   int nr=0;
-  msql.query( "SELECT * FROM eventos" );
+  msql.query( "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar;" );
   while (msql.next()){
-      data[nr][0] = String.valueOf(msql.getInt("id_Eventos"));
-      data[nr][1] = msql.getString("nombre_evento");
-      data[nr][2] = msql.getString("descripcion_evento");
-      data[nr][3] = String.valueOf(msql.getInt("Seccion_id_seccion"));
-      data[nr][4] = String.valueOf(msql.getInt("Lugar_id_lugar"));
+      data[nr][0] = msql.getString("titulo");
+      data[nr][1] = msql.getString("lugar");
+      data[nr][2] = msql.getString("fecha");
+      data[nr][3] = msql.getString("seccion");
+      data[nr][4] = msql.getString("descripcion");
+      data[nr][5] = msql.getString("imagen");
       nr++;
   }
   
   printArray(data);
+  return data;
+}
+
+String[][] getInfoTablaEventos( int numSeccion){
+  
+  int numRows = getNumRowsEventosSeccion( numSeccion);
+  println("Num eventos:"+numRows+" de la sección:"+numSeccion);
+
+  String[][] data = new String[numRows][6];
+  
+  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND s.id_seccion='"+numSeccion+"'";
+  println(q);
+  int nr=0;
+  msql.query(q);
+  while (nr<numRows){
+      msql.next();
+      println("NR:"+nr);
+      data[nr][0] = msql.getString("titulo");
+      data[nr][1] = msql.getString("lugar");
+      data[nr][2] = msql.getString("fecha");
+      data[nr][3] = msql.getString("seccion");
+      data[nr][4] = msql.getString("descripcion");
+      data[nr][5] = msql.getString("imagen");
+      nr++;
+  }
   return data;
 }

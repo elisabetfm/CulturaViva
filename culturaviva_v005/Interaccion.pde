@@ -37,18 +37,25 @@ void selectPressed(){
   if (s1.mouseOverSelect() && s1.enabled) {
     if (!s1.collapsed) {
       s1.update();      // Actualitzar valor
-      if (mousePressed == "obras de teatro"){ //condició per a què es dibuixi un rectangle
+      if (s1.selectedValue.equals("obras de teatro")){ //condició per a què es dibuixi un rectangle
+      println("ANANT a pantalla Teatre");
         numPantalla = 7;
-      } else if (mousePressed == "exposiciones de arte"){ //condició per a què es dibuixi un rectangle
+       updatePageCard();
+      } else if (s1.selectedValue.equals("exposiciones de arte")){ //condició per a què es dibuixi un rectangle
         numPantalla = 8;
-      } else if (mousePressed == "festivales"){ //condició per a què es dibuixi un rectangle
+        updatePageCard();
+      } else if (s1.selectedValue.equals("festivales")){ //condició per a què es dibuixi un rectangle
         numPantalla = 9;
-      } else if (mousePressed == "conciertos"){ //condició per a què es dibuixi un rectangle
+        updatePageCard();
+      } else if (s1.selectedValue.equals("conciertos")){ //condició per a què es dibuixi un rectangle
         numPantalla = 10;
-      } else if (mousePressed == "ferias"){ //condició per a què es dibuixi un rectangle
+        updatePageCard();
+      } else if (s1.selectedValue.equals("ferias")){ //condició per a què es dibuixi un rectangle
         numPantalla = 11;
-      } else if (mousePressed == "clubs de lectura"){ //condició per a què es dibuixi un rectangle
+        updatePageCard();
+      } else if (s1.selectedValue.equals("clubs de lectura")){ //condició per a què es dibuixi un rectangle
         numPantalla = 12;
+        updatePageCard();
       }
     }
     s1.toggle();        // Plegar o desplegar
@@ -102,9 +109,7 @@ void calendarioPressed(){
 // Modifica el cursor
 void updateCursor() {
 
-  if ((iCuenta.mouseOverButton() && iCuenta.enabled ) ||
-    (iComprar.mouseOverButton() && iComprar.enabled))  
-    {
+  if (iCuenta.mouseOverButton() && iCuenta.enabled ){
     cursor(HAND);
   } else {
     cursor(ARROW);

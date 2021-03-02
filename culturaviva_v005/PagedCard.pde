@@ -27,20 +27,17 @@ class PagedCard {
     cards = new Card[this.cardsData.length];
     for(int i=0; i<cards.length; i++){
       cards[i] = new Card(cardsData[i]);
+      String nomImatge = cardsData[i][5];
+      PImage img = loadImage("../DATA/imgs/"+nomImatge);
+      cards[i].setImage(img);
     }
   }
   
-  void setImages(PImage img1, PImage img2){
-    PImage img;
+  void setImages(PImage[] imgs){
     for(int i=0; i<cards.length; i++){
-      if(cards[i].section=="Secció 1"){
-        img = img1;
-      }
-      else {
-        img = img2;
-      }
-      cards[i].setImage(img);
+      cards[i].setImage(imgs[i]);
     }
+
   }
   
   void nextPage(){
