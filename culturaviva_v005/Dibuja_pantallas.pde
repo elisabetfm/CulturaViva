@@ -60,6 +60,27 @@ void dibujaPantallaSesion(){
   iBuscar.display();
 }
 
+void dibujaPantallaInsertar(){
+  dibujaBanner();
+  dibujaLogo();
+  dibujaInsertar();
+  bIdioma1.display();
+  bIdioma2.display();
+  bIdioma3.display();
+  bIdioma4.display();
+  buscarText.display();
+  bCalendario.display();
+  insertarText.display();
+  c.display();
+  bInsertar.display();
+  bReset.display();
+  s1.display();
+  s2.display();
+  s3.display();
+  iCuenta.display();
+  iBuscar.display();
+}
+
 void dibujaPantallaIndividual(){
   dibujaBanner();
   dibujaLogo();
@@ -106,6 +127,7 @@ void dibujaPantallaTeatro(){
   bIdioma4.display();
   buscarText.display();
   bCalendario.display();
+  pc.display(190, 250, 800, 400);
   s1.display();
   s2.display();
   s3.display();
@@ -113,10 +135,6 @@ void dibujaPantallaTeatro(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
-  
-  
-  pc.display(20, 400, 800, 400);
- 
 }
 
 void dibujaPantallaArte(){
@@ -130,6 +148,7 @@ void dibujaPantallaArte(){
   bIdioma4.display();
   buscarText.display();
   bCalendario.display();
+  pc.display(190, 250, 800, 400);
   s1.display();
   s2.display();
   s3.display();
@@ -150,6 +169,7 @@ void dibujaPantallaFestival(){
   bIdioma4.display();
   buscarText.display();
   bCalendario.display();
+  pc.display(190, 250, 800, 400);
   s1.display();
   s2.display();
   s3.display();
@@ -157,7 +177,6 @@ void dibujaPantallaFestival(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
-  pc.display(20, 400, 800, 400);
 }
 
 void dibujaPantallaConcierto(){
@@ -171,6 +190,7 @@ void dibujaPantallaConcierto(){
   bIdioma4.display();
   buscarText.display();
   bCalendario.display();
+  pc.display(190, 250, 800, 400);
   s1.display();
   s2.display();
   s3.display();
@@ -178,7 +198,6 @@ void dibujaPantallaConcierto(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
-  pc.display(20, 400, 800, 400);
 }
 
 void dibujaPantallaFeria(){
@@ -192,6 +211,7 @@ void dibujaPantallaFeria(){
   bIdioma4.display();
   buscarText.display();
   bCalendario.display();
+  pc.display(190, 250, 800, 400);
   s1.display();
   s2.display();
   s3.display();
@@ -212,6 +232,7 @@ void dibujaPantallaLectura(){
   bIdioma4.display();
   buscarText.display();
   bCalendario.display();
+  pc.display(190, 250, 800, 400);
   s1.display();
   s2.display();
   s3.display();

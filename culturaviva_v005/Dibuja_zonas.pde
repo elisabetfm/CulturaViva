@@ -45,33 +45,27 @@ void dibujaRecomendaciones(){
   text ("RECOMENDACIONES", 2*margenH + buscadosWidth + margenH + recomendacionesWidth/2, 2*margenV + logoHeight + filtrosHeight + margenV + recomendacionesHeight/2, 10);
 }
 
-void dibujaCompraEntradas(){
-  fill(255);
-  rect(2*margenH + buscadosWidth + margenH, 2*margenV + logoHeight + filtrosHeight + margenV, compraWidth, compraHeight);
-  fill(0);
-  text ("Compra de entradas", 2*margenH + buscadosWidth + margenH + compraWidth/2, 2*margenV + logoHeight +filtrosHeight + margenV + compraHeight/2, 10);
-}
-
-void dibujaReventa1(){
-  fill(255);
-  rect (2*margenH, 2*margenV + logoHeight + filtrosHeight + margenV, reventa1Width, reventa1Height);
-  fill (0);
-  text ("Reventa de entradas", 2*margenH + reventa1Width/2, 2*margenV + logoHeight + filtrosHeight + margenV + reventa1Height/2, 10);
-}
-
-void dibujaReventa2(){
-  fill(255);
-  rect (2*margenH, 2*margenV + logoHeight + filtrosHeight + reventa1Height + 2*margenV, reventa2Width, reventa2Height);
-  fill (0);
-  text ("Reventa de entradas", 2*margenH + reventa2Width/2, 2*margenV + logoHeight + filtrosHeight +  reventa1Height + 2*margenV + reventa2Height/2, 10);
-}
-
 void dibujaIniciarSesion(){
   pushStyle();
   rectMode (CENTER);
   fill(255);
   rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
   image (imgCuenta, 2*(width/2 - (buttonW3 + margenH)), 2*margenV + bannerHeight + filtrosHeight + 2*margenV, cuentaWidth, cuentaHeight);
+  popStyle();
+}
+
+void dibujaInsertar(){
+  pushStyle();
+  rectMode (CENTER);
+  fill(255);
+  rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
+  // Etiqueta  Número
+  fill(0); textSize(38); 
+  text("Número:", width/4, height/4 - 20);
+  
+  // Etiqueta  Nom
+  fill(0); textSize(38); 
+  text("Nom:", width/4, height/2 - 20); 
   popStyle();
 }
 

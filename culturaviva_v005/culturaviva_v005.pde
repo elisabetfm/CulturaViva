@@ -42,7 +42,9 @@ void draw() {
       dibujaPantallaFeria();
     } else if (numPantalla==12) {
       dibujaPantallaLectura();
-   }
+    } else if (numPantalla==13){
+      dibujaPantallaInsertar();
+    }
   }
   
   updateCursor();

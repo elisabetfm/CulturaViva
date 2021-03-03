@@ -83,7 +83,7 @@ void buttonPressed() {
   } else if (bCalendario.mouseOverButton() && bCalendario.enabled) {
     numPantalla = 6;
   } else if (bEnter.mouseOverButton() && bEnter.enabled){
-    numPantalla = 2;
+    numPantalla = 13;
   } else if (bIr.mouseOverButton() && bIr.enabled){
     numPantalla = 3;
   }

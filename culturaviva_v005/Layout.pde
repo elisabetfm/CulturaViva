@@ -78,3 +78,7 @@ float selectW = 130,
 float cardW = 750,
       cardH = 360;
       
+//Dimensiones counter
+float countW = 100,
+      countH = 30;
+      
