@@ -8,7 +8,7 @@ String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "mercados arte
 
 ImageButton iCuenta, iComprar, iBuscar;
 
-TextField usuarioText, contrasenaText, buscarText, insertarText;
+TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, seccionText, lugarText, fechaText;
 
 Calendari calendario;
 
@@ -57,7 +57,11 @@ void setTextField(){
    usuarioText = new TextField(550, 400, 350, buttonH1);
    contrasenaText = new TextField (550, 470, 350, buttonH1);
    buscarText = new TextField(2*margenH + 4*buttonW1 + 4*margenH, 2*margenV + bannerHeight, buttonW2, selectH);
-   insertarText = new TextField (width/4, height/2, 3*countW, countH);
+   tituloText = new TextField (550, 310, 3*countW, countH);
+   descripcionText = new TextField (550, 370, 3*countW, buttonH3);
+   seccionText = new TextField (550, 480, 3*countW, countH);
+   lugarText = new TextField (550, 540, buttonW1, countH);
+   fechaText = new TextField (750, 540, buttonW1, countH);
 }
 
 void setCalendario(){

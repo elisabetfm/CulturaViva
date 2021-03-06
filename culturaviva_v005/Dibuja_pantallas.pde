@@ -70,7 +70,11 @@ void dibujaPantallaInsertar(){
   bIdioma4.display();
   buscarText.display();
   bCalendario.display();
-  insertarText.display();
+  tituloText.display();
+  descripcionText.display();
+  seccionText.display();
+  lugarText.display();
+  fechaText.display();
   c.display();
   bInsertar.display();
   bReset.display();
