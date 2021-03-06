@@ -6,6 +6,11 @@ void keyPressed() {
   buscarText.keyPressed(key, (int)keyCode);
   usuarioText.keyPressed(key, (int)keyCode);
   contrasenaText.keyPressed(key, (int)keyCode);
+  tituloText.keyPressed(key, (int)keyCode);
+  descripcionText.keyPressed(key, (int)keyCode);
+  seccionText.keyPressed(key, (int)keyCode);
+  lugarText.keyPressed(key, (int)keyCode);
+  fechaText.keyPressed(key, (int)keyCode);  
 
 // Anar un mes enrere
   if(keyCode==LEFT){
@@ -28,6 +33,8 @@ void mousePressed() {
   textfieldPressed();
   
   calendarioPressed();
+  
+  counterPressed();  
   
 }
 
@@ -100,6 +107,16 @@ void textfieldPressed(){
   buscarText.isPressed();
   usuarioText.isPressed();
   contrasenaText.isPressed();
+  tituloText.isPressed();
+  descripcionText.isPressed();
+  seccionText.isPressed();
+  lugarText.isPressed();
+  fechaText.isPressed();
+  
+}
+
+void counterPressed(){
+  c.update();
 }
 
 void calendarioPressed(){
@@ -114,4 +131,16 @@ void updateCursor() {
   } else {
     cursor(ARROW);
   }
+  if(c.mouseOverButtons() || bInsertar.mouseOverButton() || bReset.mouseOverButton()){
+      cursor(HAND);
+  }
+  else {
+     cursor(ARROW);
+  }
+}
+
+void resetFormulari(){
+  c.resetValue();
+ // tituloText.removeAllText();
+ // descripcionText.removeAllText();
 }

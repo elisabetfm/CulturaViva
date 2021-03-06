@@ -44,19 +44,19 @@ void setSelect(){
   selectValues1 = getInfoTablaSeccion();
   s1 = new SelectBD(selectValues1, 2*margenH + logoWidth, 2*margenV + bannerHeight, selectW, selectH);
   selectValues2 = getInfoTablaLugar();
-  s2 = new SelectBD (selectValues2, 2*margenH + logoWidth + buttonW1 + margenH, 2*margenV + bannerHeight, selectW, selectH);
-  s3 = new Select(selectValues3, 2*margenH + logoWidth + 2*buttonW1 + 2*margenH, 2*margenV + bannerHeight, selectW, selectH);
+  s2 = new SelectBD (selectValues2, 2*margenH + logoWidth + selectW + margenH, 2*margenV + bannerHeight, selectW, selectH);
+  s3 = new Select(selectValues3, 2*margenH + logoWidth + 2*selectW + 2*margenH, 2*margenV + bannerHeight, selectW, selectH);
 }
 
 void setImageButtons(){
-  iCuenta = new ImageButton (imgCuenta, 2*margenH + logoWidth + 3*selectW + buttonW2 + buttonW1 + buttonW3 + margenH*6, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
+  iCuenta = new ImageButton (imgCuenta, 2*margenH + logoWidth + 3*selectW + buttonW2 + buttonW1 + buttonW3 + margenH*3, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
   iBuscar = new ImageButton (imgBuscar, 2*margenH + logoWidth + 3*selectW + (buttonW2 - buttonW3) + 3*margenH, 2*margenV + bannerHeight, buttonW3, selectH);
 }
 
 void setTextField(){
    usuarioText = new TextField(550, 400, 350, buttonH1);
    contrasenaText = new TextField (550, 470, 350, buttonH1);
-   buscarText = new TextField(2*margenH + 4*buttonW1 + 4*margenH, 2*margenV + bannerHeight, buttonW2, selectH);
+   buscarText = new TextField(2*margenH + 4*selectW + 3*margenH, 2*margenV + bannerHeight, buttonW2, selectH);
    tituloText = new TextField (550, 310, 3*countW, countH);
    descripcionText = new TextField (550, 370, 3*countW, buttonH3);
    seccionText = new TextField (550, 480, 3*countW, countH);
@@ -83,7 +83,7 @@ void updatePageCard(){
 }
 
 void setCounter(){
-  c = new Counter (imgMas, imgMenos, width/4, height/4, countW, countH);
+  c = new Counter (imgMas, imgMenos, 970, 280, countW, countH);
   c.setValues(0, 100);
   c.setInitialValue(0);
   c.setStepValue(1);

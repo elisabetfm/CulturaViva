@@ -60,25 +60,24 @@ void dibujaInsertar(){
   fill(255);
   rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
   // Etiqueta  Número
-  fill(0); textSize(20); 
-  text("Número:", width/4, height/4 - 20);
-  
-  // Etiqueta Título
-  fill(0); textSize(38); 
-  text("Título:", 550, height/2 - 20); 
-  // Etiqueta Descripción
-  fill(0); textSize(38); 
-  text("Descripción:", 550, height/2 - 20); 
-  fill(0); textSize(38); 
-  // Etiqueta Sección
-  text("Sección:", 550, height/2 - 20); 
-  // Etiqueta Lugar
-  fill(0); textSize(38); 
-  text("Lugar:", 550, height/2 - 20); 
-  // Etiqueta Fecha
-  fill(0); textSize(38); 
-  text("Fecha:", 750, height/2 - 20); 
+ // fill(0); textSize(20); 
+  //text("Número:", width/4, height/4 - 20);
   popStyle();
+  // Etiqueta Título
+  fill(0); textSize(20); 
+  text("Título:", 590, 300); 
+  // Etiqueta Descripción
+  fill(0); textSize(20); 
+  text("Descripción:", 610, 360); 
+  fill(0); textSize(20); 
+  // Etiqueta Sección
+  text("Sección:", 590, 470); 
+  // Etiqueta Lugar
+  fill(0); textSize(20); 
+  text("Lugar:", 590, 530); 
+  // Etiqueta Fecha
+  fill(0); textSize(20); 
+  text("Fecha:", 790, 530); 
 }
 
 void dibujaAcontecimientoIndividual(){

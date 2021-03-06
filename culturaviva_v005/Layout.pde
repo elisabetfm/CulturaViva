@@ -41,18 +41,6 @@ float buscadosWidth = 1100,
 float recomendacionesWidth = 150,
       recomendacionesHeight = 360;
       
-//Dimensiones compra entradas
-float compraWidth = 150,
-      compraHeight = 430;
-      
-//Dimensiones reventa1
-float reventa1Width = 1150,
-      reventa1Height = 200;
-      
-//Dimensiones reventa2
-float reventa2Width = 1150,
-      reventa2Height = 200;
-      
 //Dimensiones iniciar sesión
 float SesionWidth = 400,
       SesionHeight = 400;
@@ -71,7 +59,7 @@ float buttonH1 = 50,
       buttonW4 = 80;
 
 //Dimensiones de los selects
-float selectW = 130,
+float selectW = 150,
       selectH = 40;
       
 //Dimensiones de las cards

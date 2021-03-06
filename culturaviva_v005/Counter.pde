@@ -13,13 +13,13 @@ class Counter {
  // Colors de farciment i contorn
  color fillColor, strokeColor;
  
- PImage iconaMes, iconaMenys;       // Icones del botó
+ PImage imgMas, imgMenos;       // Icones del botó
 
  
  // Mètode Constructor
- Counter(PImage iconaMes, PImage iconaMenys, float x, float y, float w, float h){
-   this.iconaMes = iconaMes;
-   this.iconaMenys = iconaMenys;
+ Counter(PImage imgMas, PImage imgMenos, float x, float y, float w, float h){
+   this.imgMas = imgMas;
+   this.imgMenos = imgMenos;
    this.x = x;
    this.y = y;
    this.w = w;
@@ -54,7 +54,7 @@ class Counter {
  void display(){
    
    fill(fillColor);                            // Color 
-   stroke(strokeColor); strokeWeight(10);      //Color i gruixa del contorn
+   stroke(strokeColor); strokeWeight(2);      //Color i gruixa del contorn
    rect(this.x, this.y, this.w + 2*this.h, this.h, 10);   // Rectangle del botó
    
    fill(0); textSize(32);
@@ -63,9 +63,9 @@ class Counter {
    // Icona del botó
    fill(255); stroke(0);
    rect(this.x + this.w, this.y, this.h, this.h, 10);
-   image(iconaMes,   this.x + this.w, this.y, this.h, this.h);
+   image(imgMas,   this.x + this.w, this.y, this.h, this.h);
    rect(this.x + this.w + this.h, this.y, this.h, this.h, 10);
-   image(iconaMenys, this.x + this.w + this.h, this.y, this.h, this.h);
+   image(imgMenos, this.x + this.w + this.h, this.y, this.h, this.h);
  }
  
  boolean mouseOverButtons(){
