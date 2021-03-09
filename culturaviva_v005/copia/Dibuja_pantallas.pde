@@ -118,7 +118,7 @@ void dibujaPantallaEditar(){
   s3.display();
   iCuenta.display();
   iBuscar.display();
-  dibujaEditarBorrar();
+  dibujaEditarBorrar.display();
   sEB.display();
 }
 
@@ -136,11 +136,8 @@ void dibujaPantallaBorrar(){
   s3.display();
   iCuenta.display();
   iBuscar.display();
-  dibujaEditarBorrar();
+  dibujaEditarBorrar.display();
   sEB.display();
-  bBorrar.display();
-  confirmar.display();
-  p.display();
 }
 
 void dibujaPantallaIndividual(){

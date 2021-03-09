@@ -1,4 +1,4 @@
-class Confirm {
+class PopUp {
   
   // Dimensions
   float x, y, w, h;
@@ -8,22 +8,20 @@ class Confirm {
  String title;
  String message;
  
- Button bAceptar, bCancelar;
- float buttonW = 200, buttonH = 80;
+ Button bAceptar;
+ float buttonW = 200;
+ float buttonH = 80;
  
  boolean visible = true;
  
  // Constructor
  
- Confirm(String title, String message, float x, float y, float w, float h){
+ PopUp(String title, String message, float x, float y, float w, float h){
    this.title = title;
    this.message = message;
    this.x = x; this.y = y; 
    this.w = w; this.h = h;
-   this.bAceptar = new Button("Acceptar", x + w/4 - buttonW/2, 
-                                         y + h - buttonH*1.5, 
-                                         buttonW, buttonH);
-   this.bCancelar = new Button("Cancelar", x + 3*w/4 - buttonW/2, 
+   this.bAceptar = new Button("Acceptar", x + w/2 - buttonW/2, 
                                          y + h - buttonH*1.5, 
                                          buttonW, buttonH);
  }
@@ -43,15 +41,13 @@ class Confirm {
    this.visible = b;
    if(!this.visible){
      this.bAceptar.setEnabled(false);
-     this.bCancelar.setEnabled(false);
    }
    else {
      this.bAceptar.setEnabled(true);
-     this.bCancelar.setEnabled(true);
    }
  }
  
- // Dibuixa el Confirm
+ // Dibuixa el PopUp
  
  void display(){
    
@@ -74,17 +70,15 @@ class Confirm {
      fill(0);textSize(24); textAlign(CENTER);
      text(message, x + w/2, y + 4*b);
      
-     // Botons d'Acceptar i Cancelar
+     // Botó d'Acceptar
      bAceptar.display();
-     bCancelar.display();
      popStyle();
    }
  }
  
- // Comprova si estam sobre algun dels botons del Confirm
- boolean mouseOverButtons(){
-   return (( bAceptar.mouseOverButton()  && bAceptar.enabled ) || 
-           ( bCancelar.mouseOverButton() && bCancelar.enabled) );
+ // Comprova si estam sobre el botó del PopUp
+ boolean mouseOverButton(){
+   return bAceptar.mouseOverButton() && bAceptar.enabled;
  }
  
   

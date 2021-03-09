@@ -78,12 +78,6 @@ void selectPressed(){
       numPantalla = 3;
     }
     s3.toggle();        // Plegar o desplegar
-  } else if (sEB.mouseOverSelect() && sEB.enabled) {
-    if (!sEB.collapsed) {
-      sEB.update();      // Actualitzar valor
-      //numPantalla = 3;
-    }
-    sEB.toggle();        // Plegar o desplegar
   }
 }
 
@@ -109,8 +103,6 @@ void buttonPressed() {
     numPantalla = 15;
   } else if (bBorraro.mouseOverButton() && bBorraro.enabled){
     numPantalla = 16;
-  } else if (bBorrar.mouseOverButton() && bBorrar.enabled){
-    confirmar.setVisible(true);
   }
 }
 

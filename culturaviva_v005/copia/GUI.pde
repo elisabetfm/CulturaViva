@@ -1,14 +1,11 @@
 
-Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar;
+Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro;
 SelectBD s1, s2, sEB;
 Select s3;
 String[][] selectValues1;
 String[][] selectValues2;
 String[][] selectValuesEB;
 String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "mercados artesanales", "barra", "foodtrucks", "servicio de guardería", "máximo 100 personas", "más de 100 personas", "gratuïto"};
-String titulo = "¡Información!";
-String mensaje1 = "Se ha actualizado la Base de Datos.";
-String mensaje2 = "¿Quieres eliminar esta información?";
 
 ImageButton iCuenta, iComprar, iBuscar;
 
@@ -20,10 +17,6 @@ PagedCard pc;
 
 Counter c;
 
-PopUp p;
-
-Confirm confirmar;
-
 void setGUI(){
   setButtons();
   setImageButtons();
@@ -32,8 +25,6 @@ void setGUI(){
   setCalendario();
   setPagedCard();
   setCounter();
-  setPopUp();
-  setConfirm();
 }
 
 void setButtons(){
@@ -51,7 +42,6 @@ void setButtons(){
   bInsertaro = new Button ("Insertar", 500, 450, countW, countH);
   bEditaro = new Button ("Editar", 600, 450, countW, countH);
   bBorraro = new Button ("Borrar", 700, 450, countW, countH);
-  bBorrar = new Button ("Borrar", 700, 450, countW, countH);
 }
 
 void setSelect(){
@@ -61,7 +51,7 @@ void setSelect(){
   s2 = new SelectBD (selectValues2, 2*margenH + logoWidth + selectW + margenH, 2*margenV + bannerHeight, selectW, selectH);
   s3 = new Select(selectValues3, 2*margenH + logoWidth + 2*selectW + 2*margenH, 2*margenV + bannerHeight, selectW, selectH);
   selectValuesEB = getInfoTablaSeccion();
-  sEB = new SelectBD (selectValuesEB, 550, 310, selectW1, selectH);
+  sEB = new SelectBD (selectValuesEB, 550, 310, selectW, selectH);
 }
 
 void setImageButtons(){
@@ -103,14 +93,4 @@ void setCounter(){
   c.setValues(0, 100);
   c.setInitialValue(0);
   c.setStepValue(1);
-}
-
-void setPopUp(){
-  p = new PopUp(titulo, mensaje1, 250, 250, popW, popH);
-  p.setVisible(false);
-}
-
-void setConfirm(){
-  confirmar = new Confirm (titulo, mensaje2, 250, 250, confW, confH);
-  confirmar.setVisible(false);
 }

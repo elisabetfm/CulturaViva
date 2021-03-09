@@ -60,7 +60,6 @@ float buttonH1 = 50,
 
 //Dimensiones de los selects
 float selectW = 150,
-      selectW1 = 300,
       selectH = 40;
       
 //Dimensiones de las cards
@@ -70,13 +69,4 @@ float cardW = 750,
 //Dimensiones counter
 float countW = 100,
       countH = 30;
-      
-//Dimensiones del PopUp
-float popW = 600, 
-      popH = 340;
-
-//Dimensiones del Confirm
-float confW = 600, 
-      confH = 340;
-      
       
