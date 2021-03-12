@@ -111,6 +111,6 @@ void setPopUp(){
 }
 
 void setConfirm(){
-  confirmar = new Confirm (titulo, mensaje2, 250, 250, confW, confH);
+  confirmar = new Confirm (titulo, mensaje2, (width/2)-400, 300, confW, confH);
   confirmar.setVisible(false);
 }

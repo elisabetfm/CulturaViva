@@ -26,6 +26,7 @@ class SelectBD {
   
   void display(){
     pushStyle();
+    textAlign(LEFT);
     stroke(0); strokeWeight(2); fill(255);
     rect(x, y, w, h);
     
@@ -46,7 +47,7 @@ class SelectBD {
       for(int i=0; i<texts.length; i++){
         
         if(i== clickedOption()){
-          fill(200); noStroke();
+          fill(149, 127, 239); noStroke();
           rect(x+4, y+4 + h + (h + lineSpace)*i - 2, w -8, h + lineSpace - 8);
         }
         

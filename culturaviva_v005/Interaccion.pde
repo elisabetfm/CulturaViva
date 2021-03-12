@@ -36,6 +36,8 @@ void mousePressed() {
   
   counterPressed();  
   
+  borrarPressed();
+  
 }
 
 void selectPressed(){
@@ -157,5 +159,26 @@ void resetFormulari(){
 void borrarPressed(){
   if (bBorrar.mouseOverButton() && bBorrar.enabled){
     confirmar.setVisible(true);
-  } 
-}
+    numPantalla = 17;
+  } //else if (confirmar.bAceptar.mouseOverButton()){
+    //confirmar.setVisible(false);
+     
+     // Agafar el valor Id del Select
+     //String id = s.getSelectedId();
+     
+    // Actualitza la BBDD
+    //deleteInfoTaulaUnitat(id);
+    
+    // Recarregar informació al select
+    //String[][] selectValues = getInfoTaulaUnitat();
+    //s.setData(selectValues);
+    //s.reset();
+    
+    // Mostra el Popup
+   // p.setVisible(true);
+  //}
+  else if (confirmar.bCancelar.mouseOverButton()){
+    confirmar.setVisible(false);
+    numPantalla = 16;
+  }
+  }

@@ -48,7 +48,7 @@ void dibujaRecomendaciones(){
 void dibujaIniciarSesion(){
   pushStyle();
   rectMode (CENTER);
-  fill(255);
+  fill(184, 153, 138);
   rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
   image (imgCuenta, 2*(width/2 - (buttonW3 + margenH)), 2*margenV + bannerHeight + filtrosHeight + 2*margenV, cuentaWidth, cuentaHeight);
   popStyle();
@@ -57,7 +57,7 @@ void dibujaIniciarSesion(){
 void dibujaInsertar(){
   pushStyle();
   rectMode (CENTER);
-  fill(255);
+  fill(184, 153, 138);
   rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
   // Etiqueta  Número
  // fill(0); textSize(20); 
@@ -83,8 +83,7 @@ void dibujaInsertar(){
 void dibujaEditarBorrar(){
   pushStyle();
   rectMode (CENTER);
-  fill(255);
-  
+  fill(184, 153, 138);
   rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
   popStyle();
 }

@@ -50,10 +50,12 @@ void draw() {
       dibujaPantallaEditar();
     } else if (numPantalla==16){
       dibujaPantallaBorrar();
-  }
+    } else if (numPantalla==17){
+      dibujaPantallaConfirmar();
+    }
   
   updateCursor();
   
- println(mouseX+", "+mouseY);
+// println(mouseX+", "+mouseY);
 }
 }

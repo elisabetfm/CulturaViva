@@ -20,7 +20,7 @@ class Confirm {
    this.message = message;
    this.x = x; this.y = y; 
    this.w = w; this.h = h;
-   this.bAceptar = new Button("Acceptar", x + w/4 - buttonW/2, 
+   this.bAceptar = new Button("Aceptar", x + w/4 - buttonW/2, 
                                          y + h - buttonH*1.5, 
                                          buttonW, buttonH);
    this.bCancelar = new Button("Cancelar", x + 3*w/4 - buttonW/2, 
@@ -61,7 +61,7 @@ class Confirm {
      pushStyle();
      
      // Rectangle
-     stroke(0); strokeWeight(10);fill(200, 200, 100);
+     stroke(0); strokeWeight(4);fill(184, 153, 138);
      rect(x, y, w, h, b/2);
      
      line(x, y + 2*b , x+w, y + 2*b);

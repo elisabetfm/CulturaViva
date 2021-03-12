@@ -139,8 +139,26 @@ void dibujaPantallaBorrar(){
   dibujaEditarBorrar();
   sEB.display();
   bBorrar.display();
-  confirmar.display();
   p.display();
+  //confirmar.display();
+}
+
+void dibujaPantallaConfirmar(){
+  dibujaBanner();
+  dibujaLogo();
+  bIdioma1.display();
+  bIdioma2.display();
+  bIdioma3.display();
+  bIdioma4.display();
+  buscarText.display();
+  bCalendario.display();
+  s1.display();
+  s2.display();
+  s3.display();
+  iCuenta.display();
+  iBuscar.display();
+  //p.display();
+  confirmar.display();
 }
 
 void dibujaPantallaIndividual(){
