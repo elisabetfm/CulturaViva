@@ -109,9 +109,7 @@ void buttonPressed() {
     numPantalla = 15;
   } else if (bBorraro.mouseOverButton() && bBorraro.enabled){
     numPantalla = 16;
-  } else if (bBorrar.mouseOverButton() && bBorrar.enabled){
-    confirmar.setVisible(true);
-  }
+  } 
 }
 
 void textfieldPressed(){
@@ -154,4 +152,10 @@ void resetFormulari(){
   c.resetValue();
  // tituloText.removeAllText();
  // descripcionText.removeAllText();
+}
+
+void borrarPressed(){
+  if (bBorrar.mouseOverButton() && bBorrar.enabled){
+    confirmar.setVisible(true);
+  } 
 }

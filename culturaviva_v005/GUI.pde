@@ -37,10 +37,10 @@ void setGUI(){
 }
 
 void setButtons(){
-  bIdioma1     = new Button("Català", 2*margenH + logoWidth + bannerWidth - (4*buttonW1),0, buttonW1, buttonH2);
-  bIdioma2     = new Button("Castellano", 2*margenH + logoWidth + bannerWidth - (3*buttonW1), 0, buttonW1, buttonH2);
-  bIdioma3     = new Button("English", 2*margenH + logoWidth + bannerWidth - (2*buttonW1), 0, buttonW1, buttonH2);
-  bIdioma4     = new Button("Deutsch", 2*margenH + logoWidth + bannerWidth - buttonW1, 0, buttonW1, buttonH2);
+  bIdioma1     = new Button("Català", 2*margenH + logoWidth + bannerWidth - (4*buttonW1),0, buttonW1,idiomaH);
+  bIdioma2     = new Button("Castellano", 2*margenH + logoWidth + bannerWidth - (3*buttonW1), 0, buttonW1, idiomaH);
+  bIdioma3     = new Button("English", 2*margenH + logoWidth + bannerWidth - (2*buttonW1), 0, buttonW1, idiomaH);
+  bIdioma4     = new Button("Deutsch", 2*margenH + logoWidth + bannerWidth - buttonW1, 0, buttonW1, idiomaH);
   bCalendario = new Button ("Calendario", 2*margenH + logoWidth + 3*selectW + buttonW2 + margenH*4, 2*margenV + bannerHeight, buttonW1, selectH);
   bEnter = new Button ("Aceptar", 550, 600, 350, buttonH1);
   bIr = new Button ("Ir", 1050, 320, 200, buttonH1 );
@@ -51,7 +51,7 @@ void setButtons(){
   bInsertaro = new Button ("Insertar", 500, 450, countW, countH);
   bEditaro = new Button ("Editar", 600, 450, countW, countH);
   bBorraro = new Button ("Borrar", 700, 450, countW, countH);
-  bBorrar = new Button ("Borrar", 700, 450, countW, countH);
+  bBorrar = new Button ("Borrar", 670, 600, countW, countH); 
 }
 
 void setSelect(){
@@ -60,8 +60,8 @@ void setSelect(){
   selectValues2 = getInfoTablaLugar();
   s2 = new SelectBD (selectValues2, 2*margenH + logoWidth + selectW + margenH, 2*margenV + bannerHeight, selectW, selectH);
   s3 = new Select(selectValues3, 2*margenH + logoWidth + 2*selectW + 2*margenH, 2*margenV + bannerHeight, selectW, selectH);
-  selectValuesEB = getInfoTablaSeccion();
-  sEB = new SelectBD (selectValuesEB, 550, 310, selectW1, selectH);
+  selectValuesEB = getInfoTituloEventos();
+  sEB = new SelectBD (selectValuesEB, 570, 350, selectW1, selectH);
 }
 
 void setImageButtons(){

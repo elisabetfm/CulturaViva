@@ -98,6 +98,26 @@ String[][] getInfoTablaEventos(){
   return data;
 }
 
+String[][] getInfoTituloEventos(){
+  
+  int numRows = getNumRowsTaula("eventos");
+
+  print(numRows);
+  
+  String[][] data = new String[numRows][2];
+  
+  int nr=0;
+  msql.query( "SELECT id_Eventos, nombre_evento FROM eventos" );
+  while (msql.next()){
+      data[nr][0] = String.valueOf(msql.getInt("id_Eventos"));
+      data[nr][1] = msql.getString("nombre_evento");
+      nr++;
+  }
+  
+  printArray(data);
+  return data;
+}
+
 String[][] getInfoTablaEventos( int numSeccion){
   
   int numRows = getNumRowsEventosSeccion( numSeccion);

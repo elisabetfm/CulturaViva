@@ -58,6 +58,9 @@ float buttonH1 = 50,
       buttonW3 = 50, 
       buttonW4 = 80;
 
+//Dimensiones de los idiomas
+float idiomaH = 15;
+
 //Dimensiones de los selects
 float selectW = 150,
       selectW1 = 300,
