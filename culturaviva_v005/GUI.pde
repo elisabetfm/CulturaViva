@@ -16,7 +16,7 @@ TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, 
 
 Calendari calendario;
 
-PagedCard pc, pc1;
+PagedCard pc, pc1, pc2;
 
 Counter c;
 
@@ -31,7 +31,8 @@ void setGUI(){
   setTextField();
   setCalendario();
   setPagedCard();
-  setPagedCard1();
+  setPagedCardRecientes();
+  setPagedCardAleatorios();
   setCounter();
   setPopUp();
   setConfirm();
@@ -99,20 +100,33 @@ void updatePageCard(){
   pc.setCards();
 }
 
-void setPagedCard1(){
-  pc = new PagedCard(2);
-  String[][] infoCards = getInfoEventosRecientes();
-  pc.setData(infoCards);
-  pc.setCards();
-}
-
-void updatePageCard1(){
-   pc = new PagedCard(2);
+void setPagedCardRecientes(){
+  pc1 = new PagedCard(2);
   String[][] infoCards = getInfoEventosRecientes(s1.selectedIndex);
-  pc.setData(infoCards);
-  pc.setCards();
+  pc1.setData(infoCards);
+  pc1.setCards();
 }
 
+void updatePageCardRecientes(){
+   pc1 = new PagedCard(2);
+  String[][] infoCards = getInfoEventosRecientes(s1.selectedIndex);
+  pc1.setData(infoCards);
+  pc1.setCards();
+}
+
+void setPagedCardAleatorios(){
+  pc2 = new PagedCard(4);
+  String[][] infoCards = getInfoEventosAleatorios(s1.selectedIndex);
+  pc2.setData(infoCards);
+  pc2.setCards();
+}
+
+void updatePageCardAleatorios(){
+   pc2 = new PagedCard(4);
+  String[][] infoCards = getInfoEventosAleatorios(s1.selectedIndex);
+  pc2.setData(infoCards);
+  pc2.setCards();
+}
 
 void setCounter(){
   c = new Counter (imgMas, imgMenos, 970, 280, countW, countH);

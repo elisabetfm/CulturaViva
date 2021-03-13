@@ -56,6 +56,6 @@ void draw() {
   
   updateCursor();
   
-// println(mouseX+", "+mouseY);
+ println(mouseX+", "+mouseY);
 }
 }

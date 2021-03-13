@@ -118,7 +118,7 @@ String[][] getInfoTituloEventos(){
   return data;
 }
 
-String[][] getInfoEventosRecientes(){
+String[][] getInfoEventosRecientes(int idCategoria){
   
   int numRows = getNumRowsTaula("eventos");
 
@@ -127,7 +127,7 @@ String[][] getInfoEventosRecientes(){
   String[][] data = new String[numRows][6];
   
   int nr=0;
-  msql.query( "SELECT  *  FROM eventos ORDER BY fecha DESC;" );
+  msql.query( "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar ORDER BY fecha DESC;" );
   while (msql.next()){
       data[nr][0] = msql.getString("titulo");
       data[nr][1] = msql.getString("lugar");
@@ -141,6 +141,31 @@ String[][] getInfoEventosRecientes(){
   printArray(data);
   return data;
 }
+
+String[][] getInfoEventosAleatorios(int idCategoria){
+  
+  int numRows = getNumRowsTaula("eventos");
+
+  print(numRows);
+  
+  String[][] data = new String[numRows][6];
+  
+  int nr=0;
+  msql.query( "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar ORDER BY RAND();" );
+  while (msql.next()){
+      data[nr][0] = msql.getString("titulo");
+      data[nr][1] = msql.getString("lugar");
+      data[nr][2] = msql.getString("fecha");
+      data[nr][3] = msql.getString("seccion");
+      data[nr][4] = msql.getString("descripcion");
+      data[nr][5] = msql.getString("imagen");
+      nr++;
+  }
+  
+  printArray(data);
+  return data;
+}
+
 
 String[][] getInfoTablaEventos( int numSeccion){
   

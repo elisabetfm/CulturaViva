@@ -7,8 +7,7 @@ void dibujaPantalla01(){
 void dibujaPantallaInicio(){
   dibujaBanner();
   dibujaLogo();
-  dibujaAcontecimientos1();
-  dibujaAcontecimientos2();
+  pc1.display(40, 260, 400, 800);
   bCalendario.display();
   s1.display();
   s2.display();
@@ -16,14 +15,13 @@ void dibujaPantallaInicio(){
   iCuenta.display();
   buscarText.display();
   iBuscar.display();
-  //pc.display(190, 250, 400, 800);
 }
 
 void dibujaPantallaEventos(){
   dibujaBanner();
   dibujaLogo();
   dibujaAcontecimientosBuscados();
-  dibujaRecomendaciones();
+ // dibujaRecomendaciones();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -160,7 +158,6 @@ void dibujaPantallaTeatro(){
   image(imgTeatro, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaRecomendaciones();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -171,13 +168,13 @@ void dibujaPantallaTeatro(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
+  pc2.display(1110, 260, 200, 300);
 }
 
 void dibujaPantallaArte(){
   image(imgArte, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaRecomendaciones();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -188,13 +185,13 @@ void dibujaPantallaArte(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
+  pc2.display(1110, 260, 200, 300);
 }
 
 void dibujaPantallaFestival(){
   image(imgFestival, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaRecomendaciones();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -205,13 +202,13 @@ void dibujaPantallaFestival(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
+  pc2.display(1110, 260, 200, 300);
 }
 
 void dibujaPantallaConcierto(){
   image(imgConcierto, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaRecomendaciones();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -222,13 +219,13 @@ void dibujaPantallaConcierto(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
+  pc2.display(1110, 260, 200, 300);
 }
 
 void dibujaPantallaFeria(){
   image(imgFeria, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaRecomendaciones();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -239,13 +236,13 @@ void dibujaPantallaFeria(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
+  pc2.display(1110, 260, 200, 300);
 }
 
 void dibujaPantallaLectura(){
   image(imgLectura, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
-  dibujaRecomendaciones();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -256,4 +253,5 @@ void dibujaPantallaLectura(){
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();
+  pc2.display(1110, 260, 200, 300);
 }

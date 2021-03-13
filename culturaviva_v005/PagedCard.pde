@@ -37,7 +37,6 @@ class PagedCard {
     for(int i=0; i<cards.length; i++){
       cards[i].setImage(imgs[i]);
     }
-
   }
   
   void nextPage(){
