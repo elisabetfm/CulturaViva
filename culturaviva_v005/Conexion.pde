@@ -118,6 +118,30 @@ String[][] getInfoTituloEventos(){
   return data;
 }
 
+String[][] getInfoEventosRecientes(){
+  
+  int numRows = getNumRowsTaula("eventos");
+
+  print(numRows);
+  
+  String[][] data = new String[numRows][6];
+  
+  int nr=0;
+  msql.query( "SELECT  *  FROM eventos ORDER BY fecha DESC;" );
+  while (msql.next()){
+      data[nr][0] = msql.getString("titulo");
+      data[nr][1] = msql.getString("lugar");
+      data[nr][2] = msql.getString("fecha");
+      data[nr][3] = msql.getString("seccion");
+      data[nr][4] = msql.getString("descripcion");
+      data[nr][5] = msql.getString("imagen");
+      nr++;
+  }
+  
+  printArray(data);
+  return data;
+}
+
 String[][] getInfoTablaEventos( int numSeccion){
   
   int numRows = getNumRowsEventosSeccion( numSeccion);

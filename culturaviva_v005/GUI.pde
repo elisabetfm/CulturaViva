@@ -16,7 +16,7 @@ TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, 
 
 Calendari calendario;
 
-PagedCard pc;
+PagedCard pc, pc1;
 
 Counter c;
 
@@ -31,6 +31,7 @@ void setGUI(){
   setTextField();
   setCalendario();
   setPagedCard();
+  setPagedCard1();
   setCounter();
   setPopUp();
   setConfirm();
@@ -97,6 +98,21 @@ void updatePageCard(){
   pc.setData(infoCards);
   pc.setCards();
 }
+
+void setPagedCard1(){
+  pc = new PagedCard(2);
+  String[][] infoCards = getInfoEventosRecientes();
+  pc.setData(infoCards);
+  pc.setCards();
+}
+
+void updatePageCard1(){
+   pc = new PagedCard(2);
+  String[][] infoCards = getInfoEventosRecientes(s1.selectedIndex);
+  pc.setData(infoCards);
+  pc.setCards();
+}
+
 
 void setCounter(){
   c = new Counter (imgMas, imgMenos, 970, 280, countW, countH);

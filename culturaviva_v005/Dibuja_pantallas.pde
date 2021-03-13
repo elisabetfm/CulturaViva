@@ -9,10 +9,6 @@ void dibujaPantallaInicio(){
   dibujaLogo();
   dibujaAcontecimientos1();
   dibujaAcontecimientos2();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   bCalendario.display();
   s1.display();
   s2.display();
@@ -20,6 +16,7 @@ void dibujaPantallaInicio(){
   iCuenta.display();
   buscarText.display();
   iBuscar.display();
+  //pc.display(190, 250, 400, 800);
 }
 
 void dibujaPantallaEventos(){
@@ -27,10 +24,6 @@ void dibujaPantallaEventos(){
   dibujaLogo();
   dibujaAcontecimientosBuscados();
   dibujaRecomendaciones();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -44,10 +37,6 @@ void dibujaPantallaSesion(){
   dibujaBanner();
   dibujaLogo();
   dibujaIniciarSesion();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   usuarioText.display();
@@ -63,10 +52,6 @@ void dibujaPantallaSesion(){
 void dibujaPantallaInsBorrEdi(){
   dibujaBanner();
   dibujaLogo();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -83,10 +68,6 @@ void dibujaPantallaInsertar(){
   dibujaBanner();
   dibujaLogo();
   dibujaInsertar();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   tituloText.display();
@@ -107,10 +88,6 @@ void dibujaPantallaInsertar(){
 void dibujaPantallaEditar(){
   dibujaBanner();
   dibujaLogo();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -125,10 +102,6 @@ void dibujaPantallaEditar(){
 void dibujaPantallaBorrar(){
   dibujaBanner();
   dibujaLogo();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -140,16 +113,11 @@ void dibujaPantallaBorrar(){
   sEB.display();
   bBorrar.display();
   p.display();
-  //confirmar.display();
 }
 
 void dibujaPantallaConfirmar(){
   dibujaBanner();
   dibujaLogo();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -165,10 +133,6 @@ void dibujaPantallaIndividual(){
   dibujaBanner();
   dibujaLogo();
   dibujaAcontecimientoIndividual();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -181,10 +145,6 @@ void dibujaPantallaIndividual(){
 void dibujaPantallaCalendario(){
   dibujaBanner();
   dibujaLogo();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -201,10 +161,6 @@ void dibujaPantallaTeatro(){
   dibujaBanner();
   dibujaLogo();
   dibujaRecomendaciones();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -222,10 +178,6 @@ void dibujaPantallaArte(){
   dibujaBanner();
   dibujaLogo();
   dibujaRecomendaciones();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -243,10 +195,6 @@ void dibujaPantallaFestival(){
   dibujaBanner();
   dibujaLogo();
   dibujaRecomendaciones();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -264,10 +212,6 @@ void dibujaPantallaConcierto(){
   dibujaBanner();
   dibujaLogo();
   dibujaRecomendaciones();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -285,10 +229,6 @@ void dibujaPantallaFeria(){
   dibujaBanner();
   dibujaLogo();
   dibujaRecomendaciones();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -306,10 +246,6 @@ void dibujaPantallaLectura(){
   dibujaBanner();
   dibujaLogo();
   dibujaRecomendaciones();
-  bIdioma1.display();
-  bIdioma2.display();
-  bIdioma3.display();
-  bIdioma4.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
