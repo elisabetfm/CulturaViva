@@ -7,7 +7,7 @@ void dibujaPantalla01(){
 void dibujaPantallaInicio(){
   dibujaBanner();
   dibujaLogo();
-  pc1.display(40, 260, 400, 800);
+  pc1.displayH(170, 260, 800, 800);
   bCalendario.display();
   s1.display();
   s2.display();
@@ -15,13 +15,14 @@ void dibujaPantallaInicio(){
   iCuenta.display();
   buscarText.display();
   iBuscar.display();
+  bAnterior.display();
+  bSiguiente.display();
 }
 
 void dibujaPantallaEventos(){
   dibujaBanner();
   dibujaLogo();
   dibujaAcontecimientosBuscados();
- // dibujaRecomendaciones();
   buscarText.display();
   bCalendario.display();
   s1.display();

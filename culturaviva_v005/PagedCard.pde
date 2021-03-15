@@ -27,6 +27,18 @@ class PagedCard {
     cards = new Card[this.cardsData.length];
     for(int i=0; i<cards.length; i++){
       cards[i] = new Card(cardsData[i]);
+      cards[i].setSizeTitol(24);
+      String nomImatge = cardsData[i][5];
+      PImage img = loadImage("../DATA/imgs/"+nomImatge);
+      cards[i].setImage(img);
+    }
+  }
+  
+  void setCardsSmall(){
+    cards = new Card[this.cardsData.length];
+    for(int i=0; i<cards.length; i++){
+      cards[i] = new Card(cardsData[i]);
+      cards[i].setSizeTitol(14);
       String nomImatge = cardsData[i][5];
       PImage img = loadImage("../DATA/imgs/"+nomImatge);
       cards[i].setImage(img);
@@ -65,17 +77,42 @@ class PagedCard {
     float hCard = h / (float) numCardsPage;
     float yCard = y;
     float b = 10;
-    int nc = 0;
     for(int i = firstCardPage; i <= lastCardPage; i++){
       if(i<cards.length){
         cards[i].display(x, yCard, w, hCard, b);
-        nc++;
         yCard += hCard + b;
       }
     }
     
     // Informació de la Pàgina
     fill(0);
+    text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), x + w + 50, y+10);
+    
+    popStyle();
+  }
+  
+  void displayH(float x, float y, float w, float h){
+    
+    pushStyle();
+    
+    //fill(200, 50); stroke(0);strokeWeight(3);
+    //rect(x, y, w, h);
+    
+    // Dibuixa Cards
+    int firstCardPage = numCardsPage*numPage;
+    int lastCardPage  = numCardsPage*(numPage+1) - 1;
+    float wCard = w / (float) numCardsPage;
+    float xCard = y;
+    float b = 10;
+    for(int i = firstCardPage; i <= lastCardPage; i++){
+      if(i<cards.length){
+        cards[i].display(xCard, y, wCard, y, b);
+        xCard += wCard + b;
+      }
+    }
+    
+    // Informació de la Pàgina
+    fill(0); 
     text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), x + w + 50, y+10);
     
     popStyle();

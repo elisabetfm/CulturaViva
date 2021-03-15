@@ -6,6 +6,8 @@ class Card {
  String section;
  String description;
  
+ float sizeTitol = 24;
+ 
  // Constructors
  
  Card(){
@@ -28,6 +30,10 @@ class Card {
  }
  
  //Setters
+ 
+ void setSizeTitol(float t){
+   this.sizeTitol = t;
+ }
  
  void setImage(PImage img){
    this.img = img;
@@ -56,19 +62,19 @@ class Card {
    }
    
    // Títol
-   fill(0); textSize(24); textAlign(CENTER);
+   fill(0); textSize(sizeTitol); textAlign(CENTER);
    text(title, x + 2*w/3, y + h/5);
    
    // Lloc i data
-   fill(0); textSize(18); textAlign(CENTER);
+   fill(0); textSize(sizeTitol - 4); textAlign(CENTER);
    text(place+", "+date, x + w/3 + w/6, y + 2*h/5);
    
    // Secció
-   fill(0); textSize(18); textAlign(CENTER);
+   fill(0); textSize(sizeTitol - 4); textAlign(CENTER);
    text(section, x + 2*w/3 + w/6, y + 2*h/5);
    
    // Descripció
-   fill(0);textSize(14); textAlign(LEFT);
+   fill(0);textSize(sizeTitol - 8); textAlign(LEFT);
    text(description, x + w/3 + b, y + 2*h/3 - b, 2*w/3 - b*2, h/4);
    
    

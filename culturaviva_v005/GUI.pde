@@ -118,14 +118,14 @@ void setPagedCardAleatorios(){
   pc2 = new PagedCard(4);
   String[][] infoCards = getInfoEventosAleatorios(s1.selectedIndex);
   pc2.setData(infoCards);
-  pc2.setCards();
+  pc2.setCardsSmall();
 }
 
 void updatePageCardAleatorios(){
    pc2 = new PagedCard(4);
   String[][] infoCards = getInfoEventosAleatorios(s1.selectedIndex);
   pc2.setData(infoCards);
-  pc2.setCards();
+  pc2.setCardsSmall();
 }
 
 void setCounter(){
