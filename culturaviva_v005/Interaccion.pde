@@ -97,8 +97,25 @@ void buttonPressed() {
   } else if (bIdioma4.mouseOverButton() && bIdioma4.enabled) {
   } else if (bCalendario.mouseOverButton() && bCalendario.enabled) {
     numPantalla = 6;
-  } else if (bEnter.mouseOverButton() && bEnter.enabled){
-    numPantalla = 13;
+  } else if(bEnter.mouseOverButton() && bEnter.enabled){
+    String usuario = usuarioText.text;
+    String password = contrasenaText.text; 
+    String[][] datos = getInfoUsuarioContrasena();
+    boolean ok = false;
+    for(int i=0; i<datos.length; i++){
+      if(usuario.equals(datos[i][0]) && password.equals(datos[i][1])){
+        ok = true;
+        break;
+      }
+    } if(ok){
+      // trobat
+       numPantalla = 13;
+       println("TROBAT");
+    } else {
+      // no exiosterix
+      println("NO TROBAT");
+    }
+    
   } else if (bIr.mouseOverButton() && bIr.enabled){
     numPantalla = 3;
   } else if (iCuenta.mouseOverButton() && iCuenta.enabled) {
@@ -157,28 +174,28 @@ void resetFormulari(){
 }
 
 void borrarPressed(){
-  if (bBorrar.mouseOverButton() && bBorrar.enabled){
+  if (numPantalla==16 && bBorrar.mouseOverButton() && bBorrar.enabled){
     confirmar.setVisible(true);
     numPantalla = 17;
-  } //else if (confirmar.bAceptar.mouseOverButton()){
-    //confirmar.setVisible(false);
+  } if (confirmar.bAceptar.mouseOverButton()){
+     confirmar.setVisible(false);
      
      // Agafar el valor Id del Select
-     //String id = s.getSelectedId();
+    String id = String.valueOf(sEB.selectedIndex);
      
     // Actualitza la BBDD
-    //deleteInfoTaulaUnitat(id);
+    deleteInfoTablaEventos(id);
     
     // Recarregar informació al select
-    //String[][] selectValues = getInfoTaulaUnitat();
-    //s.setData(selectValues);
-    //s.reset();
+    String[][] selectValues = getInfoTablaEventos();
+    sEB.setData(selectValues);
+    sEB.reset();
     
     // Mostra el Popup
-   // p.setVisible(true);
-  //}
+    p.setVisible(true);
+  }
   else if (confirmar.bCancelar.mouseOverButton()){
     confirmar.setVisible(false);
     numPantalla = 16;
   }
-  }
+}

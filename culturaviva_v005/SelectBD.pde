@@ -24,6 +24,14 @@ class SelectBD {
     this.collapsed = true;
   }
   
+  void reset(){
+    this.selectedValue = "";
+  }
+  
+  void setData(String[][] info){
+    this.texts = info;
+  }
+  
   void display(){
     pushStyle();
     textAlign(LEFT);

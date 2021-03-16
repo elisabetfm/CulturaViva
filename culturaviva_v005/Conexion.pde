@@ -118,6 +118,19 @@ String[][] getInfoTituloEventos(){
   return data;
 }
 
+void deleteInfoTablaEventos(String id){
+  String q = ("DELETE FROM eventos WHERE numero='"+id+"' ");
+  println(q);
+  msql.query(q);
+  
+}
+
+void updateInfoTablaEventos(String id, String num, String nombre){
+  String q = ("UPDATE eventos SET numero='"+num+"', nom='"+nombre+"' WHERE numero='"+id+"'");
+  println(q);
+  msql.query(q);
+}
+
 String[][] getInfoEventosRecientes(int idCategoria){
   
   int numRows = getNumRowsTaula("eventos");
@@ -162,10 +175,25 @@ String[][] getInfoEventosAleatorios(int idCategoria){
       nr++;
   }
   
-  printArray(data);
+  //printArray(data);
   return data;
 }
 
+String[][] getInfoUsuarioContrasena(){
+   int numRows = getNumRowsTaula("usuario");
+  
+  String[][] data = new String[numRows][2];
+  int nr=0;
+  msql.query( "SELECT `nick_usuario` as usuario, `contrasena_usuario` as contrasena FROM `usuario` u;" );
+  while (msql.next()){
+      data[nr][0] = msql.getString("usuario");
+      data[nr][1] = msql.getString("contrasena");
+      nr++;
+  }
+  
+  printArray(data);
+  return data;
+}
 
 String[][] getInfoTablaEventos( int numSeccion){
   

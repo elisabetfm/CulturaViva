@@ -7,7 +7,7 @@ void dibujaPantalla01(){
 void dibujaPantallaInicio(){
   dibujaBanner();
   dibujaLogo();
-  pc1.displayH(170, 260, 800, 800);
+  pc1.displayH(200, 260, 800, 800);
   bCalendario.display();
   s1.display();
   s2.display();
@@ -61,6 +61,7 @@ void dibujaPantallaInsBorrEdi(){
   bInsertaro.display();
   bEditaro.display();
   bBorraro.display();
+  println("Pantalla INS BORRA EDITAR");
 }
 
 void dibujaPantallaInsertar(){
@@ -124,7 +125,7 @@ void dibujaPantallaConfirmar(){
   s3.display();
   iCuenta.display();
   iBuscar.display();
-  //p.display();
+  p.display();
   confirmar.display();
 }
 
