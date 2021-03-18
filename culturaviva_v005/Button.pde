@@ -1,18 +1,18 @@
-// Classe Botó
+// Clase Botón
 
 class Button {
   
- // Propietats d'un botó:
- float x, y, w, h;  // Posició i dimensions
- // Colors de contorn, farciment, actiu i desactiu
+ // Propiedades de un botón:
+ float x, y, w, h;  // Posición y dimensiones
+ // Colores de contorno, relleno, activación y desactivación
  color fillColor, strokeColor;
  color fillColorOver, fillColorDisabled;
- String textBoto;  // Text
- boolean enabled;  // Abilitat / desabilitat
+ String textBoton;  // Texto
+ boolean enabled;  // Habilitado / deshabilitado
  
- // Mètode Constructor
+ // Constructor
  Button(String text, float x, float y, float w, float h){
-   this.textBoto = text;
+   this.textBoton = text;
    this.x = x;
    this.y = y;
    this.w = w;
@@ -30,31 +30,32 @@ class Button {
    this.enabled = b;
  }
  
- // Dibuixa el botó
+ // Dibujar el botón
  void display(){
    if(!enabled){
-     fill(fillColorDisabled);  // Color desabilitat
+     fill(fillColorDisabled);  // Color deshabilitado
+   } else if(mouseOverButton()){
+     fill(fillColorOver);      // Color cuando el ratón está encima
+   } else {
+     fill(fillColor);          // Color activo sin el ratón encima
    }
-   else if(mouseOverButton()){
-     fill(fillColorOver);      // Color quan ratolí a sobre
-   }
-   else{
-     fill(fillColor);          // Color actiu però ratolí fora
-   }
-   stroke(strokeColor); strokeWeight(2);        //Color i gruixa del contorn
-   rect(this.x, this.y, this.w, this.h, 10);    // Rectangle del botó
+   stroke(strokeColor);  //Color del contorno
+   strokeWeight(2);        //Anchura del contorno
+   rect(this.x, this.y, this.w, this.h, 10);    // Rectángulo del botón
    
-   // Text (color, alineació i mida)
-   fill(0); textAlign(CENTER); textFont(fuente1); textSize(20);
-   text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
+   // Texto: color, alineación y medidas
+   fill(0); 
+   textAlign(CENTER); 
+   textFont(fuente1); 
+   textSize(20);
+   text(textBoton, this.x + this.w/2, this.y + this.h/2 + 10);
  }
  
- // Indica si el cursor està sobre el botó
- boolean mouseOverButton(){
+   // Indica si el cursor está sobre el botón
+   boolean mouseOverButton(){
    return (mouseX >= this.x) && 
           (mouseX<=this.x + this.w) && 
           (mouseY>= this.y) && 
           (mouseY<= this.y + this.h); 
+   }
  }
-  
-}

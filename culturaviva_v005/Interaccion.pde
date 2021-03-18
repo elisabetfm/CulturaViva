@@ -43,7 +43,6 @@ void selectPressed(){
     if (!s1.collapsed) {
       s1.update();      // Actualitzar valor
     if (s1.selectedValue.equals("obras de teatro")){ //condició per a què es dibuixi un rectangle
-      println("ANANT a pantalla Teatre");
         numPantalla = 7;
        updatePageCard();
       } else if (s1.selectedValue.equals("exposiciones de arte")){ //condició per a què es dibuixi un rectangle
@@ -66,8 +65,20 @@ void selectPressed(){
     s1.toggle();        // Plegar o desplegar
   } else if (s2.mouseOverSelect() && s2.enabled) {
     if (!s2.collapsed) {
-      s2.update();      // Actualitzar valor
-      numPantalla = 3;
+      s2.update(); // Actualitzar valor
+      if (s2.selectedValue.equals("Mallorca")){ //condició per a què es dibuixi un rectangle
+        numPantalla = 3;
+       updatePageCard();
+      } else if (s2.selectedValue.equals("Menorca")){ //condició per a què es dibuixi un rectangle
+        numPantalla = 3;
+        updatePageCard();
+      } else if (s2.selectedValue.equals("Ibiza")){ //condició per a què es dibuixi un rectangle
+        numPantalla = 3;
+        updatePageCard();
+      } else if (s2.selectedValue.equals("Formentera")){ //condició per a què es dibuixi un rectangle
+        numPantalla = 3;
+        updatePageCard();
+      } 
     }
     s2.toggle();        // Plegar o desplegar
   } else if (s3.mouseOverSelect() && s3.enabled) {

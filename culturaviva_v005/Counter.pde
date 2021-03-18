@@ -1,22 +1,23 @@
-// Classe Counter
+// Clase Counter
 
 class Counter {
   
-  // Valor del comptador
+  // Valor del contador
   int value = 255;
-  int minValue = 0, maxValue = 255;
+  int minValue = 0,
+      maxValue = 255;
   int stepValue = 1;
   
- // Propietats d'un counter:
- float x, y, w, h;  // Posició i dimensions
+ // Propiedades de un "counter":
+ float x, y, w, h;  // Posición y dimensiones
  
- // Colors de farciment i contorn
+ // Colores de relleno y contorno
  color fillColor, strokeColor;
  
- PImage imgMas, imgMenos;       // Icones del botó
+ // Iconos del botón
+ PImage imgMas, imgMenos;       
 
- 
- // Mètode Constructor
+ // Método Constructor
  Counter(PImage imgMas, PImage imgMenos, float x, float y, float w, float h){
    this.imgMas = imgMas;
    this.imgMenos = imgMenos;
@@ -29,7 +30,6 @@ class Counter {
  }
  
  // Setters
- 
  void setInitialValue(int n){
    this.value = n;
  }
@@ -50,18 +50,22 @@ class Counter {
  int getValue(){
    return this.value;
  }
-// Dibuixa el botó
+ 
+// Dibuja el botón
  void display(){
    
-   fill(fillColor);                            // Color 
-   stroke(strokeColor); strokeWeight(2);      //Color i gruixa del contorn
-   rect(this.x, this.y, this.w + 2*this.h, this.h, 10);   // Rectangle del botó
+   fill(fillColor);     // Color 
+   stroke(strokeColor); //Color del contorno
+   strokeWeight(2);     //Anchura del contorno
+   rect(this.x, this.y, this.w + 2*this.h, this.h, 10); // Rectángulo del botón
    
-   fill(0); textSize(32);
+   fill(0); 
+   textSize(32);
    text(value, this.x + 20, this.y + this.h/2 + 10);
    
-   // Icona del botó
-   fill(255); stroke(0);
+   // Icono del botón
+   fill(255); 
+   stroke(0);
    rect(this.x + this.w, this.y, this.h, this.h, 10);
    image(imgMas,   this.x + this.w, this.y, this.h, this.h);
    rect(this.x + this.w + this.h, this.y, this.h, this.h, 10);
@@ -69,17 +73,17 @@ class Counter {
  }
  
  boolean mouseOverButtons(){
-   return mouseOverButtonMes() || mouseOverButtonMenys();
+   return mouseOverButtonMas() || mouseOverButtonMenos();
  }
  
- // Indica si el cursor està sobre el botó Més
- boolean mouseOverButtonMes(){
+ // Indica si el cursor está encima del botón "mas" 
+ boolean mouseOverButtonMas(){
    return mouseX >= this.x + this.w && mouseX <= this.x + this.w + this.h &&
           mouseY >= this.y && mouseY <= this.y + this.h; 
  }
  
- // Indica si el cursor està sobre el botó Menys
- boolean mouseOverButtonMenys(){
+ // Indica si el cursor está encima del botón "menos" 
+ boolean mouseOverButtonMenos(){
    return mouseX >= this.x + this.w + this.h && mouseX <= this.x + this.w + 2*this.h &&
           mouseY >= this.y && mouseY <= this.y + this.h; 
  }
@@ -99,10 +103,10 @@ class Counter {
  }
  
  void update(){
-   if(mouseOverButtonMes()){
+   if(mouseOverButtonMas()){
      increment();
    }
-   else if(mouseOverButtonMenys()){
+   else if(mouseOverButtonMenos()){
      decrement();
    }
  }

@@ -22,14 +22,14 @@ void dibujaPantallaInicio(){
 void dibujaPantallaEventos(){
   dibujaBanner();
   dibujaLogo();
-  dibujaAcontecimientosBuscados();
+  pc.display(190, 250, 800, 400);
   buscarText.display();
   bCalendario.display();
   s1.display();
   s2.display();
   s3.display();
   iCuenta.display();
-  iBuscar.display();
+  iBuscar.display(); 
 }
 
 void dibujaPantallaSesion(){

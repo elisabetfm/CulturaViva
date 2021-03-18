@@ -5,23 +5,17 @@ Select s3;
 String[][] selectValues1;
 String[][] selectValues2;
 String[][] selectValuesEB;
-String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "mercados artesanales", "barra", "foodtrucks", "servicio de guardería", "máximo 100 personas", "más de 100 personas", "gratuïto"};
+String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "barra", "foodtrucks", "servicio de guardería", "máximo 100 personas", "más de 100 personas", "gratuïto"};
 String titulo = "¡Información!";
 String mensaje1 = "Se ha actualizado la Base de Datos.";
 String mensaje2 = "¿Quieres eliminar esta información?";
 
 ImageButton iCuenta, iComprar, iBuscar;
-
 TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, seccionText, lugarText, fechaText;
-
-Calendari calendario;
-
+Calendario calendario;
 PagedCard pc, pc1, pc2;
-
 Counter c;
-
 PopUp p;
-
 Confirm confirmar;
 
 void setGUI() {
@@ -68,7 +62,7 @@ void setSelect() {
 
 void setImageButtons() {
   iCuenta = new ImageButton (imgCuenta, 2*margenH + logoWidth + 3*selectW + buttonW2 + buttonW1 + buttonW3 + margenH*3, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
-  iBuscar = new ImageButton (imgBuscar, 2*margenH + logoWidth + 3*selectW + (buttonW2 - buttonW3) + 3*margenH, 2*margenV + bannerHeight, buttonW3, selectH);
+  iBuscar = new ImageButton (imgBuscar, 2*margenH + logoWidth + 3*selectW + (buttonW2 - buttonW3) + 3*margenH, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
 }
 
 void setTextField() {
@@ -81,49 +75,7 @@ void setTextField() {
 }
 
 void setCalendario() {
-  calendario = new Calendari (400, 300, 500, 450);
-}
-
-void setPagedCard() {
-  pc = new PagedCard(3);
-  String[][] infoCards = getInfoTablaEventos();
-  pc.setData(infoCards);
-  pc.setCards();
-}
-
-void updatePageCard() {
-  pc = new PagedCard(3);
-  String[][] infoCards = getInfoTablaEventos(s1.selectedIndex);
-  pc.setData(infoCards);
-  pc.setCards();
-}
-
-void setPagedCardRecientes() {
-  pc1 = new PagedCard(2);
-  String[][] infoCards = getInfoEventosRecientes(s1.selectedIndex);
-  pc1.setData(infoCards);
-  pc1.setCards();
-}
-
-void updatePageCardRecientes() {
-  pc1 = new PagedCard(2);
-  String[][] infoCards = getInfoEventosRecientes(s1.selectedIndex);
-  pc1.setData(infoCards);
-  pc1.setCards();
-}
-
-void setPagedCardAleatorios() {
-  pc2 = new PagedCard(4);
-  String[][] infoCards = getInfoEventosAleatorios(s1.selectedIndex);
-  pc2.setData(infoCards);
-  pc2.setCardsSmall();
-}
-
-void updatePageCardAleatorios() {
-  pc2 = new PagedCard(4);
-  String[][] infoCards = getInfoEventosAleatorios(s1.selectedIndex);
-  pc2.setData(infoCards);
-  pc2.setCardsSmall();
+  calendario = new Calendario (400, 300, 500, 450);
 }
 
 void setCounter() {

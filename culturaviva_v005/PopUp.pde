@@ -1,9 +1,9 @@
 class PopUp {
   
-  // Dimensions
+  // Dimensiones
   float x, y, w, h;
   
- // Propietats
+ // Propiedades
  PImage img;
  String title;
  String message;
@@ -15,7 +15,6 @@ class PopUp {
  boolean visible = true;
  
  // Constructor
- 
  PopUp(String title, String message, float x, float y, float w, float h){
    this.title = title;
    this.message = message;
@@ -25,7 +24,6 @@ class PopUp {
  }
  
  //Setters
- 
  void setImage(PImage img){
    this.img = img;
  }
@@ -45,39 +43,39 @@ class PopUp {
    }
  }
  
- // Dibuixa el PopUp
- 
+ // Dibuja el PopUp 
  void display(){
-   
    if(this.visible){
      float b = 40;
-     
      pushStyle();
      
-     // Rectangle
-     stroke(0); strokeWeight(10);fill(200, 200, 100);
+     // Rectángulo
+     stroke(0); 
+     strokeWeight(10);
+     fill(200, 200, 100);
      rect(x, y, w, h, b/2);
-     
      line(x, y + 2*b , x+w, y + 2*b);
      
-     // Títol
-     fill(0); textSize(38); textAlign(LEFT);
+     // Título
+     fill(0); 
+     textSize(38); 
+     textAlign(LEFT);
      text(title, x + b, y + 1.4*b);
      
-     // Missatge
-     fill(0);textSize(24); textAlign(CENTER);
+     // Mensaje
+     fill(0);
+     textSize(24); 
+     textAlign(CENTER);
      text(message, x + w/2, y + 4*b);
      
-     // Botó d'Acceptar
+     // Botón "Aceptar"
      bAceptar.display();
      popStyle();
    }
  }
  
- // Comprova si estam sobre el botó del PopUp
+ // Comprueba si el ratón está encima del PopUp
  boolean mouseOverButton(){
    return bAceptar.mouseOverButton() && bAceptar.enabled;
  }
- 
-  
 }

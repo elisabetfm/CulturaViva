@@ -13,16 +13,6 @@ void dibujaApertura(){
   text ("CULTURA VIVA", margenH + principalWidth/2, margenV + principalHeight/2, 10);
 }
 
-void dibujaAcontecimientosBuscados(){
-  fill(255);
-  rect (2*margenH, 2*margenV + logoHeight + filtrosHeight + margenV, buscadosWidth, buscadosHeight);
-  rect(2*margenH, 2*margenV + logoHeight + filtrosHeight + buscadosHeight + 2*margenV, buscadosWidth, buscadosHeight);
-  rect(2*margenH, 2*margenV + logoHeight + filtrosHeight + 2*buscadosHeight + 3*margenV, buscadosWidth, buscadosHeight);
-  fill(0);
-  text ("Acontecimientos relacionados con la busca", 2*margenH + buscadosWidth/2, 2*margenV + logoHeight + filtrosHeight + margenV + buscadosHeight/2,10);
-  text ("Acontecimientos relacionados con la busca", 2*margenH + buscadosWidth/2, 2*margenV + logoHeight + filtrosHeight + buscadosHeight + 2*margenV + buscadosHeight/2,10);
-  text ("Acontecimientos relacionados con la busca", 2*margenH + buscadosWidth/2, 2*margenV + logoHeight + filtrosHeight + 2*buscadosHeight + 3*margenV + buscadosHeight/2,10);
-}
 
 void dibujaIniciarSesion(){
   pushStyle();
