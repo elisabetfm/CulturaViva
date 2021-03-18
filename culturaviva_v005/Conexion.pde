@@ -119,10 +119,9 @@ String[][] getInfoTituloEventos(){
 }
 
 void deleteInfoTablaEventos(String id){
-  String q = ("DELETE FROM eventos WHERE numero='"+id+"' ");
+  String q = ("DELETE FROM eventos WHERE id_Eventos='"+id+"' ");
   println(q);
   msql.query(q);
-  
 }
 
 void updateInfoTablaEventos(String id, String num, String nombre){
@@ -198,7 +197,7 @@ String[][] getInfoUsuarioContrasena(){
 String[][] getInfoTablaEventos( int numSeccion){
   
   int numRows = getNumRowsEventosSeccion( numSeccion);
-  println("Num eventos:"+numRows+" de la sección:"+numSeccion);
+  //println("Num eventos:"+numRows+" de la sección:"+numSeccion);
 
   String[][] data = new String[numRows][6];
   

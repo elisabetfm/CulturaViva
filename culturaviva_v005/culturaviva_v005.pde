@@ -52,10 +52,12 @@ void draw() {
       dibujaPantallaBorrar();
     } else if (numPantalla==17){
       dibujaPantallaConfirmar();
+    } else if (numPantalla==18){
+      dibujaPantallaPopUp();
     }
   
-  updateCursor();
-  
+  updateCursor(); fill(0); textSize(28);
+  text(numPantalla, 50, 150);
 // println(mouseX+", "+mouseY);
 }
 }

@@ -1,15 +1,9 @@
-
-//
 void keyPressed() {
-  numPantalla = constrain(numPantalla, 1, 7);
-  
   buscarText.keyPressed(key, (int)keyCode);
   usuarioText.keyPressed(key, (int)keyCode);
   contrasenaText.keyPressed(key, (int)keyCode);
   tituloText.keyPressed(key, (int)keyCode);
   descripcionText.keyPressed(key, (int)keyCode);
-  seccionText.keyPressed(key, (int)keyCode);
-  lugarText.keyPressed(key, (int)keyCode);
   fechaText.keyPressed(key, (int)keyCode);  
 
 // Anar un mes enrere
@@ -38,6 +32,8 @@ void mousePressed() {
   
   borrarPressed();
   
+  insertarPressed();
+  
 }
 
 void selectPressed(){
@@ -46,7 +42,7 @@ void selectPressed(){
   if (s1.mouseOverSelect() && s1.enabled) {
     if (!s1.collapsed) {
       s1.update();      // Actualitzar valor
-      if (s1.selectedValue.equals("obras de teatro")){ //condició per a què es dibuixi un rectangle
+    if (s1.selectedValue.equals("obras de teatro")){ //condició per a què es dibuixi un rectangle
       println("ANANT a pantalla Teatre");
         numPantalla = 7;
        updatePageCard();
@@ -86,18 +82,24 @@ void selectPressed(){
       //numPantalla = 3;
     }
     sEB.toggle();        // Plegar o desplegar
+  } else if (sSeccion.mouseOverSelect() && sSeccion.enabled) {
+    if (!sSeccion.collapsed) {
+      sSeccion.update();      // Actualitzar valor
+    }
+    sSeccion.toggle();        // Plegar o desplegar
+  } else if (sLugar.mouseOverSelect() && sLugar.enabled) {
+    if (!sLugar.collapsed) {
+      sLugar.update();      // Actualitzar valor
+    }
+    sLugar.toggle();  // Plegar o desplegar
   }
 }
 
 
 void buttonPressed() {
-  if (bIdioma1.mouseOverButton() && bIdioma1.enabled) {
-  } else if (bIdioma2.mouseOverButton() && bIdioma2.enabled) {
-  } else if (bIdioma3.mouseOverButton() && bIdioma3.enabled) {
-  } else if (bIdioma4.mouseOverButton() && bIdioma4.enabled) {
-  } else if (bCalendario.mouseOverButton() && bCalendario.enabled) {
+    if (bCalendario.mouseOverButton() && bCalendario.enabled) {
     numPantalla = 6;
-  } else if(bEnter.mouseOverButton() && bEnter.enabled){
+  } else if(numPantalla==4 && bEnter.mouseOverButton() && bEnter.enabled){
     String usuario = usuarioText.text;
     String password = contrasenaText.text; 
     String[][] datos = getInfoUsuarioContrasena();
@@ -122,11 +124,12 @@ void buttonPressed() {
     numPantalla = 4;
   } else if (iBuscar.mouseOverButton() && iBuscar.enabled){
     numPantalla = 3;
-  } else if (bInsertaro.mouseOverButton() && bInsertaro.enabled){
+  } else if (numPantalla==13 && bInsertaro.mouseOverButton() && bInsertaro.enabled){
+    descripcionText.text="";
     numPantalla = 14;
-  } else if (bEditaro.mouseOverButton() && bEditaro.enabled){
+  } else if (numPantalla==13 && bEditaro.mouseOverButton() && bEditaro.enabled){
     numPantalla = 15;
-  } else if (bBorraro.mouseOverButton() && bBorraro.enabled){
+  } else if (numPantalla==13 && bBorraro.mouseOverButton() && bBorraro.enabled){
     numPantalla = 16;
   } 
 }
@@ -135,11 +138,6 @@ void textfieldPressed(){
   buscarText.isPressed();
   usuarioText.isPressed();
   contrasenaText.isPressed();
-  tituloText.isPressed();
-  descripcionText.isPressed();
-  seccionText.isPressed();
-  lugarText.isPressed();
-  fechaText.isPressed();
   
 }
 
@@ -167,17 +165,18 @@ void updateCursor() {
   }
 }
 
-void resetFormulari(){
+void resetFormulario(){
   c.resetValue();
- // tituloText.removeAllText();
- // descripcionText.removeAllText();
+  //tituloText.removeAllText();
+  //descripcionText.removeAllText();
 }
 
 void borrarPressed(){
   if (numPantalla==16 && bBorrar.mouseOverButton() && bBorrar.enabled){
     confirmar.setVisible(true);
     numPantalla = 17;
-  } if (confirmar.bAceptar.mouseOverButton()){
+  } 
+  else if (numPantalla==17 && confirmar.bAceptar.mouseOverButton()){
      confirmar.setVisible(false);
      
      // Agafar el valor Id del Select
@@ -193,9 +192,20 @@ void borrarPressed(){
     
     // Mostra el Popup
     p.setVisible(true);
+    numPantalla = 18;
   }
   else if (confirmar.bCancelar.mouseOverButton()){
     confirmar.setVisible(false);
     numPantalla = 16;
   }
+  else if (numPantalla==18 && p.bAceptar.mouseOverButton() && p.bAceptar.enabled){
+    numPantalla = 2;
+  }
+}
+
+void insertarPressed(){
+  tituloText.isPressed();
+  descripcionText.isPressed();
+  fechaText.isPressed();
+  c.update();
 }

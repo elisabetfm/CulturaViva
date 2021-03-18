@@ -21,9 +21,7 @@ class PopUp {
    this.message = message;
    this.x = x; this.y = y; 
    this.w = w; this.h = h;
-   this.bAceptar = new Button("Acceptar", x + w/2 - buttonW/2, 
-                                         y + h - buttonH*1.5, 
-                                         buttonW, buttonH);
+   this.bAceptar = new Button("Aceptar", x + w/2 - buttonW/2, y + h - buttonH*1.5, buttonW, buttonH);
  }
  
  //Setters

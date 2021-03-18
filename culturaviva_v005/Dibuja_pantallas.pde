@@ -61,7 +61,6 @@ void dibujaPantallaInsBorrEdi(){
   bInsertaro.display();
   bEditaro.display();
   bBorraro.display();
-  println("Pantalla INS BORRA EDITAR");
 }
 
 void dibujaPantallaInsertar(){
@@ -72,9 +71,9 @@ void dibujaPantallaInsertar(){
   bCalendario.display();
   tituloText.display();
   descripcionText.display();
-  seccionText.display();
-  lugarText.display();
   fechaText.display();
+  sSeccion.display();
+  sLugar.display();
   c.display();
   bInsert.display();
   bReset.display();
@@ -112,7 +111,7 @@ void dibujaPantallaBorrar(){
   dibujaEditarBorrar();
   sEB.display();
   bBorrar.display();
-  p.display();
+ // p.display();
 }
 
 void dibujaPantallaConfirmar(){
@@ -125,8 +124,21 @@ void dibujaPantallaConfirmar(){
   s3.display();
   iCuenta.display();
   iBuscar.display();
-  p.display();
+  //p.display();
   confirmar.display();
+}
+
+void dibujaPantallaPopUp(){
+  dibujaBanner();
+  dibujaLogo();
+  buscarText.display();
+  bCalendario.display();
+  s1.display();
+  s2.display();
+  s3.display();
+  iCuenta.display();
+  iBuscar.display();
+  p.display();
 }
 
 void dibujaPantallaIndividual(){

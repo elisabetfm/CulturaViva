@@ -1,6 +1,6 @@
 
 Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar;
-SelectBD s1, s2, sEB;
+SelectBD s1, s2, sEB, sSeccion, sLugar;
 Select s3;
 String[][] selectValues1;
 String[][] selectValues2;
@@ -39,10 +39,6 @@ void setGUI() {
 }
 
 void setButtons() {
-  bIdioma1     = new Button("Català", 2*margenH + logoWidth + bannerWidth - (4*buttonW1), 0, buttonW1, idiomaH);
-  bIdioma2     = new Button("Castellano", 2*margenH + logoWidth + bannerWidth - (3*buttonW1), 0, buttonW1, idiomaH);
-  bIdioma3     = new Button("English", 2*margenH + logoWidth + bannerWidth - (2*buttonW1), 0, buttonW1, idiomaH);
-  bIdioma4     = new Button("Deutsch", 2*margenH + logoWidth + bannerWidth - buttonW1, 0, buttonW1, idiomaH);
   bCalendario = new Button ("Calendario", 2*margenH + logoWidth + 3*selectW + buttonW2 + margenH*4, 2*margenV + bannerHeight, buttonW1, selectH);
   bEnter = new Button ("Aceptar", 550, 600, 350, buttonH1);
   bIr = new Button ("Ir", 1050, 320, 200, buttonH1 );
@@ -64,6 +60,10 @@ void setSelect() {
   s3 = new Select(selectValues3, 2*margenH + logoWidth + 2*selectW + 2*margenH, 2*margenV + bannerHeight, selectW, selectH);
   selectValuesEB = getInfoTituloEventos();
   sEB = new SelectBD (selectValuesEB, 570, 350, selectW1, selectH);
+  selectValues1 = getInfoTablaSeccion();
+  sSeccion = new SelectBD (selectValues1, 550, 480, 3*countW, countH );
+  selectValues2 = getInfoTablaLugar();
+  sLugar = new SelectBD (selectValues2, 550, 540, buttonW1, countH);
 }
 
 void setImageButtons() {
@@ -77,8 +77,6 @@ void setTextField() {
   buscarText = new TextField(2*margenH + 4*selectW + 3*margenH, 2*margenV + bannerHeight, buttonW2, selectH);
   tituloText = new TextField (550, 310, 3*countW, countH);
   descripcionText = new TextField (550, 370, 3*countW, buttonH3);
-  seccionText = new TextField (550, 480, 3*countW, countH);
-  lugarText = new TextField (550, 540, buttonW1, countH);
   fechaText = new TextField (750, 540, buttonW1, countH);
 }
 
