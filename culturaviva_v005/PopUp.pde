@@ -1,3 +1,4 @@
+//Clase PopUp
 class PopUp {
   
   // Dimensiones

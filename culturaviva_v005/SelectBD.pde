@@ -1,19 +1,14 @@
-
+//Clase Select Base de Datos
 class SelectBD {
-  
-  float x, y, w, h;            // Posició i dimensions
-  String[][] texts;            // Valors possibles
-  
+  float x, y, w, h;            // Posición y dimensiones
+  String[][] texts;            // Valores posibles
   int selectedIndex;         // Fila seleccionada
-  String selectedValue;      // Valor Seleccionat
-  
-  boolean collapsed = true;  // Plegat / Desplegat
-  boolean enabled;           // Abilitat / desabilitat
-  
-  float lineSpace = 15;      // Espai entre línies
+  String selectedValue;      // Valor Seleccionado
+  boolean collapsed = true;  // Plegado / Desplegado
+  boolean enabled;           // Habilitado / Deshabilitado
+  float lineSpace = 15;      // Espacio entre líneas
   
   SelectBD(String[][] texts, float x, float y, float w, float h){
-    
     this.texts = texts;
     this.selectedValue = "";
     this.x = x;
@@ -35,27 +30,31 @@ class SelectBD {
   void display(){
     pushStyle();
     textAlign(LEFT);
-    stroke(0); strokeWeight(2); fill(255);
+    stroke(0); 
+    strokeWeight(2); 
+    fill(255);
     rect(x, y, w, h);
     
     fill(100);
     rect(x + w - 30, y, 30, h);
     
-    fill(0); stroke(0);
+    fill(0); 
+    stroke(0);
     triangle(x + w - 25, y+5, x + w - 15, y + 25, x + w - 5 , y+5);
     
-    fill(0); textSize(14); 
+    fill(0); 
+    textSize(14); 
     text(selectedValue, x + 10, y + 20);
     
     if(!this.collapsed){
-      
-      fill(255); stroke(0);
+      fill(255); 
+      stroke(0);
       rect(x, y+h, w, (h + lineSpace)*texts.length);
       
       for(int i=0; i<texts.length; i++){
-        
         if(i== clickedOption()){
-          fill(149, 127, 239); noStroke();
+          fill(149, 127, 239); 
+          noStroke();
           rect(x+4, y+4 + h + (h + lineSpace)*i - 2, w -8, h + lineSpace - 8);
         }
         
@@ -65,7 +64,6 @@ class SelectBD {
       }
     }
     popStyle();
-    
   }
   
   void setCollapsed(boolean b){
@@ -85,7 +83,7 @@ class SelectBD {
     textAlign (CENTER);
   }
   
- // Indica si el cursor està sobre el select
+ // Indica si el ratón está encima del select
  boolean mouseOverSelect(){
    if(this.collapsed){
      return (mouseX >= x) && 
@@ -104,6 +102,5 @@ class SelectBD {
  int clickedOption(){
    int i = (int)map(mouseY, y + h, y + h + (h + lineSpace)*texts.length, 0, texts.length);
    return i;
- }
-  
+ } 
 }

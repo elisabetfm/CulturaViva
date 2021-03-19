@@ -1,17 +1,14 @@
-
+//Clase Select
 class Select {
   
-  float x, y, w, h;          // Posició i dimensions
-  String[] texts;            // Valors possibles
-  String selectedValue;      // Valor Seleccionat
-  
-  boolean collapsed = true;  // Plegat / Desplegat
-  boolean enabled;           // Abilitat / desabilitat
-  
+  float x, y, w, h;          // Posición y dimensiones
+  String[] texts;            // Valores posibles
+  String selectedValue;      // Valor Seleccionado
+  boolean collapsed = true;  // Plegado / Desplegado
+  boolean enabled;           // Habilitado / deshabilitado
   float lineSpace = 15;      // Espai entre línies
   
   Select(String[] texts, float x, float y, float w, float h){
-    
     this.texts = texts;
     this.selectedValue = "";
     this.x = x;
@@ -24,27 +21,33 @@ class Select {
   
   void display(){
     pushStyle();
-    stroke(0); strokeWeight(2); fill(255);
+    stroke(0); 
+    strokeWeight(2); 
+    fill(255);
     rect(x, y, w, h);
     
     fill(100);
     rect(x + w - 30, y, 30, h);
     
-    fill(0); stroke(0);
+    fill(0); 
+    stroke(0);
     triangle(x + w - 25, y+5, x + w - 15, y + 25, x + w - 5 , y+5);
     
-    fill(0); textFont(fuente6); textSize(11); textAlign(LEFT); 
+    fill(0); 
+    textFont(fuente6); 
+    textSize(11); 
+    textAlign(LEFT); 
     text(selectedValue, x + 10, y + 20);
     
-    if(!this.collapsed){
-      
-      fill(255); stroke(0);
+    if(!this.collapsed){  
+      fill(255); 
+      stroke(0);
       rect(x, y+h, w, (h + lineSpace)*texts.length);
       
-      for(int i=0; i<texts.length; i++){
-        
+      for(int i=0; i<texts.length; i++){  
         if(i== clickedOption()){
-          fill(149, 127, 239); noStroke();
+          fill(149, 127, 239); 
+          noStroke();
           rect(x+4, y+4 + h + (h + lineSpace)*i - 2, w -8, h + lineSpace - 8);
         }
         
@@ -63,13 +66,12 @@ class Select {
     this.collapsed = !this.collapsed;
   }
   
-  
   void update(){
     int option = clickedOption();
     selectedValue = texts[option];
   }
   
- // Indica si el cursor està sobre el select
+ // Indica si el ratón está encima del Select
  boolean mouseOverSelect(){
    if(this.collapsed){
      return (mouseX >= x) && 
@@ -86,9 +88,7 @@ class Select {
  }
  
  int clickedOption(){
-   int i = (int)map(mouseY, y + h, y + h + (h + lineSpace)*texts.length, 
-                            0, texts.length);
+   int i = (int)map(mouseY, y + h, y + h + (h + lineSpace)*texts.length, 0, texts.length);
    return i;
  }
-  
 }

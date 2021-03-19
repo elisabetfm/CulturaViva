@@ -1,24 +1,28 @@
 class DayButton {
   
-  // Dimensions del botó
+  // Dimensiones del botón
   float x, y, w, h;
   
-  // Data representativa
-  int dia, mes, any;
+  // Fecha representativa
+  int dia, mes, ano;
   
-  // Estats del botó
+  // Estado del botón
   boolean selected, enabled;
   
   // Constructor
   DayButton(float x, float y, float w, float h, int d, int m, int a){
-    this.x = x; this.y=y; this.w = w; this.h = h;
-    this.dia = d; this.mes = m; this.any = a;
+    this.x = x; 
+    this.y=y; 
+    this.w = w;
+    this.h = h;
+    this.dia = d; 
+    this.mes = m; 
+    this.ano = a;
     this.selected = false;
     this.enabled = true;
   }
   
   // Setters
-  
   void setEnabled(boolean b){
     this.enabled = b;
   }
@@ -27,8 +31,7 @@ class DayButton {
     this.selected = b;
   }
   
-  
-  // Dibuixa el botó
+  // Dibuja el botón
   void display(){
     pushStyle();
     if(enabled){
@@ -37,22 +40,25 @@ class DayButton {
     else{
       fill(254, 127, 45); 
     }
-    stroke(0); strokeWeight(1);
+    stroke(0); 
+    strokeWeight(1);
     rect(x, y, w, h, 5);
     if(selected){
-      fill(252, 202, 70); noStroke();
+      fill(252, 202, 70); 
+      noStroke();
       ellipse(x + w/2, y+h/2, 80, 80);
     }
-    fill(0); textFont(fuente2); textSize(24); textAlign(CENTER);
+    fill(0); 
+    textFont(fuente2); 
+    textSize(24); 
+    textAlign(CENTER);
     text(dia, x + w/2, y + h/2 + 10);
     popStyle();
   }
   
-  // Ratolí sobre el botó
+  // Ratón encima del botón
   boolean mouseOver(){
     return mouseX>=this.x && mouseX<=this.x+this.w &&
            mouseY>=this.y && mouseY<=this.y+this.h;
   }
-  
-  
 }

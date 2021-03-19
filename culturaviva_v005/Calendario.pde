@@ -195,7 +195,7 @@ class Calendario {
         b.setSelected(!prevState);
         if(b.selected){
           dateSelected = true;
-          setSelectedDate(b.dia,b.mes,b.any);
+          setSelectedDate(b.dia,b.mes,b.ano);
         }
         else {
           dateSelected = false;
@@ -204,7 +204,7 @@ class Calendario {
     }
   }
   
-  // Deselecciona tots els botons del Calendari
+  // Deselecciona todos los botones del Calendario
   void deselectAll(){
     for(DayButton b : buttons){
       if(b!=null){
@@ -212,5 +212,4 @@ class Calendario {
       }
     }
   }
-  
 }

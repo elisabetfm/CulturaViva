@@ -1,12 +1,11 @@
+//Clase PagedCard
 
 class PagedCard {
-  
 
-  String[][] cardsData;    // Dades de les Cards
+  String[][] cardsData;    // Datos de las Cards
   Card[] cards;            // Cards
   int numCards;            // Número total de Cards
-  int numCardsPage;        // Número de Cards en 1 Pàgina
-  
+  int numCardsPage;        // Número de Cards en 1 página
   int numPage;
   int numTotalPages;
   
@@ -17,7 +16,6 @@ class PagedCard {
   }
   
   // Setters
-  
   void setData(String[][] d){
     this.cardsData = d;
     this.numTotalPages = d.length / this.numCardsPage;
@@ -27,9 +25,9 @@ class PagedCard {
     cards = new Card[this.cardsData.length];
     for(int i=0; i<cards.length; i++){
       cards[i] = new Card(cardsData[i]);
-      cards[i].setSizeTitol(24);
-      String nomImatge = cardsData[i][5];
-      PImage img = loadImage("../DATA/imgs/"+nomImatge);
+      cards[i].setSizeTitulo(24);
+      String nomImagen = cardsData[i][5];
+      PImage img = loadImage("../DATA/imgs/"+nomImagen);
       cards[i].setImage(img);
     }
   }
@@ -38,9 +36,9 @@ class PagedCard {
     cards = new Card[this.cardsData.length];
     for(int i=0; i<cards.length; i++){
       cards[i] = new Card(cardsData[i]);
-      cards[i].setSizeTitol(14);
-      String nomImatge = cardsData[i][5];
-      PImage img = loadImage("../DATA/imgs/"+nomImatge);
+      cards[i].setSizeTitulo(14);
+      String nomImagen = cardsData[i][5];
+      PImage img = loadImage("../DATA/imgs/"+nomImagen);
       cards[i].setImage(img);
     }
   }
@@ -63,15 +61,11 @@ class PagedCard {
     }
   }
   
-  // Dibuixa taula
+  // Dibuja tabla
   void display(float x, float y, float w, float h){
-    
     pushStyle();
     
-    //fill(200, 50); stroke(0);strokeWeight(3);
-    //rect(x, y, w, h);
-    
-    // Dibuixa Cards
+    // Dibuja Cards
     int firstCardPage = numCardsPage*numPage;
     int lastCardPage  = numCardsPage*(numPage+1) - 1;
     float hCard = h / (float) numCardsPage;
@@ -84,10 +78,9 @@ class PagedCard {
       }
     }
     
-    // Informació de la Pàgina
+    // Información de la página
     fill(0);
     text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), x + w + 50, y+10);
-    
     popStyle();
   }
   
@@ -95,10 +88,7 @@ class PagedCard {
     
     pushStyle();
     
-    //fill(200, 50); stroke(0);strokeWeight(3);
-    //rect(x, y, w, h);
-    
-    // Dibuixa Cards
+    // Dibuja Cards
     int firstCardPage = numCardsPage*numPage;
     int lastCardPage  = numCardsPage*(numPage+1) - 1;
     float wCard = w / (float) numCardsPage;
@@ -111,12 +101,9 @@ class PagedCard {
       }
     }
     
-    // Informació de la Pàgina
+    // Información de la página
     fill(0); 
     text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), x + w + 50, y+10);
-    
     popStyle();
   }
-  
-  
 }
