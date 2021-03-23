@@ -54,6 +54,8 @@ void draw() {
       dibujaPantallaConfirmar();
     } else if (numPantalla==18){
       dibujaPantallaPopUp();
+    } else if (numPantalla==19){
+      dibujaPantallaPopUp1();
     }
   
   updateCursor(); fill(0); textSize(28);

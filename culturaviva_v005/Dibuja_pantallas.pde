@@ -141,6 +141,19 @@ void dibujaPantallaPopUp(){
   p.display();
 }
 
+void dibujaPantallaPopUp1(){
+  dibujaBanner();
+  dibujaLogo();
+  buscarText.display();
+  bCalendario.display();
+  s1.display();
+  s2.display();
+  s3.display();
+  iCuenta.display();
+  iBuscar.display();
+  p1.display();
+}
+
 void dibujaPantallaIndividual(){
   dibujaBanner();
   dibujaLogo();

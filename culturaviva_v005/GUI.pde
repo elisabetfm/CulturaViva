@@ -9,13 +9,14 @@ String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "barra", "food
 String titulo = "¡Información!";
 String mensaje1 = "Se ha actualizado la Base de Datos.";
 String mensaje2 = "¿Quieres eliminar esta información?";
+String mensaje3 = "No se ha encontrado ningún resultado.";
 
 ImageButton iCuenta, iComprar, iBuscar;
 TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, seccionText, lugarText, fechaText;
 Calendario calendario;
 PagedCard pc, pc1, pc2;
 Counter c;
-PopUp p;
+PopUp p, p1;
 Confirm confirmar;
 
 void setGUI() {
@@ -28,6 +29,8 @@ void setGUI() {
   setPagedCardRecientes();
   setPagedCardAleatorios();
   setPagedCardLugar();
+  setPagedCardDescripcion();
+  setPagedCardEscrito();
   setCounter();
   setPopUp();
   setConfirm();
@@ -89,7 +92,10 @@ void setCounter() {
 void setPopUp() {
   p = new PopUp(titulo, mensaje1, 250, 250, popW, popH);
   p.setVisible(false);
+  p1 = new PopUp(titulo, mensaje3, 250, 250, popW, popH);
+  p1.setVisible(false);
 }
+
 
 void setConfirm() {
   confirmar = new Confirm (titulo, mensaje2, (width/2)-400, 300, confW, confH);

@@ -48,7 +48,7 @@ int getNumRowsEventosLugar(int numLugar){
 }
 
 int getNumRowsEventosDescripcion(String descripcion){
-  msql.query( "SELECT COUNT(*) AS n FROM eventos WHERE descripcion_evento = '"+ descripcion +"'" );
+  msql.query( "SELECT COUNT(*) AS n FROM eventos WHERE descripcion_evento LIKE '%"+ descripcion +"%'" );
   msql.next();
   int numRows = msql.getInt("n");
   return numRows;
@@ -171,7 +171,7 @@ String[][] getInfoEventosRecientes(int idCategoria){
       nr++;
   }
   
-  printArray(data);
+ // printArray(data);
   return data;
 }
 
@@ -211,7 +211,7 @@ String[][] getInfoUsuarioContrasena(){
       nr++;
   }
   
-  printArray(data);
+  //printArray(data);
   return data;
 }
 
@@ -221,7 +221,6 @@ String[][] getInfoTablaEventos(int numSeccion){
   String[][] data = new String[numRows][6];
   
   String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND s.id_seccion='"+numSeccion+"'";
-  println(q);
   int nr=0;
   msql.query(q);
   while (nr<numRows){
@@ -245,7 +244,6 @@ String[][] getInfoTablaEventosLugar(int numLugar){
   String[][] data = new String[numRows][6];
   
   String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND l.id_lugar='"+numLugar+"'";
-  println(q);
   int nr=0;
   msql.query(q);
   while (nr<numRows){
@@ -267,8 +265,7 @@ String[][] getInfoTablaEventosDescripcion(String descripcion){
   int numRows = getNumRowsEventosDescripcion(descripcion);
   String[][] data = new String[numRows][6];
   
-  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND e.descripcion_evento LIKE '%+descripcion+%'";
-  println(q);
+  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND e.descripcion_evento LIKE '%"+descripcion+"%'";
   int nr=0;
   msql.query(q);
   while (nr<numRows){
@@ -285,12 +282,34 @@ String[][] getInfoTablaEventosDescripcion(String descripcion){
   return data;
 }
 
-String[][] getInfoTablaEventosCalendario(int fecha){
+String[][] getInfoTablaEventosBuscar(String escrito){
   
-  int numRows = getNumRowsEventosFecha(fecha);
+  int numRows = getNumRowsTaula("eventos");
   String[][] data = new String[numRows][6];
   
-  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND e.descripcion_evento LIKE '%+descripcion+%'";
+  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND e.nombre_evento LIKE '%"+escrito+"%'";
+  int nr=0;
+  msql.query(q);
+  while (nr<numRows){
+      msql.next();
+      println("NR:"+nr);
+      data[nr][0] = msql.getString("titulo");
+      data[nr][1] = msql.getString("lugar");
+      data[nr][2] = msql.getString("fecha");
+      data[nr][3] = msql.getString("seccion");
+      data[nr][4] = msql.getString("descripcion");
+      data[nr][5] = msql.getString("imagen");
+      nr++;
+  }
+  return data;
+}
+
+String[][] getInfoTablaEventosCalendario(){
+  
+  int numRows = getNumRowsTaula("eventos");
+  String[][] data = new String[numRows][6];
+  
+  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND e.nombre_evento LIKE '%+descripcion+%'";
   println(q);
   int nr=0;
   msql.query(q);

@@ -40,6 +40,20 @@ void updatePageCardDescripcion() {
   pc.setCards();
 }
 
+void setPagedCardEscrito() {
+  pc = new PagedCard(3);
+  String[][] infoCards = getInfoTablaEventosBuscar();
+  pc.setData(infoCards);
+  pc.setCards();
+}
+
+void updatePageCardEscrito() {
+  pc = new PagedCard(3);
+  String[][] infoCards = getInfoTablaEventosBuscar();
+  pc.setData(infoCards);
+  pc.setCards();
+}
+
 void setPagedCardRecientes() {
   pc1 = new PagedCard(2);
   String[][] infoCards = getInfoEventosRecientes(s1.selectedIndex);

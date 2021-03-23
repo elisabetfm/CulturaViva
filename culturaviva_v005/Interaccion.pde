@@ -66,7 +66,7 @@ void selectPressed(){
   } else if (s2.mouseOverSelect() && s2.enabled) {
     if (!s2.collapsed) {
       s2.update(); // Actualitzar valor
-      if (s2.selectedValue.equals("Mallorca")){ //condició per a què es dibuixi un rectangle
+      if (s2.selectedValue.equals("Mallorca")){ //
         numPantalla = 3;
         updatePageCardLugar();
       } else if (s2.selectedValue.equals("Menorca")){ //condició per a què es dibuixi un rectangle
@@ -84,7 +84,28 @@ void selectPressed(){
   } else if (s3.mouseOverSelect() && s3.enabled) {
     if (!s3.collapsed) {
       s3.update();      // Actualitzar valor
-      if (s3.selectedValue.equals("gratis")){
+      if (s3.selectedValue.equals("evento nocturno")){
+        numPantalla = 3;
+        updatePageCardDescripcion();
+      } else if (s3.selectedValue.equals("evento diurno")){
+        numPantalla = 3;
+        updatePageCardDescripcion();
+      } else if (s3.selectedValue.equals("barra")){
+        numPantalla = 3;
+        updatePageCardDescripcion();
+      } else if (s3.selectedValue.equals("foodtrucks")){
+        numPantalla = 3;
+        updatePageCardDescripcion();
+      } else if (s3.selectedValue.equals("servicio de guardería")){
+        numPantalla = 3;
+        updatePageCardDescripcion();
+      } else if (s3.selectedValue.equals("máximo de 100 personas")){
+        numPantalla = 3;
+        updatePageCardDescripcion();
+      } else if (s3.selectedValue.equals("más de 100 personas")){
+        numPantalla = 3;
+        updatePageCardDescripcion();
+      } else if (s3.selectedValue.equals("gratis")){
         numPantalla = 3;
         updatePageCardDescripcion();
       }
@@ -107,8 +128,7 @@ void selectPressed(){
     }
     sLugar.toggle();  // Plegar o desplegar
   }
-}
-
+ }
 
 void buttonPressed() {
     if (bCalendario.mouseOverButton() && bCalendario.enabled) {
@@ -137,7 +157,23 @@ void buttonPressed() {
   } else if (iCuenta.mouseOverButton() && iCuenta.enabled) {
     numPantalla = 4;
   } else if (iBuscar.mouseOverButton() && iBuscar.enabled){
-    numPantalla = 3;
+    String escrito = buscarText.text;
+    String[][] datos = getInfoTituloEventos();
+    boolean ok = false;
+    for(int i=0; i<datos.length; i++){
+      if(escrito.equals(datos[i][0])){
+        ok = true;
+        break;
+      }
+    } if(ok){
+      // trobat
+       numPantalla = 3;
+       updatePageCardEscrito();
+    } else {
+      // no existeix
+      p1.setVisible(true);
+      numPantalla = 19;
+    }
   } else if (numPantalla==13 && bInsertaro.mouseOverButton() && bInsertaro.enabled){
     descripcionText.text="";
     numPantalla = 14;
