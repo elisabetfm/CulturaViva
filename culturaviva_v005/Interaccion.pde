@@ -68,23 +68,26 @@ void selectPressed(){
       s2.update(); // Actualitzar valor
       if (s2.selectedValue.equals("Mallorca")){ //condició per a què es dibuixi un rectangle
         numPantalla = 3;
-       updatePageCard();
+        updatePageCardLugar();
       } else if (s2.selectedValue.equals("Menorca")){ //condició per a què es dibuixi un rectangle
         numPantalla = 3;
-        updatePageCard();
+        updatePageCardLugar();
       } else if (s2.selectedValue.equals("Ibiza")){ //condició per a què es dibuixi un rectangle
         numPantalla = 3;
-        updatePageCard();
+        updatePageCardLugar();
       } else if (s2.selectedValue.equals("Formentera")){ //condició per a què es dibuixi un rectangle
         numPantalla = 3;
-        updatePageCard();
+        updatePageCardLugar();
       } 
     }
     s2.toggle();        // Plegar o desplegar
   } else if (s3.mouseOverSelect() && s3.enabled) {
     if (!s3.collapsed) {
       s3.update();      // Actualitzar valor
-      numPantalla = 3;
+      if (s3.selectedValue.equals("gratis")){
+        numPantalla = 3;
+        updatePageCardDescripcion();
+      }
     }
     s3.toggle();        // Plegar o desplegar
   } else if (sEB.mouseOverSelect() && sEB.enabled) {

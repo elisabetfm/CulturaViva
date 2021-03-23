@@ -5,7 +5,7 @@ Select s3;
 String[][] selectValues1;
 String[][] selectValues2;
 String[][] selectValuesEB;
-String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "barra", "foodtrucks", "servicio de guardería", "máximo 100 personas", "más de 100 personas", "gratuïto"};
+String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "barra", "foodtrucks", "servicio de guardería", "máximo 100 personas", "más de 100 personas", "gratis"};
 String titulo = "¡Información!";
 String mensaje1 = "Se ha actualizado la Base de Datos.";
 String mensaje2 = "¿Quieres eliminar esta información?";
@@ -27,6 +27,7 @@ void setGUI() {
   setPagedCard();
   setPagedCardRecientes();
   setPagedCardAleatorios();
+  setPagedCardLugar();
   setCounter();
   setPopUp();
   setConfirm();

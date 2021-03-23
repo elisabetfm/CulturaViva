@@ -12,16 +12,30 @@ void updatePageCard() {
   pc.setCards();
 }
 
-void setPagedCardMallorca() {
+void setPagedCardLugar() {
   pc = new PagedCard(3);
-  String[][] infoCards = getInfoTablaEventos();
+  String[][] infoCards = getInfoTablaEventosLugar(s2.selectedIndex);
   pc.setData(infoCards);
   pc.setCards();
 }
 
-void updatePageCardMallorca() {
+void updatePageCardLugar() {
   pc = new PagedCard(3);
-  String[][] infoCards = getInfoTablaEventos(s1.selectedIndex);
+  String[][] infoCards = getInfoTablaEventosLugar(s2.selectedIndex);
+  pc.setData(infoCards);
+  pc.setCards();
+}
+
+void setPagedCardDescripcion() {
+  pc = new PagedCard(3);
+  String[][] infoCards = getInfoTablaEventosDescripcion(s3.selectedValue);
+  pc.setData(infoCards);
+  pc.setCards();
+}
+
+void updatePageCardDescripcion() {
+  pc = new PagedCard(3);
+  String[][] infoCards = getInfoTablaEventosDescripcion(s3.selectedValue);
   pc.setData(infoCards);
   pc.setCards();
 }
