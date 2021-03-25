@@ -60,6 +60,6 @@ void draw() {
   
   updateCursor(); fill(0); textSize(28);
   text(numPantalla, 50, 150);
-// println(mouseX+", "+mouseY);
+ println(mouseX+", "+mouseY);
 }
 }

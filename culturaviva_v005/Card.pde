@@ -67,16 +67,16 @@ class Card {
    fill(0); 
    textSize(sizeTitulo - 4); 
    textAlign(CENTER);
-   text(place+", "+date, x + w/3 + w/6, y + 2*h/5);
+   text(place+", "+date, x + 2*w/3, 8*h/5);
    
    // Sección
    fill(0); textSize(sizeTitulo - 4); textAlign(CENTER);
-   text(section, x + 2*w/3 + w/6, y + 2*h/5);
+   text(section, x + 2*w/3, y + 2*h/5);
    
    // Descripción
    fill(0);textSize(sizeTitulo - 8); 
    textAlign(LEFT);
-   text(description, x + w/3 + b, y + 2*h/3 - b, 2*w/3 - b*2, h/4);
+   text(description, x + w/3 + b, y + 2*h/3 - b, 2*w/3, 4*h/5);
    
    popStyle();
  }
