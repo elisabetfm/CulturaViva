@@ -33,6 +33,13 @@ int getNumRowsTaula(String nomTaula){
   return numRows;
 }
 
+int getNumRowsQuery(String query){
+  msql.query(query );
+  msql.next();
+  int numRows = msql.getInt("n");
+  return numRows;
+}
+
 int getNumRowsEventosSeccion(int numSeccion){
   msql.query( "SELECT COUNT(*) AS n FROM eventos WHERE Seccion_id_seccion='"+ numSeccion+"'" );
   msql.next();
@@ -284,10 +291,12 @@ String[][] getInfoTablaEventosDescripcion(String descripcion){
 
 String[][] getInfoTablaEventosBuscar(String escrito){
   
-  int numRows = getNumRowsTaula("eventos");
+  String query = "SELECT COUNT(*) AS n FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND UPPER(e.nombre_evento) LIKE '%"+escrito+"%'";
+  int numRows = getNumRowsQuery(query);
   String[][] data = new String[numRows][6];
   
-  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND e.nombre_evento LIKE '%"+escrito+"%'";
+  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND UPPER(e.nombre_evento) LIKE '%"+escrito+"%'";
+  println(q);
   int nr=0;
   msql.query(q);
   while (nr<numRows){

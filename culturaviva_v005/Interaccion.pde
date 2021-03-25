@@ -157,22 +157,17 @@ void buttonPressed() {
   } else if (iCuenta.mouseOverButton() && iCuenta.enabled) {
     numPantalla = 4;
   } else if (iBuscar.mouseOverButton() && iBuscar.enabled){
-    String escrito = buscarText.text;
-    String[][] datos = getInfoTituloEventos();
-    boolean ok = false;
-    for(int i=0; i<datos.length; i++){
-      if(escrito.equals(datos[i][0])){
-        ok = true;
-        break;
-      }
-    } if(ok){
-      // trobat
-       numPantalla = 3;
-       updatePageCardEscrito();
-    } else {
-      // no existeix
+    String escrito = buscarText.text.toUpperCase();
+    String[][] datos = getInfoTablaEventosBuscar(escrito);
+    
+    if(datos.length==0){
       p1.setVisible(true);
       numPantalla = 19;
+    }
+    else {
+      numPantalla = 3;
+      pc.setData(datos);
+      pc.setCards();
     }
   } else if (numPantalla==13 && bInsertaro.mouseOverButton() && bInsertaro.enabled){
     descripcionText.text="";

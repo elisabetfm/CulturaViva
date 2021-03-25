@@ -42,14 +42,14 @@ void updatePageCardDescripcion() {
 
 void setPagedCardEscrito() {
   pc = new PagedCard(3);
-  String[][] infoCards = getInfoTablaEventosBuscar();
+  String[][] infoCards = getInfoTablaEventosBuscar("");
   pc.setData(infoCards);
   pc.setCards();
 }
 
 void updatePageCardEscrito() {
   pc = new PagedCard(3);
-  String[][] infoCards = getInfoTablaEventosBuscar();
+  String[][] infoCards = getInfoTablaEventosBuscar("");
   pc.setData(infoCards);
   pc.setCards();
 }
