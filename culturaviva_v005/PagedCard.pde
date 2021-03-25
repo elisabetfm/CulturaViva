@@ -80,7 +80,7 @@ class PagedCard {
     
     // Información de la página
     fill(0);
-    text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), x + w + 50, y+10);
+    text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), 330, 710);
     popStyle();
   }
   
@@ -103,7 +103,7 @@ class PagedCard {
     
     // Información de la página
     fill(0); 
-    text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), x + w + 50, y+10);
+    text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), 330, 710);
     popStyle();
   }
 }

@@ -1,5 +1,5 @@
 
-Button bIdioma1, bIdioma2, bIdioma3, bIdioma4, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar;
+Button bInicio, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar;
 SelectBD s1, s2, sEB, sSeccion, sLugar;
 Select s3;
 String[][] selectValues1;
@@ -10,6 +10,7 @@ String titulo = "¡Información!";
 String mensaje1 = "Se ha actualizado la Base de Datos.";
 String mensaje2 = "¿Quieres eliminar esta información?";
 String mensaje3 = "No se ha encontrado ningún resultado.";
+String fecha = "2021-03-16";
 
 ImageButton iCuenta, iComprar, iBuscar;
 TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, seccionText, lugarText, fechaText;
@@ -31,12 +32,14 @@ void setGUI() {
   setPagedCardLugar();
   setPagedCardDescripcion();
   setPagedCardEscrito();
+  setPagedCardCalendario();
   setCounter();
   setPopUp();
   setConfirm();
 }
 
 void setButtons() {
+  bInicio = new Button ("Inicio", margenV, margenH*2 + logoHeight, logoWidth, selectH);
   bCalendario = new Button ("Calendario", 2*margenH + logoWidth + 3*selectW + buttonW2 + margenH*4, 2*margenV + bannerHeight, buttonW1, selectH);
   bEnter = new Button ("Aceptar", 550, 600, 350, buttonH1);
   bIr = new Button ("Ir", 1050, 320, 200, buttonH1 );
@@ -81,6 +84,7 @@ void setTextField() {
 void setCalendario() {
   calendario = new Calendario (400, 300, 500, 450);
 }
+
 
 void setCounter() {
   c = new Counter (imgMas, imgMenos, 970, 280, countW, countH);

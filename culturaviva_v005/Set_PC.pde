@@ -54,6 +54,27 @@ void updatePageCardEscrito() {
   pc.setCards();
 }
 
+void setPagedCardCalendario() {
+  pc = new PagedCard(3);
+  
+  Calendar cTemp = Calendar.getInstance();
+  int anyTemp = cTemp.get(Calendar.YEAR);
+  int mesTemp = cTemp.get(Calendar.MONTH) + 1;
+  int diaTemp = cTemp.get(Calendar.DATE);
+  String fechaHoy = diaTemp+"/"+mesTemp+"/"+anyTemp;
+  
+  String[][] infoCards = getInfoTablaEventosCalendario(fechaHoy);
+  pc.setData(infoCards);
+  pc.setCards();
+}
+
+void updatePageCardCalendario(String fecha) {
+  pc = new PagedCard(3);
+  String[][] infoCards = getInfoTablaEventosCalendario(fecha);
+  pc.setData(infoCards);
+  pc.setCards();
+}
+
 void setPagedCardRecientes() {
   pc1 = new PagedCard(2);
   String[][] infoCards = getInfoEventosRecientes(s1.selectedIndex);

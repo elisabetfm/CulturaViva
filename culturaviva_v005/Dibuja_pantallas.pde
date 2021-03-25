@@ -8,6 +8,7 @@ void dibujaPantallaInicio(){
   dibujaBanner();
   dibujaLogo();
   pc1.displayH(200, 260, 800, 800);
+  bInicio.display();
   bCalendario.display();
   s1.display();
   s2.display();
@@ -23,6 +24,7 @@ void dibujaPantallaEventos(){
   dibujaBanner();
   dibujaLogo();
   pc.display(190, 250, 800, 400);
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -30,12 +32,15 @@ void dibujaPantallaEventos(){
   s3.display();
   iCuenta.display();
   iBuscar.display(); 
+  bAnterior.display();
+  bSiguiente.display();
 }
 
 void dibujaPantallaSesion(){
   dibujaBanner();
   dibujaLogo();
   dibujaIniciarSesion();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   usuarioText.display();
@@ -51,6 +56,7 @@ void dibujaPantallaSesion(){
 void dibujaPantallaInsBorrEdi(){
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -67,6 +73,7 @@ void dibujaPantallaInsertar(){
   dibujaBanner();
   dibujaLogo();
   dibujaInsertar();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   tituloText.display();
@@ -87,6 +94,7 @@ void dibujaPantallaInsertar(){
 void dibujaPantallaEditar(){
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -101,6 +109,7 @@ void dibujaPantallaEditar(){
 void dibujaPantallaBorrar(){
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -111,13 +120,13 @@ void dibujaPantallaBorrar(){
   dibujaEditarBorrar();
   sEB.display();
   bBorrar.display();
- // p.display();
 }
 
 void dibujaPantallaConfirmar(){
   dibujaBanner();
   dibujaLogo();
   buscarText.display();
+  bInicio.display();
   bCalendario.display();
   s1.display();
   s2.display();
@@ -131,6 +140,7 @@ void dibujaPantallaConfirmar(){
 void dibujaPantallaPopUp(){
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -144,6 +154,7 @@ void dibujaPantallaPopUp(){
 void dibujaPantallaPopUp1(){
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -158,6 +169,7 @@ void dibujaPantallaIndividual(){
   dibujaBanner();
   dibujaLogo();
   dibujaAcontecimientoIndividual();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   s1.display();
@@ -171,6 +183,7 @@ void dibujaPantallaCalendario(){
   dibujaBanner();
   dibujaLogo();
   buscarText.display();
+  bInicio.display();
   bCalendario.display();
   s1.display();
   s2.display();
@@ -185,6 +198,7 @@ void dibujaPantallaTeatro(){
   image(imgTeatro, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -202,6 +216,7 @@ void dibujaPantallaArte(){
   image(imgArte, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -219,6 +234,7 @@ void dibujaPantallaFestival(){
   image(imgFestival, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -236,6 +252,7 @@ void dibujaPantallaConcierto(){
   image(imgConcierto, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -253,6 +270,7 @@ void dibujaPantallaFeria(){
   image(imgFeria, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
+  bInicio.display();
   buscarText.display();
   bCalendario.display();
   pc.display(190, 250, 800, 400);
@@ -277,6 +295,7 @@ void dibujaPantallaLectura(){
   s2.display();
   s3.display();
   iCuenta.display();
+  bInicio.display();
   iBuscar.display();
   bAnterior.display();
   bSiguiente.display();

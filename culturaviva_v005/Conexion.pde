@@ -313,12 +313,13 @@ String[][] getInfoTablaEventosBuscar(String escrito){
   return data;
 }
 
-String[][] getInfoTablaEventosCalendario(){
-  
-  int numRows = getNumRowsTaula("eventos");
+String[][] getInfoTablaEventosCalendario(String fecha){
+  String fecha2 = formataFecha2(fecha);
+  println(fecha2);
+  String query = "SELECT COUNT(*) AS n FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND e.fecha= '"+fecha2+"'";
+  int numRows = getNumRowsQuery(query);
   String[][] data = new String[numRows][6];
-  
-  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND e.nombre_evento LIKE '%+descripcion+%'";
+  String q = "SELECT e.`nombre_evento` as titulo, l.nombre_lugar as lugar, e.`fecha` as fecha, s.nombre_seccion as seccion, e.`descripcion_evento` as descripcion, e.`imagen` as imagen FROM `eventos` e, lugar l, seccion s WHERE e.`Seccion_id_seccion`=s.id_seccion AND e.`Lugar_id_lugar`=l.id_lugar AND e.fecha='"+fecha2+"'";
   println(q);
   int nr=0;
   msql.query(q);

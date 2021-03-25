@@ -154,6 +154,16 @@ void buttonPressed() {
     
   } else if (bIr.mouseOverButton() && bIr.enabled){
     numPantalla = 3;
+    String fecha = calendario.selectedDay+"/"+ calendario.selectedMonth+"/"+calendario.selectedYear;
+    String [][] datos = getInfoTablaEventosCalendario (fecha);
+    if(datos.length==0){
+       p1.setVisible(true);
+      numPantalla = 19;
+    } else{
+      numPantalla = 3;
+      pc.setData(datos);
+      pc.setCards();
+    }
   } else if (iCuenta.mouseOverButton() && iCuenta.enabled) {
     numPantalla = 4;
   } else if (iBuscar.mouseOverButton() && iBuscar.enabled){
@@ -163,12 +173,14 @@ void buttonPressed() {
     if(datos.length==0){
       p1.setVisible(true);
       numPantalla = 19;
-    }
+    } 
     else {
       numPantalla = 3;
       pc.setData(datos);
       pc.setCards();
-    }
+    } 
+  } else if (numPantalla==19 && p1.bAceptar.mouseOverButton() && p1.bAceptar.enabled){
+    numPantalla = 2;
   } else if (numPantalla==13 && bInsertaro.mouseOverButton() && bInsertaro.enabled){
     descripcionText.text="";
     numPantalla = 14;
@@ -176,7 +188,15 @@ void buttonPressed() {
     numPantalla = 15;
   } else if (numPantalla==13 && bBorraro.mouseOverButton() && bBorraro.enabled){
     numPantalla = 16;
-  } 
+  } else if (bInicio.mouseOverButton() && bInicio.enabled){
+    numPantalla = 2;
+  } else if (bSiguiente.mouseOverButton() && bSiguiente.enabled){
+    pc.nextPage();
+    pc1.nextPage();
+  } else if(bAnterior.mouseOverButton() && bAnterior.enabled){
+    pc.prevPage();
+    pc1.prevPage();
+  }
 }
 
 void textfieldPressed(){
