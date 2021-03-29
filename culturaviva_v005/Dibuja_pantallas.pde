@@ -79,8 +79,6 @@ void dibujaPantallaInsertar(){
   tituloText.display();
   descripcionText.display();
   fechaText.display();
-  sSeccion.display();
-  sLugar.display();
   c.display();
   bInsert.display();
   bReset.display();
@@ -89,6 +87,8 @@ void dibujaPantallaInsertar(){
   s3.display();
   iCuenta.display();
   iBuscar.display();
+  sLugar.display();
+  sSeccion.display();
 }
 
 void dibujaPantallaEditar(){

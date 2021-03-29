@@ -146,13 +146,14 @@ void buttonPressed() {
     } if(ok){
       // trobat
        numPantalla = 13;
+       bBorraro.setEnabled(true);
        println("TROBAT");
     } else {
       // no exiosterix
       println("NO TROBAT");
     }
     
-  } else if (bIr.mouseOverButton() && bIr.enabled){
+  } else if (numPantalla==6 && bIr.mouseOverButton() && bIr.enabled){
     numPantalla = 3;
     String fecha = calendario.selectedDay+"/"+ calendario.selectedMonth+"/"+calendario.selectedYear;
     String [][] datos = getInfoTablaEventosCalendario (fecha);
@@ -183,6 +184,7 @@ void buttonPressed() {
     numPantalla = 2;
   } else if (numPantalla==13 && bInsertaro.mouseOverButton() && bInsertaro.enabled){
     descripcionText.text="";
+    bBorraro.setEnabled(false);
     numPantalla = 14;
   } else if (numPantalla==13 && bEditaro.mouseOverButton() && bEditaro.enabled){
     numPantalla = 15;
@@ -259,7 +261,7 @@ void borrarPressed(){
     p.setVisible(true);
     numPantalla = 18;
   }
-  else if (confirmar.bCancelar.mouseOverButton()){
+  else if (numPantalla==18 && confirmar.bCancelar.mouseOverButton()){
     confirmar.setVisible(false);
     numPantalla = 16;
   }
