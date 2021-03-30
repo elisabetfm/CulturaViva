@@ -56,7 +56,8 @@ float buttonH1 = 50,
       buttonW1 = 130, 
       buttonW2 = 420, 
       buttonW3 = 50, 
-      buttonW4 = 80;
+      buttonW4 = 80,
+      buttonW5 = 170; 
 
 //Dimensiones de los idiomas
 float idiomaH = 15;

@@ -3,6 +3,7 @@ class SelectBD {
   float x, y, w, h;            // Posición y dimensiones
   String[][] texts;            // Valores posibles
   int selectedIndex;         // Fila seleccionada
+  String selectedId;
   String selectedValue;      // Valor Seleccionado
   boolean collapsed = true;  // Plegado / Desplegado
   boolean enabled;           // Habilitado / Deshabilitado
@@ -10,6 +11,7 @@ class SelectBD {
   
   SelectBD(String[][] texts, float x, float y, float w, float h){
     this.texts = texts;
+    this.selectedId = "";
     this.selectedValue = "";
     this.x = x;
     this.y = y;
@@ -19,7 +21,21 @@ class SelectBD {
     this.collapsed = true;
   }
   
+  void selectById(String id){
+    this.selectedIndex = 0;
+    this.selectedId = "";
+    this.selectedValue = "";
+    for(int i=0; i<texts.length; i++){
+      if(texts[i][0].equals(id)){
+        this.selectedIndex = i;
+        this.selectedId = texts[i][0];
+        this.selectedValue = texts[i][1];
+      }
+    }
+  }
+  
   void reset(){
+    this.selectedId = "";
     this.selectedValue = "";
   }
   
@@ -80,6 +96,7 @@ class SelectBD {
     println(option);
     selectedIndex = Integer.valueOf(texts[option][0]);
     selectedValue = texts[option][1];
+    selectedId = texts[option][0];
     textAlign (CENTER);
   }
   

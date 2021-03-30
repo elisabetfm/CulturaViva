@@ -26,8 +26,6 @@ void draw() {
       dibujaPantallaEventos();
     } else if (numPantalla==4) {
       dibujaPantallaSesion();
-    } else if (numPantalla==5) {
-      dibujaPantallaIndividual();
     } else if (numPantalla==6) {
       dibujaPantallaCalendario();
     } else if (numPantalla==7) {
@@ -60,6 +58,5 @@ void draw() {
   
   updateCursor(); fill(0); textSize(28);
   text(numPantalla, 50, 150);
-// println(mouseX+", "+mouseY);
-}
+ }
 }

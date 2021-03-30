@@ -1,5 +1,5 @@
 
-Button bInicio, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar;
+Button bInicio, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar, bEditar;
 SelectBD s1, s2, sEB, sSeccion, sLugar;
 Select s3;
 String[][] selectValues1;
@@ -11,12 +11,12 @@ String mensaje1 = "Se ha actualizado la Base de Datos.";
 String mensaje2 = "¿Quieres eliminar esta información?";
 String mensaje3 = "No se ha encontrado ningún resultado.";
 String fecha = "2021-03-16";
+String idUsuarioLogin="0";
 
 ImageButton iCuenta, iComprar, iBuscar;
 TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, seccionText, lugarText, fechaText;
 Calendario calendario;
 PagedCard pc, pc1, pc2;
-Counter c;
 PopUp p, p1;
 Confirm confirmar;
 
@@ -33,7 +33,6 @@ void setGUI() {
   setPagedCardDescripcion();
   setPagedCardEscrito();
   setPagedCardCalendario();
-  setCounter();
   setPopUp();
   setConfirm();
 }
@@ -51,6 +50,7 @@ void setButtons() {
   bEditaro = new Button ("Editar", 600, 450, countW, countH);
   bBorraro = new Button ("Borrar", 700, 450, countW, countH);
   bBorrar = new Button ("Borrar", 670, 600, countW, countH);
+  bEditar = new Button ("Editar", 670, 600, countW, countH);
 }
 
 void setSelect() {
@@ -78,25 +78,17 @@ void setTextField() {
   buscarText = new TextField(2*margenH + 4*selectW + 3*margenH, 2*margenV + bannerHeight, buttonW2, selectH);
   tituloText = new TextField (550, 310, 3*countW, countH);
   descripcionText = new TextField (550, 370, 3*countW, buttonH3);
-  fechaText = new TextField (750, 540, buttonW1, countH);
+  fechaText = new TextField (750, 540, buttonW5, countH);
 }
 
 void setCalendario() {
   calendario = new Calendario (400, 300, 500, 450);
 }
 
-
-void setCounter() {
-  c = new Counter (imgMas, imgMenos, 970, 280, countW, countH);
-  c.setValues(0, 100);
-  c.setInitialValue(0);
-  c.setStepValue(1);
-}
-
 void setPopUp() {
-  p = new PopUp(titulo, mensaje1, 250, 250, popW, popH);
+  p = new PopUp(titulo, mensaje1, (width/2)-400, 300, popW, popH);
   p.setVisible(false);
-  p1 = new PopUp(titulo, mensaje3, 250, 250, popW, popH);
+  p1 = new PopUp(titulo, mensaje3,(width/2)-400, 300, popW, popH);
   p1.setVisible(false);
 }
 

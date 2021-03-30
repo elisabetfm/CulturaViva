@@ -79,7 +79,6 @@ void dibujaPantallaInsertar(){
   tituloText.display();
   descripcionText.display();
   fechaText.display();
-  c.display();
   bInsert.display();
   bReset.display();
   s1.display();
@@ -103,6 +102,7 @@ void dibujaPantallaEditar(){
   iCuenta.display();
   iBuscar.display();
   dibujaEditarBorrar();
+  bEditar.display();
   sEB.display();
 }
 
@@ -163,20 +163,6 @@ void dibujaPantallaPopUp1(){
   iCuenta.display();
   iBuscar.display();
   p1.display();
-}
-
-void dibujaPantallaIndividual(){
-  dibujaBanner();
-  dibujaLogo();
-  dibujaAcontecimientoIndividual();
-  bInicio.display();
-  buscarText.display();
-  bCalendario.display();
-  s1.display();
-  s2.display();
-  s3.display();
-  iCuenta.display();
-  iBuscar.display();
 }
 
 void dibujaPantallaCalendario(){

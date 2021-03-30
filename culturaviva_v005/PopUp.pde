@@ -53,7 +53,7 @@ class PopUp {
      // Rectángulo
      stroke(0); 
      strokeWeight(10);
-     fill(200, 200, 100);
+     fill(184, 153, 138);
      rect(x, y, w, h, b/2);
      line(x, y + 2*b , x+w, y + 2*b);
      

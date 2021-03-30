@@ -25,7 +25,17 @@ void conexion(){
   }
 }
 
-// Obté el número de files de la taula
+//Inserta los datos en la tabla Eventos
+void insertInfoTablaEventos(String titulo, String descripcion, String fecha, String seccion, String lugar, String usuario){
+  String q = "INSERT INTO eventos (nombre_evento, descripcion_evento, fecha, Seccion_id_seccion, Lugar_id_lugar, Usuario_id_usuario) VALUES ('"+titulo+"','"+descripcion+"', '"+fecha+"', '"+seccion+"', '"+lugar+"', '"+usuario+"')";
+  println(q);
+  msql.query(q);
+}
+
+//Reset formulari
+
+
+// Obtener el número de filas de la tabla
 int getNumRowsTaula(String nomTaula){
   msql.query( "SELECT COUNT(*) AS n FROM %s", nomTaula );
   msql.next();
@@ -209,16 +219,36 @@ String[][] getInfoEventosAleatorios(int idCategoria){
 String[][] getInfoUsuarioContrasena(){
    int numRows = getNumRowsTaula("usuario");
   
-  String[][] data = new String[numRows][2];
+  String[][] data = new String[numRows][3];
   int nr=0;
-  msql.query( "SELECT `nick_usuario` as usuario, `contrasena_usuario` as contrasena FROM `usuario` u;" );
+  msql.query( "SELECT `nick_usuario` as usuario, `contrasena_usuario` as contrasena, `id_Usuario` as idUsuario FROM `usuario` u;" );
   while (msql.next()){
       data[nr][0] = msql.getString("usuario");
       data[nr][1] = msql.getString("contrasena");
+      data[nr][2] = msql.getString("idUsuario");
       nr++;
   }
   
   //printArray(data);
+  return data;
+}
+
+String[] getInfoEvento(String idEvento){
+  
+  String[] data = new String[6];
+  
+  String q = "SELECT id_Eventos, nombre_evento, descripcion_evento, Lugar_id_lugar, Seccion_id_seccion, fecha FROM `eventos`  WHERE id_Eventos='"+idEvento+"'";
+  int nr=0;
+  msql.query(q);
+      msql.next();
+      println("NR:"+nr);
+      data[0] = msql.getString("id_Eventos");
+      data[1] = msql.getString("nombre_evento");
+      data[2] = msql.getString("descripcion_evento");
+      data[3] = msql.getString("Lugar_id_lugar");
+      data[4] = msql.getString("Seccion_id_seccion");
+      data[5] = msql.getString("fecha");
+
   return data;
 }
 

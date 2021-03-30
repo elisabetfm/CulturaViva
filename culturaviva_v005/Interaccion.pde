@@ -26,9 +26,7 @@ void mousePressed() {
 
   textfieldPressed();
   
-  calendarioPressed();
-  
-  counterPressed();  
+  calendarioPressed();  
   
   borrarPressed();
   
@@ -141,6 +139,7 @@ void buttonPressed() {
     for(int i=0; i<datos.length; i++){
       if(usuario.equals(datos[i][0]) && password.equals(datos[i][1])){
         ok = true;
+        idUsuarioLogin=datos[i][2];
         break;
       }
     } if(ok){
@@ -198,6 +197,34 @@ void buttonPressed() {
   } else if(bAnterior.mouseOverButton() && bAnterior.enabled){
     pc.prevPage();
     pc1.prevPage();
+  } else if (numPantalla==14 && bInsert.mouseOverButton() && bInsert.enabled){
+     // Agafar els valors dels camps del formulari
+     String titulo = tituloText.text;
+     String descripcion = descripcionText.text;
+     String fecha = fechaText.text;
+     String idSeccion = sSeccion.selectedId;
+     String idLugar = sLugar.selectedId;
+     String usuario = idUsuarioLogin;
+    // Inserir a la BBDD
+    insertInfoTablaEventos(titulo, descripcion, fecha, idSeccion, idLugar, usuario);
+    // Resetear los campos del formulario
+    resetFormulario();
+     p.setVisible(true);
+     numPantalla = 18;
+  } else if (bReset.mouseOverButton() && bReset.enabled){
+    //Resetear los cmapos del formulario
+    resetFormulario();
+  } else if (numPantalla==15 && bEditar.mouseOverButton() && bEditar.enabled){
+    String idEvent = sEB.selectedId;
+    String[] info = getInfoEvento(idEvent);
+    printArray(info);
+    sLugar.selectById(info[3]);
+    sSeccion.selectById(info[4]);
+    tituloText.text = info[1];
+    descripcionText.text = info[2];
+    fechaText.text = info [5];
+    numPantalla = 14;
+     //Actualiza la 
   }
 }
 
@@ -206,10 +233,6 @@ void textfieldPressed(){
   usuarioText.isPressed();
   contrasenaText.isPressed();
   
-}
-
-void counterPressed(){
-  c.update();
 }
 
 void calendarioPressed(){
@@ -224,7 +247,7 @@ void updateCursor() {
   } else {
     cursor(ARROW);
   }
-  if(c.mouseOverButtons() || bInsert.mouseOverButton() || bReset.mouseOverButton()){
+  if(bInsert.mouseOverButton() || bReset.mouseOverButton()){
       cursor(HAND);
   }
   else {
@@ -233,9 +256,12 @@ void updateCursor() {
 }
 
 void resetFormulario(){
-  c.resetValue();
-  //tituloText.removeAllText();
-  //descripcionText.removeAllText();
+  //c.resetValue();
+  tituloText.removeAllText();
+  descripcionText.removeAllText();
+  fechaText.removeAllText();
+  //sSeccion.removeAllText();
+  //sLugar.removeAllText();
 }
 
 void borrarPressed(){
@@ -274,5 +300,5 @@ void insertarPressed(){
   tituloText.isPressed();
   descripcionText.isPressed();
   fechaText.isPressed();
-  c.update();
+  
 }

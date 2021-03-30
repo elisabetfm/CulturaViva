@@ -56,9 +56,3 @@ void dibujaEditarBorrar(){
   rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
   popStyle();
 }
-void dibujaAcontecimientoIndividual(){
-  fill(255);
-  rect (margenH, 2*margenV + logoHeight + filtrosHeight + margenV, individualWidth, individualHeight);
-  fill(0);
-  text ("acontecimiento individual", margenH + individualWidth/2, 2*margenV + logoHeight + filtrosHeight + margenV + individualHeight/2, 10);
-}

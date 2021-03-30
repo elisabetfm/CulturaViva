@@ -14,7 +14,7 @@ class TextField {
   // Texto del campo
   String text = "";
   int textLength = 0;
-  int textSize = 24;
+  int textSize = 20;
   boolean selected = false;
    
   // Constructor
@@ -51,13 +51,7 @@ class TextField {
          } else if (keyCode == 32) {
              addText(' '); // SPACE
          } else {
-             boolean isKeyCapitalLetter = (key >= 'A' && key <= 'Z');
-             boolean isKeySmallLetter = (key >= 'a' && key <= 'z');
-             boolean isKeyNumber = (key >= '0' && key <= '9');
-        
-           if (isKeyCapitalLetter || isKeySmallLetter || isKeyNumber) {
              addText(key);
-           }
          }
       }
    }
@@ -72,12 +66,18 @@ class TextField {
    
    // Quitar la última letra del texto
    void removeText() {
-      if (textLength - 1 >= 0) {
-         text = text.substring(0, textLength - 1);
+     println("Borrant de "+text);
+      if (text.length() >= 1) {
+         text = text.substring(0, text.length() - 1);
          textLength--;
       }
    }
 
+//Quitar todo el texto
+void removeAllText(){
+     this.text = "";
+   }
+   
    // Indica si el ratón está encima del campo de texto
    boolean mouseOverTextField() {
       if (mouseX >= this.x && mouseX <= this.x + this.w) {
