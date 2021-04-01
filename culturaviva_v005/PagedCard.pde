@@ -93,11 +93,11 @@ class PagedCard {
     int lastCardPage  = numCardsPage*(numPage+1) - 1;
     float wCard = w / (float) numCardsPage;
     float xCard = y;
-    float b = 10;
+    float b = 8;
     for(int i = firstCardPage; i <= lastCardPage; i++){
       if(i<cards.length){
-        cards[i].display(xCard, y, wCard, y, b);
-        xCard += wCard + b;
+        cards[i].display(xCard, y, wCard, margenH + logoHeight + selectH + 4*margenH, b);
+        xCard += wCard + 50;
       }
     }
     

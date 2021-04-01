@@ -88,6 +88,7 @@ void dibujaPantallaInsertar(){
   iBuscar.display();
   sLugar.display();
   sSeccion.display();
+  iFoto.display();
 }
 
 void dibujaPantallaEditar(){

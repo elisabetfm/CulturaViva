@@ -28,9 +28,6 @@ void dibujaInsertar(){
   rectMode (CENTER);
   fill(184, 153, 138);
   rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
-  // Etiqueta  Número
- // fill(0); textSize(20); 
-  //text("Número:", width/4, height/4 - 20);
   popStyle();
   // Etiqueta Título
   fill(0); textSize(20); 
@@ -44,6 +41,9 @@ void dibujaInsertar(){
   // Etiqueta Lugar
   fill(0); textSize(20); 
   text("Lugar:", 590, 530); 
+  //Etiqueta Imagen
+   fill(0); textSize(20); 
+  text("Imagen:", 710, 530); 
   // Etiqueta Fecha
   fill(0); textSize(20); 
   text("Fecha:", 790, 530); 

@@ -12,9 +12,15 @@ String mensaje2 = "¿Quieres eliminar esta información?";
 String mensaje3 = "No se ha encontrado ningún resultado.";
 String fecha = "2021-03-16";
 String idUsuarioLogin="0";
+// Ruta del fichero imagen
+String rutaImagen ="D:../DATA/imgs";
+// Nom del fitxer imatge
+String tituloImagen="";
+// Carpeta on guardar les imatges
+String rutaCopia = "D:../DATA/imgs";
 
-ImageButton iCuenta, iComprar, iBuscar;
-TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, seccionText, lugarText, fechaText;
+ImageButton iCuenta, iBuscar, iFoto;
+TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, fechaText;
 Calendario calendario;
 PagedCard pc, pc1, pc2;
 PopUp p, p1;
@@ -70,6 +76,7 @@ void setSelect() {
 void setImageButtons() {
   iCuenta = new ImageButton (imgCuenta, 2*margenH + logoWidth + 3*selectW + buttonW2 + buttonW1 + buttonW3 + margenH*3, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
   iBuscar = new ImageButton (imgBuscar, 2*margenH + logoWidth + 3*selectW + (buttonW2 - buttonW3) + 3*margenH, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
+  iFoto = new ImageButton (imgFoto, 690, 540, buttonW3, countH);
 }
 
 void setTextField() {

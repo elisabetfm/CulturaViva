@@ -67,7 +67,7 @@ class Card {
    fill(0); 
    textSize(sizeTitulo - 4); 
    textAlign(CENTER);
-   text(place+", "+date, x + 2*w/3, 8*h/5);
+   text(place+", "+date, x + 2*w/3, y + 3*h/5);
    
    // Sección
    fill(0); textSize(sizeTitulo - 4); textAlign(CENTER);

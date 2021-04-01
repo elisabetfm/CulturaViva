@@ -225,6 +225,11 @@ void buttonPressed() {
     fechaText.text = info [5];
     numPantalla = 14;
      //Actualiza la 
+  } else if (numPantalla==14 && iFoto.mouseOverButton() && iFoto.enabled){
+     // Se abre el diálogo el dialeg
+    selectInput("Selecciona una imagen ...", "fileSelected");
+     // Copiam la imatge
+    // get (rutaImagen, rutaCopia, tituloImagen);
   }
 }
 
@@ -252,6 +257,11 @@ void updateCursor() {
   }
   else {
      cursor(ARROW);
+  } if (iFoto.mouseOverButton()){
+    cursor (HAND);
+  } 
+  else {
+    cursor (ARROW);
   }
 }
 
