@@ -34,6 +34,7 @@ void dibujaPantallaEventos(){
   iBuscar.display(); 
   bAnterior.display();
   bSiguiente.display();
+  pc2.display(1110, 260, 200, 300);
 }
 
 void dibujaPantallaSesion(){
@@ -119,8 +120,8 @@ void dibujaPantallaBorrar(){
   iCuenta.display();
   iBuscar.display();
   dibujaEditarBorrar();
-  sEB.display();
   bBorrar.display();
+  sEB.display();
 }
 
 void dibujaPantallaConfirmar(){

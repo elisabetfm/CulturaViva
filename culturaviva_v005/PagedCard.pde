@@ -36,7 +36,7 @@ class PagedCard {
     cards = new Card[this.cardsData.length];
     for(int i=0; i<cards.length; i++){
       cards[i] = new Card(cardsData[i]);
-      cards[i].setSizeTitulo(14);
+      cards[i].setSizeTitulo(13);
       String nomImagen = cardsData[i][5];
       PImage img = loadImage("../DATA/imgs/"+nomImagen);
       cards[i].setImage(img);

@@ -40,7 +40,7 @@ class Card {
  // Dibuja la Card
  void display(float x, float y, float w, float h, float b){
    pushStyle();
-   
+   textFont(fuente6); 
    // Rectángulo inferior
    stroke(0); 
    fill(255,255,255);
@@ -76,7 +76,7 @@ class Card {
    // Descripción
    fill(0);textSize(sizeTitulo - 8); 
    textAlign(LEFT);
-   text(description, x + w/3 + b, y + 2*h/3 - b, 2*w/3, 4*h/5);
+   text(description, x + w/3 + b, y+2*h/3 - b +10, 2*w/3, 4*h/5);
    
    popStyle();
  }

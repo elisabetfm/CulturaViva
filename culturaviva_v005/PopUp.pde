@@ -49,10 +49,10 @@ class PopUp {
    if(this.visible){
      float b = 40;
      pushStyle();
-     
+     textFont(fuente4); 
      // Rectángulo
      stroke(0); 
-     strokeWeight(10);
+     strokeWeight(4);
      fill(184, 153, 138);
      rect(x, y, w, h, b/2);
      line(x, y + 2*b , x+w, y + 2*b);

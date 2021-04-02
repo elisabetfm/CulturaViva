@@ -31,7 +31,7 @@ class TextField {
     else {
        fill(bgColor);
     }
-    
+      
       strokeWeight(borderWeight);
       stroke(borderColor);
       rect(x, y, w, h, 5);

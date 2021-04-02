@@ -49,7 +49,7 @@ class DayButton {
       ellipse(x + w/2, y+h/2, 80, 80);
     }
     fill(0); 
-    textFont(fuente2); 
+    textFont(fuente3); 
     textSize(24); 
     textAlign(CENTER);
     text(dia, x + w/2, y + h/2 + 10);

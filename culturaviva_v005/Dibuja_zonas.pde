@@ -9,7 +9,7 @@ void dibujaLogo(){
 }
 
 void dibujaApertura(){
-  fill(0); textFont(fuente7);
+  fill(0); textFont(fuente5);
   text ("CULTURA VIVA", margenH + principalWidth/2, margenV + principalHeight/2, 10);
 }
 

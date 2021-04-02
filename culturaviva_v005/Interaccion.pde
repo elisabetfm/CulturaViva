@@ -297,7 +297,7 @@ void borrarPressed(){
     p.setVisible(true);
     numPantalla = 18;
   }
-  else if (numPantalla==18 && confirmar.bCancelar.mouseOverButton()){
+  else if (numPantalla==17 && confirmar.bCancelar.mouseOverButton()){
     confirmar.setVisible(false);
     numPantalla = 16;
   }

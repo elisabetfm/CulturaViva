@@ -169,6 +169,7 @@ class Calendario {
     fill(0); 
     textSize(36); 
     textAlign(LEFT);
+    textFont(fuente3); 
     text(months[mes-1]+"/"+ano, x, y - 30);
     for(DayButton b : buttons){
       if(b!=null){
@@ -181,6 +182,7 @@ class Calendario {
       fill(0); 
       textSize(24); 
       textAlign(RIGHT);
+      textFont(fuente3); 
       text(dateText, x+w, y - 30);
     }
   }

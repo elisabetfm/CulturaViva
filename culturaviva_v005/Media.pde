@@ -4,7 +4,7 @@ import processing.sound.*;
 // Imatges
 PImage imgLogo, imgFondo, imgBanner, imgCuenta, imgBuscar, imgTeatro, imgArte, imgFestival, imgConcierto, imgFeria, imgLectura, imgFoto;
 //Tipografies
-PFont fuente1, fuente2, fuente3, fuente4, fuente5, fuente6, fuente7;
+PFont fuente1, fuente2, fuente3, fuente4, fuente5, fuente6;
 
 //Audios
 SoundFile[] audio;
@@ -56,13 +56,12 @@ void loadImages(){
 
 // Càrrega de les Tipografies
 void loadFonts(){
-  fuente1 = createFont("../DATA/fonts/Borgen.ttf", 32);
+  fuente1 = createFont("../DATA/fonts/Borgen.ttf", 32); //si
   fuente2 = createFont("../DATA/fonts/BorgenBold.ttf", 32);
-  fuente3 = createFont("../DATA/fonts/secrcode.ttf", 32);
-  fuente4= createFont("../DATA/fonts/HunDIN1451.ttf", 32);
-  fuente5 = createFont("../DATA/fonts/monkey.ttf", 32);
-  fuente6 = createFont("../DATA/fonts/saxmono.ttf", 32);
-  fuente7= createFont("../DATA/fonts/Hiddencinema.ttf", 70);
+  fuente3 = createFont("../DATA/fonts/HunDIN1451.ttf", 32); //si
+  fuente4 = createFont("../DATA/fonts/saxmono.ttf", 32);
+  fuente5= createFont("../DATA/fonts/Hiddencinema.ttf", 70); //si
+  fuente6 = createFont("../DATA/fonts/Cinzel-Regular.otf", 30); //si
 }
 
 // Càrrega dels àudios
