@@ -1,6 +1,6 @@
 
-Button bInicio, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar, bEditar;
-SelectBD s1, s2, sEB, sSeccion, sLugar;
+Button bInicio, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar, bEditar, bUpdate, bFiltro;
+SelectBD s1, s2, sEB, sSeccion, sLugar, sSeccionEditar;
 Select s3;
 String[][] selectValues1;
 String[][] selectValues2;
@@ -13,11 +13,12 @@ String mensaje3 = "No se ha encontrado ningún resultado.";
 String fecha = "2021-03-16";
 String idUsuarioLogin="0";
 // Ruta del fichero imagen
-String rutaImagen ="D:../DATA/imgs";
+String rutaImagen = "C:\\Users\\usuario\\Desktop\\Solució informàtica\\CulturaViva\\DATA\\imgs";
 // Nom del fitxer imatge
 String tituloImagen="";
 // Carpeta on guardar les imatges
-String rutaCopia = "D:../DATA/imgs";
+String rutaCopia = "C:\\Users\\usuario\\Desktop\\Solució informàtica\\CulturaViva\\DATA\\imgs";
+String idEvento = "";
 
 ImageButton iCuenta, iBuscar, iFoto;
 TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, fechaText;
@@ -25,6 +26,7 @@ Calendario calendario;
 PagedCard pc, pc1, pc2;
 PopUp p, p1;
 Confirm confirmar;
+PImage img;
 
 void setGUI() {
   setButtons();
@@ -48,15 +50,17 @@ void setButtons() {
   bCalendario = new Button ("Calendario", 2*margenH + logoWidth + 3*selectW + buttonW2 + margenH*4, 2*margenV + bannerHeight, buttonW1, selectH);
   bEnter = new Button ("Aceptar", 550, 600, 350, buttonH1);
   bIr = new Button ("Ir", 1050, 320, 200, buttonH1 );
-  bAnterior = new Button ("Anterior", 440, 690, 200, 30);
-  bSiguiente = new Button ("Siguiente", 650, 690, 200, 30);
-  bInsert = new Button ("Insert", 600, 600, countW, countH);
-  bReset = new Button ("Reset", 750, 600, countW, countH);
+  bAnterior = new Button ("Anterior", 500, 690, 200, 30);
+  bSiguiente = new Button ("Siguiente", 720, 690, 200, 30);
+  bInsert = new Button ("Insertar", 1050, 350, countW, selectH);
+  bReset = new Button ("Reset",  1050, 580, countW, selectH);
   bInsertaro = new Button ("Insertar", 500, 450, countW, countH);
   bEditaro = new Button ("Editar", 600, 450, countW, countH);
   bBorraro = new Button ("Borrar", 700, 450, countW, countH);
-  bBorrar = new Button ("Borrar", 670, 600, countW, countH);
-  bEditar = new Button ("Editar", 670, 600, countW, countH);
+  bBorrar = new Button ("Borrar",  1050, 580, countW, selectH);
+  bEditar = new Button ("Editar", 1050, 580, countW, selectH);
+  bUpdate = new Button ("Actualiza",  1050, 350, countW, selectH);
+  bFiltro = new Button ("Filtro", 1050, 350, countW, selectH);
 }
 
 void setSelect() {
@@ -65,18 +69,21 @@ void setSelect() {
   selectValues2 = getInfoTablaLugar();
   s2 = new SelectBD (selectValues2, 2*margenH + logoWidth + selectW + margenH, 2*margenV + bannerHeight, selectW, selectH);
   s3 = new Select(selectValues3, 2*margenH + logoWidth + 2*selectW + 2*margenH, 2*margenV + bannerHeight, selectW, selectH);
-  selectValuesEB = getInfoTituloEventos();
-  sEB = new SelectBD (selectValuesEB, 570, 350, selectW1, selectH);
   selectValues1 = getInfoTablaSeccion();
-  sSeccion = new SelectBD (selectValues1, 550, 480, 3*countW, countH );
+  sSeccion = new SelectBD (selectValues1, 550, 500, 3*countW, countH );
   selectValues2 = getInfoTablaLugar();
-  sLugar = new SelectBD (selectValues2, 550, 540, buttonW1, countH);
+  sLugar = new SelectBD (selectValues2, 550, 580, buttonW1, countH);
+  selectValues1 = getInfoTablaSeccion();
+  sSeccionEditar = new SelectBD (selectValues1, 570, 350, selectW1, selectH);
+  selectValuesEB = getInfoTituloEventos();
+  sEB = new SelectBD (selectValuesEB, 570, 450, selectW1, selectH);
+  sEB.enabled = false;
 }
 
 void setImageButtons() {
   iCuenta = new ImageButton (imgCuenta, 2*margenH + logoWidth + 3*selectW + buttonW2 + buttonW1 + buttonW3 + margenH*3, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
   iBuscar = new ImageButton (imgBuscar, 2*margenH + logoWidth + 3*selectW + (buttonW2 - buttonW3) + 3*margenH, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
-  iFoto = new ImageButton (imgFoto, 690, 540, buttonW3, countH);
+  iFoto = new ImageButton (imgFoto, 690, 580, buttonW3, countH);
 }
 
 void setTextField() {
@@ -84,8 +91,8 @@ void setTextField() {
   contrasenaText = new TextField (550, 470, 350, buttonH1);
   buscarText = new TextField(2*margenH + 4*selectW + 3*margenH, 2*margenV + bannerHeight, buttonW2, selectH);
   tituloText = new TextField (550, 310, 3*countW, countH);
-  descripcionText = new TextField (550, 370, 3*countW, buttonH3);
-  fechaText = new TextField (750, 540, buttonW5, countH);
+  descripcionText = new TextField (550, 385, 3*countW, buttonH3);
+  fechaText = new TextField (750, 580, buttonW5, countH);
 }
 
 void setCalendario() {
@@ -95,7 +102,7 @@ void setCalendario() {
 void setPopUp() {
   p = new PopUp(titulo, mensaje1, (width/2)-400, 300, popW, popH);
   p.setVisible(false);
-  p1 = new PopUp(titulo, mensaje3,(width/2)-400, 300, popW, popH);
+  p1 = new PopUp(titulo, mensaje3, (width/2)-400, 300, popW, popH);
   p1.setVisible(false);
 }
 

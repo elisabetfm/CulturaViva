@@ -1,14 +1,14 @@
 //Clase Select
 class Select {
-  
+
   float x, y, w, h;          // Posición y dimensiones
   String[] texts;            // Valores posibles
   String selectedValue;      // Valor Seleccionado
   boolean collapsed = true;  // Plegado / Desplegado
   boolean enabled;           // Habilitado / deshabilitado
   float lineSpace = 15;      // Espai entre línies
-  
-  Select(String[] texts, float x, float y, float w, float h){
+
+  Select(String[] texts, float x, float y, float w, float h) {
     this.texts = texts;
     this.selectedValue = "";
     this.x = x;
@@ -18,77 +18,76 @@ class Select {
     this.enabled = true;
     this.collapsed = true;
   }
-  
-  void display(){
+
+  void display() {
     pushStyle();
     stroke(0); 
     strokeWeight(2); 
     fill(255);
     rect(x, y, w, h);
-    
+
     fill(100);
     rect(x + w - 30, y, 30, h);
-    
+
     fill(0); 
     stroke(0);
-    triangle(x + w - 25, y+5, x + w - 15, y + 25, x + w - 5 , y+5);
-    
+    triangle(x + w - 25, y+5, x + w - 15, y + 25, x + w - 5, y+5);
+
     fill(0); 
     textFont(fuente6); 
     textSize(11); 
     textAlign(LEFT); 
     text(selectedValue, x + 10, y + 20);
-    
-    if(!this.collapsed){  
+
+    if (!this.collapsed) {  
       fill(255); 
       stroke(0);
       rect(x, y+h, w, (h + lineSpace)*texts.length);
-      
-      for(int i=0; i<texts.length; i++){  
-        if(i== clickedOption()){
+
+      for (int i=0; i<texts.length; i++) {  
+        if (i== clickedOption()) {
           fill(149, 127, 239); 
           noStroke();
           rect(x+4, y+4 + h + (h + lineSpace)*i - 2, w -8, h + lineSpace - 8);
         }
-        
+
         fill(0);
         text(texts[i], x + 10, y + h + 25 + (h + lineSpace)*i);
       }
     }
     popStyle();
   }
-  
-  void setCollapsed(boolean b){
+
+  void setCollapsed(boolean b) {
     this.collapsed = b;
   }
-  
-  void toggle(){
+
+  void toggle() {
     this.collapsed = !this.collapsed;
   }
-  
-  void update(){
+
+  void update() {
     int option = clickedOption();
     selectedValue = texts[option];
   }
-  
- // Indica si el ratón está encima del Select
- boolean mouseOverSelect(){
-   if(this.collapsed){
-     return (mouseX >= x) && 
-            (mouseX <= x + w) && 
-            (mouseY >= y) && 
-            (mouseY <= y + h); 
-   }
-   else {
-     return (mouseX>= x) && 
-            (mouseX<= x + w) && 
-            (mouseY>= y) && 
-            (mouseY<= y + h + (h + lineSpace)*texts.length); 
-   }
- }
- 
- int clickedOption(){
-   int i = (int)map(mouseY, y + h, y + h + (h + lineSpace)*texts.length, 0, texts.length);
-   return i;
- }
+
+  // Indica si el ratón está encima del Select
+  boolean mouseOverSelect() {
+    if (this.collapsed) {
+      return (mouseX >= x) && 
+        (mouseX <= x + w) && 
+        (mouseY >= y) && 
+        (mouseY <= y + h);
+    } else {
+      return (mouseX>= x) && 
+        (mouseX<= x + w) && 
+        (mouseY>= y) && 
+        (mouseY<= y + h + (h + lineSpace)*texts.length);
+    }
+  }
+
+  int clickedOption() {
+    int i = (int)map(mouseY, y + h, y + h + (h + lineSpace)*texts.length, 0, texts.length);
+    return i;
+  }
 }

@@ -1,13 +1,13 @@
 //Funciones de dibujo de las pantallas
 
-void dibujaPantalla01(){
+void dibujaPantalla01() {
   dibujaApertura();
-  }
+}
 
-void dibujaPantallaInicio(){
+void dibujaPantallaInicio() {
   dibujaBanner();
   dibujaLogo();
-  pc1.displayH(200, 260, 800, 800);
+  pc1.displayH(20, 300, 1250, 800);
   bInicio.display();
   bCalendario.display();
   s1.display();
@@ -20,7 +20,7 @@ void dibujaPantallaInicio(){
   bSiguiente.display();
 }
 
-void dibujaPantallaEventos(){
+void dibujaPantallaEventos() {
   dibujaBanner();
   dibujaLogo();
   pc.display(190, 250, 800, 400);
@@ -37,7 +37,7 @@ void dibujaPantallaEventos(){
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaSesion(){
+void dibujaPantallaSesion() {
   dibujaBanner();
   dibujaLogo();
   dibujaIniciarSesion();
@@ -54,7 +54,7 @@ void dibujaPantallaSesion(){
   iBuscar.display();
 }
 
-void dibujaPantallaInsBorrEdi(){
+void dibujaPantallaInsBorrEdi() {
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -70,7 +70,7 @@ void dibujaPantallaInsBorrEdi(){
   bBorraro.display();
 }
 
-void dibujaPantallaInsertar(){
+void dibujaPantallaInsertar() {
   dibujaBanner();
   dibujaLogo();
   dibujaInsertar();
@@ -87,12 +87,12 @@ void dibujaPantallaInsertar(){
   s3.display();
   iCuenta.display();
   iBuscar.display();
+  iFoto.display();
   sLugar.display();
   sSeccion.display();
-  iFoto.display();
 }
 
-void dibujaPantallaEditar(){
+void dibujaPantallaEditar() {
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -106,9 +106,33 @@ void dibujaPantallaEditar(){
   dibujaEditarBorrar();
   bEditar.display();
   sEB.display();
+  sSeccionEditar.display();
+  bFiltro.display();
 }
 
-void dibujaPantallaBorrar(){
+void dibujaPantallaModificar() {
+  dibujaBanner();
+  dibujaLogo();
+  dibujaInsertar();
+  bInicio.display();
+  buscarText.display();
+  bCalendario.display();
+  tituloText.display();
+  descripcionText.display();
+  fechaText.display();
+  bUpdate.display();
+  bReset.display();
+  s1.display();
+  s2.display();
+  s3.display();
+  iCuenta.display();
+  iBuscar.display();
+  iFoto.display();
+  sLugar.display();
+  sSeccion.display();
+}
+
+void dibujaPantallaBorrar() {
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -122,9 +146,11 @@ void dibujaPantallaBorrar(){
   dibujaEditarBorrar();
   bBorrar.display();
   sEB.display();
+  sSeccionEditar.display();
+  bFiltro.display();
 }
 
-void dibujaPantallaConfirmar(){
+void dibujaPantallaConfirmar() {
   dibujaBanner();
   dibujaLogo();
   buscarText.display();
@@ -139,7 +165,7 @@ void dibujaPantallaConfirmar(){
   confirmar.display();
 }
 
-void dibujaPantallaPopUp(){
+void dibujaPantallaPopUp() {
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -153,7 +179,7 @@ void dibujaPantallaPopUp(){
   p.display();
 }
 
-void dibujaPantallaPopUp1(){
+void dibujaPantallaPopUp1() {
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -167,7 +193,7 @@ void dibujaPantallaPopUp1(){
   p1.display();
 }
 
-void dibujaPantallaCalendario(){
+void dibujaPantallaCalendario() {
   dibujaBanner();
   dibujaLogo();
   buscarText.display();
@@ -182,7 +208,7 @@ void dibujaPantallaCalendario(){
   bIr.display();
 }
 
-void dibujaPantallaTeatro(){
+void dibujaPantallaTeatro() {
   image(imgTeatro, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -200,7 +226,7 @@ void dibujaPantallaTeatro(){
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaArte(){
+void dibujaPantallaArte() {
   image(imgArte, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -218,7 +244,7 @@ void dibujaPantallaArte(){
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaFestival(){
+void dibujaPantallaFestival() {
   image(imgFestival, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -236,7 +262,7 @@ void dibujaPantallaFestival(){
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaConcierto(){
+void dibujaPantallaConcierto() {
   image(imgConcierto, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -254,7 +280,7 @@ void dibujaPantallaConcierto(){
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaFeria(){
+void dibujaPantallaFeria() {
   image(imgFeria, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -272,7 +298,7 @@ void dibujaPantallaFeria(){
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaLectura(){
+void dibujaPantallaLectura() {
   image(imgLectura, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();

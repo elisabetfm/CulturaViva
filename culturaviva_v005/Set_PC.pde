@@ -56,13 +56,13 @@ void updatePageCardEscrito() {
 
 void setPagedCardCalendario() {
   pc = new PagedCard(3);
-  
+
   Calendar cTemp = Calendar.getInstance();
   int anyTemp = cTemp.get(Calendar.YEAR);
   int mesTemp = cTemp.get(Calendar.MONTH) + 1;
   int diaTemp = cTemp.get(Calendar.DATE);
   String fechaHoy = diaTemp+"/"+mesTemp+"/"+anyTemp;
-  
+
   String[][] infoCards = getInfoTablaEventosCalendario(fechaHoy);
   pc.setData(infoCards);
   pc.setCards();
@@ -94,6 +94,7 @@ void setPagedCardAleatorios() {
   String[][] infoCards = getInfoEventosAleatorios(s1.selectedIndex);
   pc2.setData(infoCards);
   pc2.setCardsSmall();
+  pc2.mostrarPagina=false;
 }
 
 void updatePageCardAleatorios() {
