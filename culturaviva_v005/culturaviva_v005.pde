@@ -1,12 +1,11 @@
-//diseño de las pantallas de Cultura Viva
+//Diseño de las pantallas de Cultura Viva
 
 int numPantalla = 2;
 
 void setup() {
-  //fullScreen(); //dimensión de la pantalla
-  size(1600, 800);
+   size(1600, 800); //dimensión de la pantalla
   noStroke(); // figuras sin bordes
-  textAlign(CENTER);
+  textAlign(CENTER); // posición del texto
   textSize(20); //alineación y tamaño del texto
   conexion();
   loadMedia();
@@ -19,7 +18,7 @@ void draw() {
   if (frameCount<20) {
     dibujaApertura();
   } else {
-    if (numPantalla==2) {
+    if (numPantalla==2) { // la correspondencia de las pantallas y los números
       dibujaPantallaInicio();
     } else if (numPantalla==3) {
       dibujaPantallaEventos();
@@ -55,6 +54,8 @@ void draw() {
       dibujaPantallaPopUp1();
     } else if (numPantalla==20) {
       dibujaPantallaModificar();
+    } else if (numPantalla==21){
+      dibujaPantallaSesionError();
     }
 
     updateCursor();

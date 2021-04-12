@@ -1,4 +1,4 @@
-// Clase Botón
+// Clase Botón con Imágenes
 
 class ImageButton {
 

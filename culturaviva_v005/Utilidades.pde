@@ -1,9 +1,9 @@
+//Libreria de Processing
 import java.io.IOException;
 import java.nio.file.*;
+
 // Conversión de Time del formato ENG al formato EUROPEO
 // "2021-03-16"  -----> "16/03/2021"
-
-
 String formataFecha(String fechaEntrada) {
 
   String ano = fechaEntrada.split("-")[0];
@@ -13,10 +13,8 @@ String formataFecha(String fechaEntrada) {
   return dia+"/"+mes+"/"+ano;
 }
 
-
 // Conversión de Time del formato EUROPEO al formato ENG
 // "16/03/2021"  ----->  "2021-03-16" 
-
 String formataFecha2(String fechaEntrada) {
 
   String dia = fechaEntrada.split("/")[0];

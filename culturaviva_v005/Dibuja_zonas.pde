@@ -1,21 +1,21 @@
 // FUNCIONES DE DIBUJO DE LAS ZONAS
 
-void dibujaBanner() {
+void dibujaBanner() { //parámetros para crear el banner
   image(imgBanner, 2*margenH +logoWidth, margenV, bannerWidth, bannerHeight);
 }
 
-void dibujaLogo() {
+void dibujaLogo() { //parámetros para crear el logo
   image(imgLogo, margenH, margenV, logoWidth, logoHeight);
 }
 
-void dibujaApertura() {
+void dibujaApertura() { //parámetros para crear la pantalla de Apertura
   fill(0); 
   textFont(fuente5);
   text ("CULTURA VIVA", margenH + principalWidth/2, margenV + principalHeight/2, 10);
 }
 
 
-void dibujaIniciarSesion() {
+void dibujaIniciarSesion() { //parámetros para crear la pantalla de Iniciar Sesión
   pushStyle();
   rectMode (CENTER);
   fill(184, 153, 138);
@@ -24,7 +24,20 @@ void dibujaIniciarSesion() {
   popStyle();
 }
 
-void dibujaInsertar() {
+void dibujaIniciarSesionError() { //parámetros para crear la pantalla de Iniciar Sesión si se ha equivocado de usuario y/o constraseña (más oportunidades)
+  pushStyle();
+  rectMode (CENTER);
+  fill(184, 153, 138);
+  rect (width/2 - (buttonW3 + margenH), height/2 + filtrosHeight + margenV, SesionWidth, SesionHeight);
+  image (imgCuenta, 2*(width/2 - (buttonW3 + margenH)), 2*margenV + bannerHeight + filtrosHeight + 2*margenV, cuentaWidth, cuentaHeight);
+  //Mensaje
+  fill(255, 0, 0); 
+  textSize(16); 
+  text ("El usuario y la contraseña no son coincidentes", width/2 - (buttonW3 + margenH), logoHeight + selectH + 10*margenH);
+  popStyle();
+}
+
+void dibujaInsertar() { //parámetros para crear la pantalla Insertar
   pushStyle();
   rectMode (CENTER);
   fill(184, 153, 138);
@@ -56,7 +69,7 @@ void dibujaInsertar() {
   text("Fecha:", 790, 560);
 }
 
-void dibujaEditarBorrar() {
+void dibujaEditarBorrar() { //parámetros para crear la interficie para la pantalla Borrar o Editar
   pushStyle();
   rectMode (CENTER);
   fill(184, 153, 138);

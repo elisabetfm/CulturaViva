@@ -1,10 +1,10 @@
 //Funciones de dibujo de las pantallas
 
-void dibujaPantalla01() {
+void dibujaPantalla01() {//parámetros necesarios para dibujar la Pantalla de Apertura
   dibujaApertura();
 }
 
-void dibujaPantallaInicio() {
+void dibujaPantallaInicio() { //parámetros necesarios para dibujar la Pantalla de Inicio
   dibujaBanner();
   dibujaLogo();
   pc1.displayH(20, 300, 1250, 800);
@@ -20,7 +20,7 @@ void dibujaPantallaInicio() {
   bSiguiente.display();
 }
 
-void dibujaPantallaEventos() {
+void dibujaPantallaEventos() { //parámetros necesarios para dibujar la Pantalla de Eventos
   dibujaBanner();
   dibujaLogo();
   pc.display(190, 250, 800, 400);
@@ -37,7 +37,7 @@ void dibujaPantallaEventos() {
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaSesion() {
+void dibujaPantallaSesion() { //parámetros necesarios para dibujar la Pantalla de Iniciar Sesión
   dibujaBanner();
   dibujaLogo();
   dibujaIniciarSesion();
@@ -54,7 +54,24 @@ void dibujaPantallaSesion() {
   iBuscar.display();
 }
 
-void dibujaPantallaInsBorrEdi() {
+void dibujaPantallaSesionError(){ //parámetros necesarios para dibujar la Pantalla de Iniciar Sesión si se ha equivocado de usuario y/o constraseña (más oportunidades)
+  dibujaBanner();
+  dibujaLogo();
+  dibujaIniciarSesionError();
+  bInicio.display();
+  buscarText.display();
+  bCalendario.display();
+  usuarioText.display();
+  contrasenaText.display();
+  bEnter.display();
+  s1.display();
+  s2.display();
+  s3.display();
+  iCuenta.display();
+  iBuscar.display();
+}
+
+void dibujaPantallaInsBorrEdi() { //parámetros necesarios para dibujar la Pantalla para elegir si el usuario quiere Insertar, Editar o Borrar
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -70,7 +87,7 @@ void dibujaPantallaInsBorrEdi() {
   bBorraro.display();
 }
 
-void dibujaPantallaInsertar() {
+void dibujaPantallaInsertar() { //parámetros necesarios para dibujar la Pantalla de Insertar
   dibujaBanner();
   dibujaLogo();
   dibujaInsertar();
@@ -92,7 +109,7 @@ void dibujaPantallaInsertar() {
   sSeccion.display();
 }
 
-void dibujaPantallaEditar() {
+void dibujaPantallaEditar() { //parámetros necesarios para dibujar la Pantalla de Editar (para elegir qué evento se quiere modificar)
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -110,7 +127,7 @@ void dibujaPantallaEditar() {
   bFiltro.display();
 }
 
-void dibujaPantallaModificar() {
+void dibujaPantallaModificar() { //parámetros necesarios para dibujar la Pantalla de Editar el evento elegido
   dibujaBanner();
   dibujaLogo();
   dibujaInsertar();
@@ -132,7 +149,7 @@ void dibujaPantallaModificar() {
   sSeccion.display();
 }
 
-void dibujaPantallaBorrar() {
+void dibujaPantallaBorrar() { //parámetros necesarios para dibujar la Pantalla de Borrar
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -150,7 +167,7 @@ void dibujaPantallaBorrar() {
   bFiltro.display();
 }
 
-void dibujaPantallaConfirmar() {
+void dibujaPantallaConfirmar() { //parámetros necesarios para dibujar la Pantalla de Confirmar la acción de borrar
   dibujaBanner();
   dibujaLogo();
   buscarText.display();
@@ -165,7 +182,7 @@ void dibujaPantallaConfirmar() {
   confirmar.display();
 }
 
-void dibujaPantallaPopUp() {
+void dibujaPantallaPopUp() { //parámetros necesarios para dibujar la Pantalla de PopUp, para comunicar al usuario con un mensaje
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -179,7 +196,7 @@ void dibujaPantallaPopUp() {
   p.display();
 }
 
-void dibujaPantallaPopUp1() {
+void dibujaPantallaPopUp1() { //parámetros necesarios para dibujar la Pantalla de PopUp, para comunicar al usuario con un mensaje
   dibujaBanner();
   dibujaLogo();
   bInicio.display();
@@ -193,7 +210,7 @@ void dibujaPantallaPopUp1() {
   p1.display();
 }
 
-void dibujaPantallaCalendario() {
+void dibujaPantallaCalendario() { //parámetros necesarios para dibujar la Pantalla de Calendario
   dibujaBanner();
   dibujaLogo();
   buscarText.display();
@@ -208,7 +225,7 @@ void dibujaPantallaCalendario() {
   bIr.display();
 }
 
-void dibujaPantallaTeatro() {
+void dibujaPantallaTeatro() { //parámetros necesarios para dibujar la Pantalla de Usuario
   image(imgTeatro, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -226,7 +243,7 @@ void dibujaPantallaTeatro() {
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaArte() {
+void dibujaPantallaArte() { //parámetros necesarios para dibujar la Pantalla de Arte
   image(imgArte, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -244,7 +261,7 @@ void dibujaPantallaArte() {
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaFestival() {
+void dibujaPantallaFestival() { //parámetros necesarios para dibujar la Pantalla de Festival
   image(imgFestival, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -262,7 +279,7 @@ void dibujaPantallaFestival() {
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaConcierto() {
+void dibujaPantallaConcierto() { //parámetros necesarios para dibujar la Pantalla de Concierto
   image(imgConcierto, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -280,7 +297,7 @@ void dibujaPantallaConcierto() {
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaFeria() {
+void dibujaPantallaFeria() { //parámetros necesarios para dibujar la Pantalla de Feria
   image(imgFeria, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();
@@ -298,7 +315,7 @@ void dibujaPantallaFeria() {
   pc2.display(1110, 260, 200, 300);
 }
 
-void dibujaPantallaLectura() {
+void dibujaPantallaLectura() { //parámetros necesarios para dibujar la Pantalla de Club de Lectura
   image(imgLectura, 0, 0, width, height);
   dibujaBanner();
   dibujaLogo();

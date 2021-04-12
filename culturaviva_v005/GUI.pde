@@ -1,34 +1,31 @@
 
-Button bInicio, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar, bEditar, bUpdate, bFiltro;
-SelectBD s1, s2, sEB, sSeccion, sLugar, sSeccionEditar;
-Select s3;
-String[][] selectValues1;
-String[][] selectValues2;
-String[][] selectValuesEB;
-String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "barra", "foodtrucks", "servicio de guardería", "máximo 100 personas", "más de 100 personas", "gratis"};
-String titulo = "¡Información!";
-String mensaje1 = "Se ha actualizado la Base de Datos.";
-String mensaje2 = "¿Quieres eliminar esta información?";
-String mensaje3 = "No se ha encontrado ningún resultado.";
-String fecha = "2021-03-16";
-String idUsuarioLogin="0";
-// Ruta del fichero imagen
-String rutaImagen = "C:\\Users\\usuario\\Desktop\\Solució informàtica\\CulturaViva\\DATA\\imgs";
-// Nom del fitxer imatge
-String tituloImagen="";
-// Carpeta on guardar les imatges
-String rutaCopia = "C:\\Users\\usuario\\Desktop\\Solució informàtica\\CulturaViva\\DATA\\imgs";
+Button bInicio, bBuscar, bCalendario, bEnter, bIr, bAnterior, bSiguiente, bInsert, bReset, bInsertaro, bEditaro, bBorraro, bBorrar, bEditar, bUpdate, bFiltro; // declarar los botones
+SelectBD s1, s2, sEB, sSeccion, sLugar, sSeccionEditar; // declarar los selects de BBDD
+Select s3; // declarar los selects
+String[][] selectValues1; // declarar los valores de los selects de BBDD
+String[][] selectValues2;  // declarar los valores de los selects de BBDD
+String[][] selectValuesEB;  // declarar los valores de los selects de BBDD
+String[] selectValues3 = {"eventos nocturnos", "eventos diurnos", "barra", "foodtrucks", "servicio de guardería", "máximo 100 personas", "más de 100 personas", "gratis"}; // declarar los valores de los selects 
+String titulo = "¡Información!";  // declarar la información de los PopUps
+String mensaje1 = "Se ha actualizado la Base de Datos."; // declarar la información de los PopUps
+String mensaje2 = "¿Quieres eliminar esta información?"; // declarar la información de los PopUps
+String mensaje3 = "No se ha encontrado ningún resultado."; // declarar la información de los PopUps
+String fecha = "2021-03-16"; // declarar la estructura de la fecha
+String idUsuarioLogin="0"; 
+String rutaImagen = "C:\\Users\\usuario\\Desktop\\Solución informática\\CulturaViva\\DATA\\imgs"; // Ruta del fichero imagen
+String tituloImagen=""; // Nom del fitxer imatge
+String rutaCopia = "C:\\Users\\usuario\\Desktop\\Solución informática\\CulturaViva\\DATA\\imgs"; // Carpeta on guardar les imatges
 String idEvento = "";
 
-ImageButton iCuenta, iBuscar, iFoto;
-TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, fechaText;
-Calendario calendario;
-PagedCard pc, pc1, pc2;
-PopUp p, p1;
-Confirm confirmar;
+ImageButton iCuenta, iBuscar, iFoto; // declarar los botones con imágenes
+TextField usuarioText, contrasenaText, buscarText, tituloText, descripcionText, fechaText; // declarar los selects de BBDD
+Calendario calendario; // declarar el calendario
+PagedCard pc, pc1, pc2; // declarar las PagedCards
+PopUp p, p1; // declarar los PopUps
+Confirm confirmar; // declarar el Confirm
 PImage img;
 
-void setGUI() {
+void setGUI() { // set que lamma a los demás sets
   setButtons();
   setImageButtons();
   setSelect();
@@ -45,7 +42,7 @@ void setGUI() {
   setConfirm();
 }
 
-void setButtons() {
+void setButtons() { // creación de los botones
   bInicio = new Button ("Inicio", margenV, margenH*2 + logoHeight, logoWidth, selectH);
   bCalendario = new Button ("Calendario", 2*margenH + logoWidth + 3*selectW + buttonW2 + margenH*4, 2*margenV + bannerHeight, buttonW1, selectH);
   bEnter = new Button ("Aceptar", 550, 600, 350, buttonH1);
@@ -63,7 +60,7 @@ void setButtons() {
   bFiltro = new Button ("Filtro", 1050, 350, countW, selectH);
 }
 
-void setSelect() {
+void setSelect() { //creación de los selects
   selectValues1 = getInfoTablaSeccion();
   s1 = new SelectBD(selectValues1, 2*margenH + logoWidth, 2*margenV + bannerHeight, selectW, selectH);
   selectValues2 = getInfoTablaLugar();
@@ -80,13 +77,13 @@ void setSelect() {
   sEB.enabled = false;
 }
 
-void setImageButtons() {
+void setImageButtons() { // creación de los botones con imágenes
   iCuenta = new ImageButton (imgCuenta, 2*margenH + logoWidth + 3*selectW + buttonW2 + buttonW1 + buttonW3 + margenH*3, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
   iBuscar = new ImageButton (imgBuscar, 2*margenH + logoWidth + 3*selectW + (buttonW2 - buttonW3) + 3*margenH, 2*margenV + bannerHeight, cuentaWidth, cuentaHeight);
   iFoto = new ImageButton (imgFoto, 690, 580, buttonW3, countH);
 }
 
-void setTextField() {
+void setTextField() { // creación de los campos de textos
   usuarioText = new TextField(550, 400, 350, buttonH1);
   contrasenaText = new TextField (550, 470, 350, buttonH1);
   buscarText = new TextField(2*margenH + 4*selectW + 3*margenH, 2*margenV + bannerHeight, buttonW2, selectH);
@@ -95,19 +92,18 @@ void setTextField() {
   fechaText = new TextField (750, 580, buttonW5, countH);
 }
 
-void setCalendario() {
+void setCalendario() { //creación del calendario
   calendario = new Calendario (400, 300, 500, 450);
 }
 
-void setPopUp() {
+void setPopUp() { // creación de los PopUps
   p = new PopUp(titulo, mensaje1, (width/2)-400, 300, popW, popH);
   p.setVisible(false);
   p1 = new PopUp(titulo, mensaje3, (width/2)-400, 300, popW, popH);
-  p1.setVisible(false);
 }
 
 
-void setConfirm() {
+void setConfirm() { // creación del Confirm
   confirmar = new Confirm (titulo, mensaje2, (width/2)-400, 300, confW, confH);
   confirmar.setVisible(false);
 }
